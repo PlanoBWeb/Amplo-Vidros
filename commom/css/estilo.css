@@ -1,0 +1,343 @@
+/* Folha de estilo */
+
+/* Reset */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+@font-face{
+    font-family: 'gotham-book';
+    src: url('../fonts/gotham-rounded-book.otf');
+}
+
+@font-face{
+    font-family: 'gotham-medium';
+    src: url('../fonts/gotham-rounded-medium.otf');
+}
+
+@font-face{
+    font-family: 'gotham-italic';
+    src: url('../fonts/gotham-rounded-medium-italic.otf');
+}
+
+a:hover{
+    text-decoration: none !important;
+}
+
+.row{
+    margin: 0px !important;
+}
+
+.pd-none{
+    padding: 0px !important;
+}
+
+
+/*Header*/
+.navbar-brand{
+    height: auto !important;
+}
+
+.navbar{
+    margin-bottom: 0px !important;
+}
+
+.bg-topo{
+    width:      100%;
+    height:     auto;
+    display:    table;
+    position:   relative;
+    background: #d7d9d8;
+}
+
+.bg-topo img{
+    max-width:  100%;
+    margin-top: 1px;
+    display:    table;
+    margin:     auto;
+}
+
+.topo-contato{
+    width:      100%;
+    max-width:  1072px;
+    height:     auto;
+    display:    table;
+    position:   relative;
+    margin:     auto;
+}    
+
+.atende-topo{
+    color:        #d60308;
+    font-family:  'gotham-medium';
+    font-size:    0.9em;
+    float:        left;
+    padding-left: 7px;
+}
+
+.tel-topo{
+    text-decoration:none;
+    color:          #4d4d4d;    
+    font-size:      1.4em;
+    font-family:    'gotham-medium';
+    margin-top:     -10px;
+    float:          left;
+}
+
+.bloco-tel-topo{
+    border-right:   1px solid #d60308;
+    padding-right:  30px !important;
+    padding-left:   30px !important;
+    margin-top:     25px;
+}
+
+.email-topo{
+    color:          #4d4d4d;  
+    font-size:      0.9em;
+    font-family:    'gotham-medium';
+    margin-top:     -5px;
+    float:          left;
+}
+
+.fb-like{
+    width:      58px !important;
+    overflow:   hidden !important;
+}
+
+.bloco-face-topo{
+    padding:    20px 5px;
+    border:     2px solid #d7d9d8;    
+    margin-top: -14px;
+    background: #fff;
+}
+
+.txt-face{
+    color:          #385699;
+    font-family:    'Calibri';
+    font-weight:    bold;
+    font-size:      1em;
+}
+
+.img-amplo-face{
+    float:          left;
+    margin-right:   15px;
+}
+
+.navbar-default{
+    width:              100%;
+    background-color:   #fff !important;
+    border-color:       #cbcbcb;
+}
+
+.link-menu-topo{
+    color:          #464646;
+    font-size:      0.9em;
+    font-family:    'gotham-medium';
+    text-transform: uppercase;
+    font-weight:    normal;
+    padding-left:   10px !important;
+    padding-right:  10px !important;
+}
+
+.busca-desk{
+    background-color:   #ebeaeb !important;  
+    border-radius:      0px !important;
+    border-color:       transparent !important;
+    border:             none !important;
+    height:             31px !important;
+    width:              170px !important;
+}
+
+.btn-buscar-desk{
+    margin-left:        -5px;
+    background-color:   #fff;
+    padding:            0px !important;
+}
+    
+.redes-sociais{
+    margin-top: 10px !important;
+    float:      left;
+}
+
+.lupa-mobile{
+    float:          right;
+    margin-right:   8px;
+    margin-top:     8px;
+    cursor:         pointer;
+}
+
+.bloco-busca-mobile{
+    display: none;
+} 
+
+/*Vitrine*/
+.bloco-desc-banner
+{
+    padding:    5px 70px;
+    /*background: #000;
+    opacity:    0.8;*/
+    position:   absolute;
+    max-width:  500px;
+    top:        20px;
+    z-index:    9999;
+}
+
+.vitrine-index
+{
+    margin-bottom: 20px;    
+}
+
+.bloco-desc-banner h2
+{
+    font-size:      2.2em;
+    color:          #464646;
+    font-family:    'gotham-medium';
+    text-transform: uppercase;
+}
+
+.bloco-desc-banner p
+{
+    font-size:      1.2em;
+    color:          #464646;
+    font-family:    'gotham-medium';
+}
+
+.owl-pagination{
+    display: none;
+}
+
+.saiba-mais-vitrine{
+    background:     #d60308;
+    padding:        10px 30px;
+    color:          #fff;
+    font-weight:    normal;
+    font-family:    'gotham-book';
+    font-size:      1em;
+    border-radius:  2px;
+    margin-top:     20px;
+    float: left;
+}
+
+.saiba-mais-vitrine:hover{
+    color: #fff;
+}
+
+@media all and (min-width: 768px) {
+    .navbar-default{
+        width:              100%;
+        max-width:          1072px;
+        display:            table;
+        margin:             auto;
+        background-color:   #fff !important;
+        border-color:       #cbcbcb;
+        -webkit-box-shadow: -2px -3px 5px -1px #cbcbcb;
+        -moz-box-shadow:    -2px -3px 5px -1px #cbcbcb;
+        box-shadow:         -2px -3px 5px -1px #cbcbcb;
+        margin-top:         20px;
+        padding-top:        10px;
+        padding-bottom:     5px;
+    }
+
+    .link-home{
+        padding: 10px !important;
+        border: solid 1px #eeeced;
+    }
+
+    .barra-separa-menu{
+        color:          #464646;
+        font-size:      0.9em;
+        font-family:    'gotham-medium';
+        padding: 15px 0px;
+        float: left;
+    }
+
+}
+
+@media all and (max-width: 767px) {
+    body{
+        min-width: 336px;
+    }
+    
+    .mg-menu-busca{
+        margin-top: 20px !important;
+    }
+    
+    .form-group-mob{
+        display: table;
+        margin:  auto;
+    }
+
+    .busca-mob{
+        background-color:   #ebeaeb !important;  
+        border-radius:      0px !important;
+        border-color:       transparent !important;
+        border:             none !important;
+        height:             31px !important;
+        width:              300px !important;
+    }
+
+    .navbar-default{
+        position: fixed;
+    }
+
+    .vitrine-index{
+        display: none !important;
+    }
+
+}
+
+@media all and (max-width: 976px) {
+    .email-topo{
+        font-size: 0.76em;
+    }
+
+    .tel-topo{
+        font-size: 1em;
+    }
+
+    .bloco-tel-topo {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+}
