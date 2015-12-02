@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-01 17:51:15
+<?php /* Smarty version 2.6.12, created on 2015-12-02 17:11:32
          compiled from index.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -40,59 +40,279 @@ unset($_smarty_tpl_vars);
  ?>
         <!-- Banner -->
         <div id="demo" class="vitrine-index">
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        <div id="owl-demo" class="owl-carousel">
-                            <div class="item">
-                                <div class="bloco-desc-banner">
-                                    <h2>GUARDA CORPO <br>DE VIDRO</h2>
-                                    <p>Somos especialistas: Consulte os modelos de fixação, todos em aço inox</p>
-                                    <a class="saiba-mais-vitrine" href="">saiba mais</a>
-                                </div>
-                                <img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/banner.jpg" alt="banner" title="banner">
+            <div class="row">
+                <div class="span12">
+                    <div id="owl-demo" class="owl-carousel">
+                        <div class="item">
+                            <div class="bloco-desc-banner">
+                                <h2>GUARDA CORPO <br>DE VIDRO</h2>
+                                <p>Somos especialistas: Consulte os modelos de fixação, todos em aço inox</p>
+                                <a class="saiba-mais-vitrine" href="">saiba mais</a>
                             </div>
-                            <div class="item"><img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/banner.jpg" alt="banner" title="banner"></div>
+                            <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/banner.jpg" alt="banner" title="banner">
                         </div>
+                        <div class="item"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/banner.jpg" alt="banner" title="banner"></div>
                     </div>
                 </div>
             </div>
         </div> 
         <!-- Banner -->
+
+        <!-- Baixo Banner -->
+        <article class="baixo-banner mg-top-mobile">
+            <div class="encapsula-baixo-banner">
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <a class="link-baixo-banner pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
+home"><h2>BOX<br> para banheiros</h2></a>
+                    <a class="pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
+home">
+                        <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_1.png" alt="BOX para banheiros" title="BOX para banheiros">
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <a class="link-baixo-banner pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
+home"><h2>DECORAÇÃO<br> de ambientes</h2></a>
+                    <a class="pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
+home">
+                        <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_2.png" alt="BOX para banheiros" title="BOX para banheiros">
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <a class="link-baixo-banner pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
+home"><h2>ENGENHARIA<br> soluções</h2></a>
+                    <a class="pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
+home">
+                        <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_3.png" alt="BOX para banheiros" title="BOX para banheiros">
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <a class="link-baixo-banner pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
+home"><h2>PROJETOS <br> especiais</h2></a>
+                    <a class="pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
+home">
+                        <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_4.png" alt="BOX para banheiros" title="BOX para banheiros">
+                    </a>
+                </div>
+            </div>
+        </article>
+        <!-- Baixo Banner -->
+
+        <!-- Conteudo -->
+        <section class="conteudo">
+            <article class="destaques-home">
+                <div class="row mg-bt-80">
+                    <!-- Destaque 1 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 bloco-vitrine-destaques">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-7 col-md-7 pd-none">
+                                <h2 class="txt-prod-destaque">Produtos em Destaques</h2>
+                            </div>    
+                            <div class="col-xs-12 col-sm-5 col-md-5 pd-none linha-lado-destaques"></div>    
+                        </div>
+                        <div class="vitrine-slides">
+                            <div class="bloco-roda-vitrine">
+                                <div class="encapsula-produto-vitrine-geral encapsula-produto-vitrine">
+                                    <div class="produto-vitrine-geral produto-vitrine">
+                                            <img class="img-produto-destaque" src="<?php echo $this->_tpl_vars['URL']; ?>
+upload/produto/produto_1.jpg" alt="Produto 1" title="Produto 1">
+                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
+produtos/" class="titulo-produto-destaque">Espelhos</a>
+                                    </div>
+
+                                    <div class="produto-vitrine-geral produto-vitrine">
+                                            <img class="img-produto-destaque" src="<?php echo $this->_tpl_vars['URL']; ?>
+upload/produto/produto_2.jpg" alt="Produto 1" title="Produto 1">
+                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
+produtos/" class="titulo-produto-destaque">titulo 1</a>
+                                    </div>
+
+                                    <div class="produto-vitrine-geral produto-vitrine">
+                                            <img class="img-produto-destaque" src="<?php echo $this->_tpl_vars['URL']; ?>
+upload/produto/produto_3.jpg" alt="Produto 1" title="Produto 1">
+                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
+produtos/" class="titulo-produto-destaque">titulo 2</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="setas-produto-destaque">
+                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+" id="prev" class="pull-left"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/btn_left.png" alt="Seta esquerda" title="Seta esquerda"></a>
+                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+" id="next" class="pull-right"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/btn_right.png" alt="Seta direita" title="Seta direita"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Destaque 1 -->
+
+                    <!-- Destaque 2 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 bloco-vitrine-destaques">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-7 col-md-7 pd-none">
+                                <h2 class="txt-prod-destaque">Projetos em Destaques</h2>
+                            </div>    
+                            <div class="col-xs-12 col-sm-5 col-md-5 pd-none linha-lado-destaques"></div>    
+                        </div>
+                        <div class="vitrine-slides">
+                            <div class="bloco-roda-vitrine">
+                                <div class="encapsula-produto-vitrine-geral encapsula-produto-vitrine-projetos">
+                                    <div class="produto-vitrine-geral produto-vitrine-projetos">
+                                        <img class="img-produto-destaque" src="<?php echo $this->_tpl_vars['URL']; ?>
+upload/produto/produto_1.jpg" alt="Produto 1" title="Produto 1">
+                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
+produtos/" class="titulo-produto-destaque">Espelhos</a>
+                                    </div>
+
+                                    <div class="produto-vitrine-geral produto-vitrine-projetos">
+                                        <img class="img-produto-destaque" src="<?php echo $this->_tpl_vars['URL']; ?>
+upload/produto/produto_2.jpg" alt="Produto 1" title="Produto 1">
+                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
+produtos/" class="titulo-produto-destaque">titulo 1</a>
+                                    </div>
+
+                                    <div class="produto-vitrine-geral produto-vitrine-projetos">
+                                        <img class="img-produto-destaque" src="<?php echo $this->_tpl_vars['URL']; ?>
+upload/produto/produto_3.jpg" alt="Produto 1" title="Produto 1">
+                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
+produtos/" class="titulo-produto-destaque">titulo 2</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="setas-produto-destaque">
+                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+" id="prev-projetos" class="pull-left"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/btn_left.png" alt="Seta esquerda" title="Seta esquerda"></a>
+                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+" id="next-projetos" class="pull-right"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/btn_right.png" alt="Seta direita" title="Seta direita"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Destaque 2 -->  
+                </div>               
+
+                <div class="row mg-bt-80">
+                    <div class="col-xs-12 col-sm-6 col-md-6 mg-bt-80">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-3 col-md-3 pd-none">
+                                <h2 class="txt-prod-destaque">Sobre nós</h2>
+                            </div>    
+                            <div class="col-xs-12 col-sm-9 col-md-9 pd-none linha-lado-destaques"></div>    
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 mg-bt-20  mg-auto-empresa">
+                                <img class="img-loja" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/empresa.jpg" alt="foto da loja" title="foto da loja">
+                            </div> 
+                            <div class="col-xs-12 col-sm-6 col-md-6 mg-auto-empresa">
+                                <img class="img-loja" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/empresa.jpg" alt="foto da loja" title="foto da loja">
+                            </div>    
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">    
+                                <p class="txt-a-loja">
+                                    <br>
+                                    A Amplo Vidros e Espelhos é uma empresa baseada em princípios de responsabilidade e comprometimento, trabalhamos com o foco no atendimento extremamente personalizado, levando em consideração a necessidade real do nosso cliente nos mais variados projetos.<br><br>
+
+                                    Nossos produtos são desenvolvidos em conjunto com nossos clientes, fornecedores e parceiros, criando algo único e de qualidade ampliada, surgimos como alternativa diferenciada para clientes que buscam o que há de melhor no mercado, com funcionalidade e segurança. <br><br>
+                                </p>
+                                <a class="btn-default-padrao pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
+quem-somos">saiba mais</a>
+                            </div>
+                        </div>
+                    </div>    
+
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-7 col-md-7 pd-none">
+                                <h2 class="txt-prod-destaque">Assine nossa newsletter</h2>
+                            </div>    
+                            <div class="col-xs-12 col-sm-5 col-md-5 pd-none linha-lado-destaques"></div>    
+                        </div>
+                        <div class="row">
+                            <form class="form-horizontal form-home" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+envia" name="contato">
+                                <!-- <input type="hidden" name="pag" value="<?php echo $this->_tpl_vars['pagina']; ?>
+"> -->
+                               <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_nome.png" alt="nome" title="nome">
+                                        <label for="inputnome" class="col-sm-2 control-label">Nome</label>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputnome">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_email.png" alt="email" title="email">
+                                        <label for="inputEmail" class="col-sm-2 control-label">email</label>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="inputEmail">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-default-padrao pull-right"  onclick="return enviardados();">assinar!</button>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <br><br>
+                            <div class="col-xs-12 col-sm-8 col-md-8 pd-none">
+                                <h2 class="txt-prod-destaque">Faça seu projeto conosco!</h2>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 pd-none linha-lado-destaques"></div>    
+                        </div>
+                        <div class="row">
+                            <img class="img-bandeiras" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/bandeiras.png" alt="Faça seu projeto conosco!" title="Faça seu projeto conosco!">
+                        </div>
+                        <div class="row">
+                            <br><br><br>
+                            <div class="col-xs-12 col-sm-8 col-md-8 pd-none">
+                                <h2 class="txt-prod-destaque txt-conectado-mg">fique conectado conosco!</h2>
+                            </div>    
+                            <div class="col-xs-12 col-sm-4 col-md-4 pd-none bloco-conectado">
+                                <a href="https://www.facebook.com/Amplovidros" target="_blank">
+                                    <img class="img-conectado" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_face.png" alt="fique conectado pelo Facebook" title="fique conectado pelo Facebook">
+                                </a>
+                                <a href="https://twitter.com/#!/amplovidros" target="_blank">
+                                    <img class="img-conectado" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icone_twitter.png" alt="fique conectado pelo Twitter" title="fique conectado pelo Twitter">
+                                </a>
+                                <a href="" target="_blank">
+                                    <img class="img-conectado" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_instagram.png" alt="fique conectado pelo Instagram" title="fique conectado pelo Instagram">
+                                </a>
+                            </div>    
+                        </div>
+                    </div>    
+                </div>
+            </article>
+        </section>
+        <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../inc/footer.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
     </div>
-    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="commom/js/bootstrap.min.js"></script>
-    <!-- vitrine -->
-    <script src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/js/vitrine/owl.carousel.js"></script>
-    <script src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/js/lightbox.js"></script>
-    <!-- vitrine -->
-    <?php echo '
-        <script>
-            $(\'.lupa-mobile\').click(function(){
-                if($(\'.bloco-busca-mobile\').is(":visible")){
-                    $(\'.bloco-busca-mobile\').toggle();
-                }else{
-                    $(\'.bloco-busca-mobile\').toggle();
-               }
-            });
-
-            $(document).ready(function() {
-                $("#owl-demo").owlCarousel({
-                    navigation : true,
-                    slideSpeed : 300,
-                    paginationSpeed : 400,
-                    singleItem : true
-                });
-            });
-        </script>
-    '; ?>
-
 </body>
 </html>
