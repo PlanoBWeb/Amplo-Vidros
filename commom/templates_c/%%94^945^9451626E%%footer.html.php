@@ -1,10 +1,10 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-02 18:06:41
+<?php /* Smarty version 2.6.12, created on 2015-12-08 16:56:12
          compiled from ../inc/footer.html */ ?>
     <footer>
         <article class="rodape">
             <div class="col-xs-12 col-sm-4 col-md-4 pd-none hidden-xs">
                 <a class="logo-rodape" href="<?php echo $this->_tpl_vars['URL']; ?>
-home" alt="AmploVidros"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+home" title="AmploVidros"><img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/logo.png" alt="AmploVidros" title="AmploVidros"></a>
                 <ul>
                         <li class="linha-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
@@ -93,18 +93,20 @@ commom/img/icon_msg.png" title="vendas@amplovidros.com.br" alt="vendas@amplovidr
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 pd-none encapsula-redes-footer">
                     <div class="redes-footer">
-                        <a class="link-redes-f" href="https://www.facebook.com/Amplovidros" target="_blank">
-                            <img src="<?php echo $this->_tpl_vars['URL']; ?>
+                        <div class="bloco-encapsula-redes-f">
+                            <a class="link-redes-f" href="https://www.facebook.com/Amplovidros" target="_blank">
+                                <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon_face_f.png" alt="Facebook" title="Facebook">
-                        </a>
-                        <a class="link-redes-f" href="https://twitter.com/amplovidros" target="_blank">
-                            <img src="<?php echo $this->_tpl_vars['URL']; ?>
+                            </a>
+                            <a class="link-redes-f" href="https://twitter.com/amplovidros" target="_blank">
+                                <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon_twitter.png" alt="Twitter" title="Twitter">
-                        </a>
-                        <a class="link-redes-f" href="" target="_blank">
-                            <img src="<?php echo $this->_tpl_vars['URL']; ?>
+                            </a>
+                            <a class="link-redes-f" href="" target="_blank">
+                                <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon_insta.png" alt="Instagram" title="Instagram">
-                        </a>
+                            </a>
+                        </div>
                         <p class="fique-conectado-f">Fique conectado conosco!</p>
                     </div>
                 </div>          
@@ -137,24 +139,6 @@ commom/js/vitrine/owl.carousel.js"></script>
 commom/js/lightbox.js"></script>
     <!-- vitrine -->
     <script src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/js/funcoes.js"></script>
+    <script src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/js/geral.js"></script>
-    <?php echo '
-        <script>
-            $(\'.lupa-mobile\').click(function(){
-                if($(\'.bloco-busca-mobile\').is(":visible")){
-                    $(\'.bloco-busca-mobile\').toggle();
-                }else{
-                    $(\'.bloco-busca-mobile\').toggle();
-               }
-            });
-
-            $(document).ready(function() {
-                $("#owl-demo").owlCarousel({
-                    navigation : true,
-                    slideSpeed : 300,
-                    paginationSpeed : 400,
-                    singleItem : true
-                });
-            });
-        </script>
-    '; ?>

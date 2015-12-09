@@ -11,11 +11,11 @@
 {/literal}
 <header>
     <div class="bg-topo hidden-xs">
-        <img src="commom/img/bg_topo.jpg" alt="">
+        <img src="{$URL}commom/img/bg_topo.jpg" alt="">
     </div>
     <article class="topo-contato">
         <div class="col-xs-9 col-sm-3 col-md-3 hidden-xs">
-            <a href="{$URL}home" alt="AmploVidros"><img src="{$URL}commom/img/logo.png" alt="AmploVidros" title="AmploVidros"></a>
+            <a href="{$URL}home" title="AmploVidros"><img src="{$URL}commom/img/logo.png" alt="AmploVidros" title="AmploVidros"></a>
         </div>
         <div class="col-sm-6 col-md-6 hidden-xs">
             <div class="pull-left bloco-tel-topo">
@@ -69,16 +69,25 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a class="link-menu-topo link-home" href="{$URL}home"><img src="{$URL}commom/img/icon_casa.jpg" alt="AmploVidros" title="AmploVidros"></a></li>
-                    <li><a class="link-menu-topo" href="#">quem somos</a></li>
+                    <li>
+                        <a class="link-menu-topo link-home" href="{$URL}home">
+                            {if $pagina == "" || $pagina == "home"}
+                                <img src="{$URL}commom/img/icon_casa_ativo.jpg" alt="AmploVidros" title="AmploVidros">
+                            {else}
+                                <img src="{$URL}commom/img/icon_casa.jpg" alt="AmploVidros" title="AmploVidros">
+                            {/if}
+                        </a>
+                    </li>
+                    <li><a class="link-menu-topo {if $pagina == "quem-somos"}link-topo-ativo{/if}" href="{$URL}quem-somos">quem somos</a></li>
                     <li><span  class="barra-separa-menu hidden-xs">|</span></li>
-                    <li><a class="link-menu-topo" href="#">produtos</a></li>
+                    <li><a class="link-menu-topo {if $pagina == "produtos"}link-topo-ativo{/if}" href="{$URL}produtos">produtos</a></li>
                     <li><span  class="barra-separa-menu hidden-xs">|</span></li>
-                    <li><a class="link-menu-topo" href="#">projetos</a></li>
+                    <li><a class="link-menu-topo {if $pagina == "projetos"}link-topo-ativo{/if}" href="{$URL}projetos">projetos</a></li>
                     <li><span  class="barra-separa-menu hidden-xs">|</span></li>
-                    <li><a class="link-menu-topo" href="#">promoção</a></li>
+                    <li><a class="link-menu-topo {if $pagina == "promocao"}link-topo-ativo{/if}" href="{$URL}promocao">promoção</a></li>
                     <li><span  class="barra-separa-menu hidden-xs">|</span></li>
-                    <li><a class="link-menu-topo" href="#">orçamentos</a></li>
+                    <li><a class="link-menu-topo {if $pagina == "orcamentos"}link-topo-ativo{/if}" href="{$URL}orcamentos">orçamentos</a></li>
+                    <li><a class="link-menu-topo visible-xs-block {if $pagina == "fale-conosco"}link-topo-ativo{/if}" href="{$URL}fale-conosco">fale conosco</a></li>
                 </ul>
                 <div class="pull-right hidden-xs">
                     <form class="navbar-form navbar-left" role="search">

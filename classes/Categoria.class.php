@@ -63,11 +63,17 @@ class Categoria
 	{
 		$query = "";
 		
-		if($post['id'])
+		if($post['catNormal'])
 		{
-			$query .= " AND categoria.id = '".$post['id']."' ";
+			$query .= " AND categoria.urlAmigavel = '".$post['catNormal']."'";
 		}
 
+		if($post['catPai'])
+		{
+			$query .= " AND categoria.idPai = '0' AND categoria.ambiente = '0'";	
+		}
+
+		// Select pela url amigavel e recupero id dessa categoria
 		$retorno = array();
 	
 		$sql = "SELECT
@@ -79,6 +85,93 @@ class Categoria
 				ORDER BY
 					titulo ASC
 		";
+
+		// echo "<pre>";
+		// print_r($sql);
+		// die();
+
+		$result = mysql_query($sql);
+		if (!($result))
+		{
+			$retorno[0] = "1";
+			$retorno[1] = "Erro ao executar a query. Classe = " . $this->entidade . " - Metodo = Pesquisar";
+			return $retorno;
+		}
+
+		$i = 0;
+		while( $rows = mysql_fetch_array($result) )
+		{
+			$dados[$i] 					= $rows;
+			$dados[$i]['titulo'] 		= utf8_encode($rows['titulo']);
+
+			$i++;
+		}
+		
+
+		// Se tiver uma categoria entra aqui
+		if($post['catNormal'])
+			{
+
+			$tituloCat = $dados[0]['titulo'];
+			// Com o id da urlAmigavel faço select trazendo os resultados
+			$sql = "SELECT
+						*
+					FROM  
+						" . $this->entidade . "
+					WHERE
+						1 = 1 AND categoria.idPai = ".$dados[0]['id']."
+			";
+		
+			$result = mysql_query($sql);
+			if (!($result))
+			{
+				$retorno[0] = "1";
+				$retorno[1] = "Erro ao executar a query. Classe = " . $this->entidade . " - Metodo = Pesquisar";
+				return $retorno;
+			}
+			
+			$i = 0;
+			while( $rows = mysql_fetch_array($result) )
+			{
+				$dados[$i] 					= $rows;
+				$dados[$i]['titulo'] 		= utf8_encode($rows['titulo']);
+				$dados[$i]['tituloCat']		= utf8_encode($tituloCat);
+				$dados[$i]['teste']		= utf8_encode('teste');
+				$i++;
+			}
+		}
+
+		// echo "<pre>";
+		// print_r($dados);
+		// die();
+		
+		$retorno[0] = 0;
+		$retorno[1] = $dados;
+		return $retorno;
+	}
+
+	function PesquisarCategoria($post)
+	{
+		$query = "";
+		
+		// $query .= " AND categoria.idPai = categoria.id";	
+		//$query .= " AND categoria.id = '1' AND categoria.idPai = '1' ";	
+		
+		$retorno = array();
+	
+		$sql = "SELECT
+					*
+				FROM  
+					" . $this->entidade . "
+				WHERE
+					1 = 1 ".$query."
+		";
+		/*ORDER BY
+					idPai, titulo ASC*/
+		// echo "<pre>";
+		// print_r($sql);
+		// die();
+
 		$result = mysql_query($sql);
 		if (!($result))
 		{
@@ -91,8 +184,7 @@ class Categoria
 		while( $rows = mysql_fetch_array($result) )
 		{
 			$dados[$i] 					= $rows;
-			$dados[$i]['categoria'] 		= utf8_encode($rows['categoria']);
-			$dados[$i]['titulo'] 			= utf8_encode($rows['titulo']);
+			$dados[$i]['titulo'] 		= utf8_encode($rows['titulo']);
 
 			$i++;
 		}

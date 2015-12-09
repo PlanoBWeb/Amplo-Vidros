@@ -30,7 +30,7 @@ if( $_SERVER['SERVER_NAME'] == 'planobweb' || $_SERVER['SERVER_NAME'] == '192.16
 	define("db_host", 'localhost');
 	define("db_user", 'root');
 	define("db_pass", '');
-	define("db_base", 'planobweb_extranet');
+	define("db_base", 'amplovidros');
 	define("PATH_SERVIDOR","C:/wamp/www/clientes/AmploVidros/Web/");
 	define("PASTAPROJETO", "clientes/AmploVidros/Web/");
 	if ($_SERVER['SERVER_NAME'] == '192.168.0.105') {

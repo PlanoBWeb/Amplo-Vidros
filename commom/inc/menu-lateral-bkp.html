@@ -1,0 +1,69 @@
+{if $pagina == produtos || $pagina == produto}
+    <div class="col-xs-12 col-sm-3 col-md-3 mg-bt-20 pd-lf-none hidden-xs">
+        <ul class="menu-lateral">
+            <ul>
+            {assign var="nmTipo" value=$nmTipo|default:""}
+            {section name=i loop=$dadosCatMenu}  
+                </li>
+                {if $nmTipo <> $dadosCatMenu[i].titulo[0] && $dadosCatMenu[i].idPai[0] == 0}
+                    </ul> 
+                    <li class="txt-interna abre-sub-lateral">
+                    {$dadosCatMenu[i].titulo}
+                    <img class="pull-right" src="{$URL}commom/img/seta.png" alt="Abrir menu" title="Abrir menu"> 
+                    <ul class="subMenu-lateral">
+                {/if}
+                {if $dadosCatMenu[i].idPai[0] <>  0}
+                    <li class="txt-interna"><a href="{$URL}produtos/{$dadosCatMenu[i].urlAmigavel}">{$dadosCatMenu[i].titulo}</a></li>
+                {/if}
+                {assign var="nmTipo" value=$dadosCatMenu[i].titulo}
+            {/section}
+            <!--
+            <li class="txt-interna abre-sub-lateral">espelhos <img class="pull-right" src="{$URL}commom/img/seta.png" alt="Abrir menu" title="Abrir menu">
+                <ul class="subMenu-lateral">
+                    <li class="txt-interna"><a href="{$URL}produto">espelhos Interno</a></li>
+                    <li class="txt-interna"><a href="{$URL}produto">espelhos Interno</a></li>
+                    <li class="txt-interna"><a href="{$URL}produto">espelhos Interno</a></li>
+                    <li class="txt-interna txt-ambiente">AMBIENTE</li>
+                    <li class="txt-interna"><a href="{$URL}produto">espelhos Interno</a></li>
+                    <li class="txt-interna"><a href="{$URL}produto">espelhos Interno</a></li>
+                </ul>
+            </li> -->
+        </ul>
+    </div>
+    <!-- Mobile -->
+    <form action="{$URL}" class="menu-lateral-mob visible-xs-block">
+        <div class="form-group">
+            <div class="col-sm-9 mg-lf-5-">
+                <select class="form-control" id="inputOnde" name="onde">
+                    <option>Escolha um produto</option>
+                    <option>produto</option>
+                </select>
+            </div>
+        </div>
+        <br>
+    </form>
+    <!-- Mobile -->
+{else}
+    <div class="col-xs-12 col-sm-3 col-md-3 mg-bt-20 pd-lf-none hidden-xs">
+        <ul class="menu-lateral">
+            <li class="txt-interna abre-sub-lateral"><a href="{$URL}projeto">Hotel Enseada</a></li>
+            <li class="txt-interna abre-sub-lateral"><a href="{$URL}projeto">Residencial Arujá</a></li>
+            <li class="txt-interna abre-sub-lateral"><a href="{$URL}projeto">Academia Nível A</a></li>
+            <li class="txt-interna abre-sub-lateral"><a href="{$URL}projeto">Academia Cia Água</a></li>
+            <li class="txt-interna abre-sub-lateral"><a href="{$URL}projeto">Clínica bem viver</a></li>
+        </ul>
+    </div>
+    <!-- Mobile -->
+    <form action="{$URL}" class="menu-lateral-mob visible-xs-block">
+        <div class="form-group">
+            <div class="col-sm-9 mg-lf-5-">
+                <select class="form-control" id="inputOnde" name="onde">
+                    <option>Escolha um projeto</option>
+                    <option>projeto</option>
+                </select>
+            </div>
+        </div>
+        <br>
+    </form>
+    <!-- Mobile -->
+{/if}

@@ -1,4 +1,191 @@
+    // Função para vitirne projetos
+    $(document).ready(function() {
+        $('.lightBox-menor').on('click', function(event) {
+            event.preventDefault();
+            var big_image_href = $(this).attr('href');
+            
+            $('.img-inicial').remove();
+            $('.carrega-lightBox-menor').fadeIn();
+            $('.carrega-lightBox-menor').append('<img class="img-inicial" src="'+big_image_href+'">');
+        });
+    });
 
+    $(document).ready(function() {
+
+        var current = '.mtlsr-images-for-lightbox ul li.current';
+        //Função para verificar a posição atual da imagem e remover as setas(prev e next) conforme necessário
+        function check_image_position(){                
+            if ($(current).is(':last-child')) {
+                $('.next').hide();
+                $('.prev').show();
+            }else if ($(current).is(':first-child')) {
+                $('.next').show();
+                $('.prev').hide();
+            }else{
+                $('.next, .prev').show();
+            }
+        }           
+        
+        $('.mtlsr-images-for-lightbox ul li').on('click', 'a', function(event) {
+            event.preventDefault();
+            
+            var qualLightBox = $(this).data("item-id");
+            // projeto-com-1
+
+            var big_image_href = $(this).attr('href');
+            
+            // $(this).parent().addClass('current');
+            if (qualLightBox == "projeto-com-1") {
+                $('.mtlsr-lightbox-1').fadeIn();  
+            }else if(qualLightBox == "projeto-com-2"){
+                $('.mtlsr-lightbox-2').fadeIn(); 
+            }else if(qualLightBox == "projeto-com-3"){
+                $('.mtlsr-lightbox-3').fadeIn(); 
+            }else if(qualLightBox == "projeto-com-4"){
+                $('.mtlsr-lightbox-4').fadeIn(); 
+            }else if(qualLightBox == "projeto-com-5"){
+                $('.mtlsr-lightbox-5').fadeIn(); 
+            }else if(qualLightBox == "projeto-com-6"){
+                $('.mtlsr-lightbox-6').fadeIn(); 
+            }
+
+            $(this).parent('li').addClass('current');
+            //$('.mtlsr-lightbox').fadeIn();
+            $('.mtlsr-lightbox').append('<img class="image-in-lightbox" src="'+big_image_href+'" alt=""></div>');
+            
+            check_image_position();
+        });
+        //Fechar
+        $('.mtlsr-lightbox').on('click', '.close', function(event) {
+            $('.mtlsr-lightbox').fadeOut();
+            $('.mtlsr-lightbox .image-in-lightbox').remove();
+            $(current).removeClass('current');
+        });
+        //Função Next e Prev
+        $('.mtlsr-lightbox a').on('click', function(e){             
+            if($(this).attr('class')=='next'){
+                var big_image_href = $(current).next().find('a').attr('href');                
+            
+                $(current).next().addClass('current');
+                $(current).prev().removeClass('current');
+                
+            }else if($(this).attr('class')=='prev'){
+                var big_image_href = $(current).prev().find('a').attr('href');
+            
+                $(current).prev().addClass('current');
+                $(current).next().removeClass('current');
+            }
+            check_image_position();
+                
+            $('.mtlsr-lightbox .image-in-lightbox').remove();
+            $('.mtlsr-lightbox').append('<img class="image-in-lightbox" src="'+big_image_href+'" alt=""></div>');
+        });
+        
+    });
+
+    // Menu lateral
+    $('.abre-sub-lateral').click(function(){
+        // event.preventDefault();
+        menu = $(this).children('.subMenu-lateral');
+        link = $(this).parent('.linha-menu-produto');
+
+        if($('.subMenu-lateral').is(':visible')){
+            $('.subMenu-lateral').hide();   
+            // $(link).addClass('menu-produto-icon'); 
+            // $(link).removeClass('menu-produto-icon-ativo'); 
+        }else{
+            $(menu).toggle();       
+
+        }
+    });
+
+    // Valida Newslleter
+    function validaNewsletter()
+    {
+        d = document.newsletter;
+
+        if(trim(d.nome_news.value)=="")
+        {
+            alert("O campo NOME deve ser preenchido!");
+            d.nome_news.focus();
+            return false;
+        }
+        
+        if(trim(d.email_news.value)=="")
+        {
+            alert("O campo E-MAIL deve ser preenchido!");
+            d.email_news.focus();
+            return false;
+        }
+        
+        if(!email_news(d.email_news,'')) return false;
+        
+        d.submit();
+    }
+
+    // Valida Formulário
+    function enviardados()
+    {
+        d = document.contato;
+
+        if(trim(d.nome.value)=="")
+        {
+            alert("O campo NOME deve ser preenchido!");
+            d.nome.focus();
+            return false;
+        }
+        
+        if(trim(d.email.value)=="")
+        {
+            alert("O campo E-MAIL deve ser preenchido!");
+            d.email.focus();
+            return false;
+        }
+        
+        if(!email(d.email,'')) return false;
+
+        if(trim(d.telefone.value)=="")
+        {
+            alert("O campo TELEFONE deve ser preenchido!");
+            d.telefone.focus();
+            return false;
+        }
+        
+        if(trim(d.msg.value)=="")
+        {
+            alert("O campo MENSAGEM deve ser preenchido!");
+            d.msg.focus();
+            return false;
+        }
+
+        if(trim(d.onde.value)=="" || trim(d.onde.value)== "Selecione")
+        {
+            alert("O campo ONDE NOS ENCONTROU deve ser preenchido!");
+            d.onde.focus();
+            return false;
+        }
+        
+        d.submit();
+    }
+
+    // Busca mobile
+    $('.lupa-mobile').click(function(){
+        if($('.bloco-busca-mobile').is(":visible")){
+            $('.bloco-busca-mobile').toggle();
+        }else{
+            $('.bloco-busca-mobile').toggle();
+       }
+    });
+
+    // Vitrine Banner
+    $(document).ready(function() {
+        $("#owl-demo").owlCarousel({
+            navigation : true,
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem : true
+        });
+    });
 
     // Vitrine Produtos
     $(document).ready(function() {

@@ -1,5 +1,4 @@
 <?php
-	
 	include_once "configs/config.php";
 
 	$url = $_SERVER['REQUEST_URI'];
@@ -7,15 +6,17 @@
 	$url = str_replace(PASTAPROJETO, "", $url);
 	$url = explode('/', $url);
 
-	$permissao  = array('home', 'index', 'erro', 'fale-conosco', 'envia', 'obrigado-contato', 'obrigado-news', 'obrigado-orcamento');
+	$permissao  = array('home', 'envia', 'quem-somos', 'index', 'erro', 'produtos', 'produto', 'projetos', 'projeto', 'promocao', 'orcamentos', 'resultado-busca', 'fale-conosco', 'obrigado-contato', 'obrigado-newsletter', 'obrigado-orcamento');
 
-	if ($url[0] == "" || $url[0] == "index") {
+	$url['pagina'] = $url[0];
+
+	if ($url['pagina'] == "" || $url['pagina'] == "index") {
 		include "home.php";
-	}elseif ($url[0] == "admin") {
+	}elseif ($url['pagina'] == "admin") {
 		include "admin/index.php";
 	}else{
-		if (in_array($url[0], $permissao)) {
-			include $url[0].".php";
+		if (in_array($url['pagina'], $permissao)) {
+			include $url['pagina'].".php";
 		}else{
 			include "erro.php";
 		}

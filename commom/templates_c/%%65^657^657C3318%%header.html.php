@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-01 17:11:47
+<?php /* Smarty version 2.6.12, created on 2015-12-09 13:18:56
          compiled from ../inc/header.html */ ?>
 <div id="fb-root"></div>
 <?php echo '
@@ -14,12 +14,13 @@
 
 <header>
     <div class="bg-topo hidden-xs">
-        <img src="commom/img/bg_topo.jpg" alt="">
+        <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/bg_topo.jpg" alt="">
     </div>
     <article class="topo-contato">
         <div class="col-xs-9 col-sm-3 col-md-3 hidden-xs">
             <a href="<?php echo $this->_tpl_vars['URL']; ?>
-home" alt="AmploVidros"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+home" title="AmploVidros"><img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/logo.png" alt="AmploVidros" title="AmploVidros"></a>
         </div>
         <div class="col-sm-6 col-md-6 hidden-xs">
@@ -81,18 +82,34 @@ commom/img/icon_busca.jpg" alt="Buscar" title="Buscar">
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a class="link-menu-topo link-home" href="<?php echo $this->_tpl_vars['URL']; ?>
-home"><img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/icon_casa.jpg" alt="AmploVidros" title="AmploVidros"></a></li>
-                    <li><a class="link-menu-topo" href="#">quem somos</a></li>
+                    <li>
+                        <a class="link-menu-topo link-home" href="<?php echo $this->_tpl_vars['URL']; ?>
+home">
+                            <?php if ($this->_tpl_vars['pagina'] == "" || $this->_tpl_vars['pagina'] == 'home'): ?>
+                                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_casa_ativo.jpg" alt="AmploVidros" title="AmploVidros">
+                            <?php else: ?>
+                                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_casa.jpg" alt="AmploVidros" title="AmploVidros">
+                            <?php endif; ?>
+                        </a>
+                    </li>
+                    <li><a class="link-menu-topo <?php if ($this->_tpl_vars['pagina'] == "quem-somos"): ?>link-topo-ativo<?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+quem-somos">quem somos</a></li>
                     <li><span  class="barra-separa-menu hidden-xs">|</span></li>
-                    <li><a class="link-menu-topo" href="#">produtos</a></li>
+                    <li><a class="link-menu-topo <?php if ($this->_tpl_vars['pagina'] == 'produtos'): ?>link-topo-ativo<?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+produtos">produtos</a></li>
                     <li><span  class="barra-separa-menu hidden-xs">|</span></li>
-                    <li><a class="link-menu-topo" href="#">projetos</a></li>
+                    <li><a class="link-menu-topo <?php if ($this->_tpl_vars['pagina'] == 'projetos'): ?>link-topo-ativo<?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+projetos">projetos</a></li>
                     <li><span  class="barra-separa-menu hidden-xs">|</span></li>
-                    <li><a class="link-menu-topo" href="#">promoção</a></li>
+                    <li><a class="link-menu-topo <?php if ($this->_tpl_vars['pagina'] == 'promocao'): ?>link-topo-ativo<?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+promocao">promoção</a></li>
                     <li><span  class="barra-separa-menu hidden-xs">|</span></li>
-                    <li><a class="link-menu-topo" href="#">orçamentos</a></li>
+                    <li><a class="link-menu-topo <?php if ($this->_tpl_vars['pagina'] == 'orcamentos'): ?>link-topo-ativo<?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+orcamentos">orçamentos</a></li>
+                    <li><a class="link-menu-topo visible-xs-block <?php if ($this->_tpl_vars['pagina'] == "fale-conosco"): ?>link-topo-ativo<?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+fale-conosco">fale conosco</a></li>
                 </ul>
                 <div class="pull-right hidden-xs">
                     <form class="navbar-form navbar-left" role="search">

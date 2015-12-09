@@ -3,9 +3,9 @@
     include_once "configs/config.php";
     include_once "url.php";
 
-    $smarty->assign("titulo", utf8_encode(TITULO));
-    $smarty->assign("nome", $_SESSION['nome']);
-    $smarty->assign("perfil", $_SESSION['perfil']);
+    $smarty->assign("pagina", $pagina);
+    $smarty->assign("URL", URL);
+    $smarty->assign("breadcrumb", "Home");
     $smarty->display("index.html");
 
 ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-02 17:11:32
+<?php /* Smarty version 2.6.12, created on 2015-12-09 10:06:35
          compiled from index.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -52,8 +52,8 @@ unset($_smarty_tpl_vars);
                             <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/banner.jpg" alt="banner" title="banner">
                         </div>
-                        <div class="item"><img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/banner.jpg" alt="banner" title="banner"></div>
+                        <!-- <div class="item"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/banner.jpg" alt="banner" title="banner"></div> -->
                     </div>
                 </div>
             </div>
@@ -246,9 +246,10 @@ quem-somos">saiba mais</a>
                         </div>
                         <div class="row">
                             <form class="form-horizontal form-home" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
-envia" name="contato">
+envia" name="newsletter">
                                 <!-- <input type="hidden" name="pag" value="<?php echo $this->_tpl_vars['pagina']; ?>
 "> -->
+                                <input type="hidden" name="newsletterEnvia" value="newsletter">
                                <div class="form-group">
                                     <div class="col-sm-2">
                                         <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
@@ -256,7 +257,7 @@ commom/img/icon_nome.png" alt="nome" title="nome">
                                         <label for="inputnome" class="col-sm-2 control-label">Nome</label>
                                     </div>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputnome">
+                                        <input type="text" name="nome_news" class="form-control" id="inputnome">
                                     </div>
                                 </div>
 
@@ -267,10 +268,10 @@ commom/img/icon_email.png" alt="email" title="email">
                                         <label for="inputEmail" class="col-sm-2 control-label">email</label>
                                     </div>
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputEmail">
+                                        <input type="email" name="email_news" class="form-control" id="inputEmail">
                                     </div>
                                 </div>
-                                <button type="submit" class="btn-default-padrao pull-right"  onclick="return enviardados();">assinar!</button>
+                                <button type="submit" class="btn-default-padrao pull-right"  onclick="return validaNewsletter();">assinar!</button>
                             </form>
                         </div>
                         <div class="row">
