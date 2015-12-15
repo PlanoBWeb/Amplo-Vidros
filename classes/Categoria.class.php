@@ -112,7 +112,8 @@ class Categoria
 		if($post['catNormal'])
 			{
 
-			$tituloCat = $dados[0]['titulo'];
+			$tituloCat 		= $dados[0]['titulo'];
+			$urlAmigaCat 	= $dados[0]['urlAmigavel'];
 			// Com o id da urlAmigavel faço select trazendo os resultados
 			$sql = "SELECT
 						*
@@ -121,7 +122,7 @@ class Categoria
 					WHERE
 						1 = 1 AND categoria.idPai = ".$dados[0]['id']."
 			";
-		
+
 			$result = mysql_query($sql);
 			if (!($result))
 			{
@@ -136,10 +137,12 @@ class Categoria
 				$dados[$i] 					= $rows;
 				$dados[$i]['titulo'] 		= utf8_encode($rows['titulo']);
 				$dados[$i]['tituloCat']		= utf8_encode($tituloCat);
-				$dados[$i]['teste']		= utf8_encode('teste');
+				$dados[$i]['urlAmigaCat']	= $urlAmigaCat;
 				$i++;
 			}
 		}
+		
+
 
 		// echo "<pre>";
 		// print_r($dados);

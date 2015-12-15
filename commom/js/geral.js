@@ -47,6 +47,8 @@
                 $('.mtlsr-lightbox-5').fadeIn(); 
             }else if(qualLightBox == "projeto-com-6"){
                 $('.mtlsr-lightbox-6').fadeIn(); 
+            }else if(qualLightBox == "projeto-com-0"){
+                $('.mtlsr-lightbox-0').fadeIn(); 
             }
 
             $(this).parent('li').addClass('current');

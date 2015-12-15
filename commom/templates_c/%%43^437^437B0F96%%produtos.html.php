@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-09 15:03:22
+<?php /* Smarty version 2.6.12, created on 2015-12-09 15:19:18
          compiled from produtos.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -91,8 +91,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 produto" class="txt-interna"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 </a></h2>
                                         <div class="row">
-                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
-produtos/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
+                                            <a href="<?php echo $this->_tpl_vars['URL'];  if ($this->_tpl_vars['dados'][0]['tituloCat']): ?>produto/<?php echo $this->_tpl_vars['dados'][0]['urlAmigaCat'];  else: ?>produtos<?php endif; ?>/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
 " class="btn-default-padrao">Ver Mais</a>
                                         </div>
                                     </div>
@@ -145,8 +144,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 produto" class="txt-interna"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 </a></h2>
                                             <div class="row">
-                                                <a href="<?php echo $this->_tpl_vars['URL']; ?>
-produtos/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
+                                                <a href="<?php echo $this->_tpl_vars['URL'];  if ($this->_tpl_vars['dados'][0]['tituloCat']): ?>produto/<?php echo $this->_tpl_vars['dados'][0]['urlAmigaCat'];  else: ?>produtos<?php endif; ?>/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
 " class="btn-default-padrao">Ver Mais</a>
                                             </div>
                                         </div>

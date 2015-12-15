@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-07 12:11:28
+<?php /* Smarty version 2.6.12, created on 2015-12-15 13:33:46
          compiled from projeto.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -52,10 +52,13 @@ unset($_smarty_tpl_vars);
  ?>
                     <div class="col-xs-12 col-sm-9 col-md-9">
 
-                        <h1 class="titulo-interna">Academia nível A</h1>
+                        <h1 class="titulo-interna"><?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
+</h1>
                         
                         <div class="row">
-                            <p class="projeto-por">Elaboração: João Paulo  |  Designer: Amanda Soares</p>
+                            <p class="projeto-por"><?php if ($this->_tpl_vars['dados'][0]['elaboracao']): ?> Elaboração: <?php echo $this->_tpl_vars['dados'][0]['elaboracao']; ?>
+ <?php endif; ?>  | <?php if ($this->_tpl_vars['dados'][0]['designer']): ?> Designer: <?php echo $this->_tpl_vars['dados'][0]['designer']; ?>
+ <?php endif; ?></p>
                         </div>
 
                         <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
@@ -64,39 +67,44 @@ unset($_smarty_tpl_vars);
                         <div class="row pd-bt-60">
                             <div class="col-xs-12 col-sm-6 col-md-6 pd-lf-none mg-bt-20">
                                 <div class="carrega-lightBox-menor"></div>
-                                <img class="img-inicial" src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g2.jpg" alt="Academia nível A" title="Academia nível A">
+                                <img class="img-inicial" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][0]['galeriaImg']; ?>
+" alt="<?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
+" title="<?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
+">
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6 pd-lf-none">
-                                <a class="lightBox-menor" href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g3.jpg">
-                                    <img src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="Academia nível A" title="Academia nível A">
-                                </a>
+                                <?php unset($this->_sections['i']);
+$this->_sections['i']['name'] = 'i';
+$this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['dados']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['i']['show'] = true;
+$this->_sections['i']['max'] = $this->_sections['i']['loop'];
+$this->_sections['i']['step'] = 1;
+$this->_sections['i']['start'] = $this->_sections['i']['step'] > 0 ? 0 : $this->_sections['i']['loop']-1;
+if ($this->_sections['i']['show']) {
+    $this->_sections['i']['total'] = $this->_sections['i']['loop'];
+    if ($this->_sections['i']['total'] == 0)
+        $this->_sections['i']['show'] = false;
+} else
+    $this->_sections['i']['total'] = 0;
+if ($this->_sections['i']['show']):
 
-                                <a class="lightBox-menor" href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g4.jpg">
-                                    <img src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="Academia nível A" title="Academia nível A">
-                                </a>
-
-                                <a class="lightBox-menor" href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g5.jpg">
-                                    <img src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="Academia nível A" title="Academia nível A">
-                                </a>
-
-                                <a class="lightBox-menor" href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g6.jpg">
-                                    <img src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="Academia nível A" title="Academia nível A">
-                                </a>
-
-                                <a class="lightBox-menor" href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g7.jpg">
-                                    <img src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="Academia nível A" title="Academia nível A">
-                                </a>
+            for ($this->_sections['i']['index'] = $this->_sections['i']['start'], $this->_sections['i']['iteration'] = 1;
+                 $this->_sections['i']['iteration'] <= $this->_sections['i']['total'];
+                 $this->_sections['i']['index'] += $this->_sections['i']['step'], $this->_sections['i']['iteration']++):
+$this->_sections['i']['rownum'] = $this->_sections['i']['iteration'];
+$this->_sections['i']['index_prev'] = $this->_sections['i']['index'] - $this->_sections['i']['step'];
+$this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_sections['i']['step'];
+$this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
+$this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
+?> 
+                                     <a class="lightBox-menor" href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['galeriaImg']; ?>
+">
+                                        <img src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['galeriaImgThumb']; ?>
+" alt="<?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
+" title="<?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
+">
+                                    </a>
+                                <?php endfor; endif; ?>
                             </div>
                         </div>
                         <!-- Projeto -->

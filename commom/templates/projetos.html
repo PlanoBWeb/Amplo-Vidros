@@ -38,41 +38,23 @@
                         <!-- Tipos 1 -->
                         <div class="row">
                             <br>
-                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
-                                <img class="img-produtos-tipos" src="{$URL}commom/img/produto1.jpg" alt="projeto" title="projeto">
-                                <h2><a href="{$URL}projeto" class="txt-interna">Hotel Enseada</a></h2>
-                                <div class="row">
-                                    <a href="{$URL}projeto" class="btn-default-padrao">Ver Mais</a>
+                            {section name=i loop=$dados}
+                                <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                    <img class="img-produtos-tipos" src="{$URL}{$dados[i].caminhoThumbnail}" alt="{$dados[i].texto}" title="{$dados[i].texto}">
+                                    <h2><a href="{$URL}projeto/{$dados[i].urlAmigavel}" class="txt-interna">{$dados[i].titulo}</a></h2>
+                                    <div class="row">
+                                        <a href="{$URL}projeto/{$dados[i].urlAmigavel}" class="btn-default-padrao">Ver Mais</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
-                                <img class="img-produtos-tipos" src="{$URL}commom/img/produto1.jpg" alt="projeto" title="projeto">
-                                <h2><a href="{$URL}projeto" class="txt-interna">Residencial Arujá</a></h2>
-                                <div class="row">
-                                    <a href="{$URL}projeto" class="btn-default-padrao">Ver Mais</a>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
-                                <img class="img-produtos-tipos" src="{$URL}commom/img/produto1.jpg" alt="projeto" title="projeto">
-                                <h2><a href="{$URL}projeto" class="txt-interna">Academia Nível A</a></h2>
-                                <div class="row">
-                                    <a href="{$URL}projeto" class="btn-default-padrao">Ver Mais</a>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
-                                <img class="img-produtos-tipos" src="{$URL}commom/img/produto1.jpg" alt="projeto" title="projeto">
-                                <h2><a href="{$URL}projeto" class="txt-interna">Academia Cia Água</a></h2>
-                                <div class="row">
-                                    <a href="{$URL}projeto" class="btn-default-padrao">Ver Mais</a>
-                                </div>
-                            </div>
+                            {/section}
+                            <!-- 
                             <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
                                 <img class="img-produtos-tipos" src="{$URL}commom/img/produto1.jpg" alt="projeto" title="projeto">
                                 <h2><a href="{$URL}projeto" class="txt-interna">Clínica bem viver</a></h2>
                                 <div class="row">
                                     <a href="{$URL}projeto" class="btn-default-padrao">Ver Mais</a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <!-- Tipos 1 -->
 

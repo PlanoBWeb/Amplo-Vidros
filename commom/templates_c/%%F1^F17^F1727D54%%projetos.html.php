@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-07 12:06:20
+<?php /* Smarty version 2.6.12, created on 2015-12-15 13:20:23
          compiled from projetos.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -58,46 +58,47 @@ unset($_smarty_tpl_vars);
                         <!-- Tipos 1 -->
                         <div class="row">
                             <br>
-                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
-                                <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/produto1.jpg" alt="projeto" title="projeto">
-                                <h2><a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="txt-interna">Hotel Enseada</a></h2>
-                                <div class="row">
-                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="btn-default-padrao">Ver Mais</a>
+                            <?php unset($this->_sections['i']);
+$this->_sections['i']['name'] = 'i';
+$this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['dados']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['i']['show'] = true;
+$this->_sections['i']['max'] = $this->_sections['i']['loop'];
+$this->_sections['i']['step'] = 1;
+$this->_sections['i']['start'] = $this->_sections['i']['step'] > 0 ? 0 : $this->_sections['i']['loop']-1;
+if ($this->_sections['i']['show']) {
+    $this->_sections['i']['total'] = $this->_sections['i']['loop'];
+    if ($this->_sections['i']['total'] == 0)
+        $this->_sections['i']['show'] = false;
+} else
+    $this->_sections['i']['total'] = 0;
+if ($this->_sections['i']['show']):
+
+            for ($this->_sections['i']['index'] = $this->_sections['i']['start'], $this->_sections['i']['iteration'] = 1;
+                 $this->_sections['i']['iteration'] <= $this->_sections['i']['total'];
+                 $this->_sections['i']['index'] += $this->_sections['i']['step'], $this->_sections['i']['iteration']++):
+$this->_sections['i']['rownum'] = $this->_sections['i']['iteration'];
+$this->_sections['i']['index_prev'] = $this->_sections['i']['index'] - $this->_sections['i']['step'];
+$this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_sections['i']['step'];
+$this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
+$this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
+?>
+                                <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoThumbnail']; ?>
+" alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['texto']; ?>
+" title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['texto']; ?>
+">
+                                    <h2><a href="<?php echo $this->_tpl_vars['URL']; ?>
+projeto/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
+" class="txt-interna"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
+</a></h2>
+                                    <div class="row">
+                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
+projeto/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
+" class="btn-default-padrao">Ver Mais</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
-                                <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/produto1.jpg" alt="projeto" title="projeto">
-                                <h2><a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="txt-interna">Residencial Arujá</a></h2>
-                                <div class="row">
-                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="btn-default-padrao">Ver Mais</a>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
-                                <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/produto1.jpg" alt="projeto" title="projeto">
-                                <h2><a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="txt-interna">Academia Nível A</a></h2>
-                                <div class="row">
-                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="btn-default-padrao">Ver Mais</a>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
-                                <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/produto1.jpg" alt="projeto" title="projeto">
-                                <h2><a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="txt-interna">Academia Cia Água</a></h2>
-                                <div class="row">
-                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="btn-default-padrao">Ver Mais</a>
-                                </div>
-                            </div>
+                            <?php endfor; endif; ?>
+                            <!-- 
                             <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
                                 <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/produto1.jpg" alt="projeto" title="projeto">
@@ -107,7 +108,7 @@ projeto" class="txt-interna">Clínica bem viver</a></h2>
                                     <a href="<?php echo $this->_tpl_vars['URL']; ?>
 projeto" class="btn-default-padrao">Ver Mais</a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <!-- Tipos 1 -->
 

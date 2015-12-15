@@ -32,10 +32,10 @@
                     {include file="../inc/menu-lateral.html"}
                     <div class="col-xs-12 col-sm-9 col-md-9">
 
-                        <h1 class="titulo-interna">Academia nível A</h1>
+                        <h1 class="titulo-interna">{$dados[0].titulo}</h1>
                         
                         <div class="row">
-                            <p class="projeto-por">Elaboração: João Paulo  |  Designer: Amanda Soares</p>
+                            <p class="projeto-por">{if $dados[0].elaboracao} Elaboração: {$dados[0].elaboracao} {/if}  | {if $dados[0].designer} Designer: {$dados[0].designer} {/if}</p>
                         </div>
 
                         <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
@@ -44,28 +44,14 @@
                         <div class="row pd-bt-60">
                             <div class="col-xs-12 col-sm-6 col-md-6 pd-lf-none mg-bt-20">
                                 <div class="carrega-lightBox-menor"></div>
-                                <img class="img-inicial" src="{$URL}upload/projetos/projeto_g2.jpg" alt="Academia nível A" title="Academia nível A">
+                                <img class="img-inicial" src="{$URL}{$dados[0].galeriaImg}" alt="{$dados[0].titulo}" title="{$dados[0].titulo}">
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6 pd-lf-none">
-                                <a class="lightBox-menor" href="{$URL}upload/projetos/projeto_g3.jpg">
-                                    <img src="{$URL}upload/projetos/projeto.jpg" alt="Academia nível A" title="Academia nível A">
-                                </a>
-
-                                <a class="lightBox-menor" href="{$URL}upload/projetos/projeto_g4.jpg">
-                                    <img src="{$URL}upload/projetos/projeto.jpg" alt="Academia nível A" title="Academia nível A">
-                                </a>
-
-                                <a class="lightBox-menor" href="{$URL}upload/projetos/projeto_g5.jpg">
-                                    <img src="{$URL}upload/projetos/projeto.jpg" alt="Academia nível A" title="Academia nível A">
-                                </a>
-
-                                <a class="lightBox-menor" href="{$URL}upload/projetos/projeto_g6.jpg">
-                                    <img src="{$URL}upload/projetos/projeto.jpg" alt="Academia nível A" title="Academia nível A">
-                                </a>
-
-                                <a class="lightBox-menor" href="{$URL}upload/projetos/projeto_g7.jpg">
-                                    <img src="{$URL}upload/projetos/projeto.jpg" alt="Academia nível A" title="Academia nível A">
-                                </a>
+                                {section name=i loop=$dados} 
+                                     <a class="lightBox-menor" href="{$URL}{$dados[i].galeriaImg}">
+                                        <img src="{$URL}{$dados[i].galeriaImgThumb}" alt="{$dados[0].titulo}" title="{$dados[0].titulo}">
+                                    </a>
+                                {/section}
                             </div>
                         </div>
                         <!-- Projeto -->

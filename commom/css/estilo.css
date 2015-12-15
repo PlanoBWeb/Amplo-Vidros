@@ -812,7 +812,7 @@ footer{
 
 .lupa-produto{
     position:   absolute;
-    bottom:     60px;
+    bottom:     67px;
     right:      20px;
 }
 
@@ -943,6 +943,11 @@ footer{
 .next, .prev{top:50%}
 .next{right:20px;}
 .prev{left:20px;}
+
+.projetos-lightbox{
+    display:    table;
+    width:      100%;
+}
 
 @media all and (min-width: 768px) {
     .navbar-default{

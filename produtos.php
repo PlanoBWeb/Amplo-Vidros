@@ -2,10 +2,8 @@
 
     include_once "configs/config.php";
     include_once "classes/Categoria.class.php";
-    include_once "classes/Produto.class.php";
     include_once "url.php";
     $class 		= new Categoria();
-    $classProd 	= new Produto();
 
     // Menu lateral
 	$retornoMenuLat	= $class->PesquisarCategoria(null);
@@ -16,8 +14,6 @@
 		$smarty->display("mensagem.html");
 		exit();
 	}
-
-
 
     // Passo parametro 1 para trazer somente as categorias pai
     if ($url[1] == "") {
@@ -33,7 +29,6 @@
 		$smarty->display("mensagem.html");
 		exit();
 	}
-
 	$totalRetorno = count($retorno[1]);
 	for ($i=0; $i < $totalRetorno; $i++) { 
 		$existeAmbiente = $retorno[1][$i]['ambiente'];
@@ -42,9 +37,6 @@
 		}
 	}
 
-	// echo "<pre>";
-	// print_r($retorno[1]);
-	// die();
 	$smarty->assign("existeAmbiente", $existeAmbiente);
     $smarty->assign("dados", $retorno[1]);
     $smarty->assign("dadosCatMenu", $retornoMenuLat[1]);

@@ -43,7 +43,7 @@
                                         <img class="img-produtos-tipos" src="{$URL}{$dados[i].caminhoImagem}" alt="{$dados[i].texto}" title="{$dados[i].texto}">
                                         <h2><a href="{$URL}produto" class="txt-interna">{$dados[i].titulo}</a></h2>
                                         <div class="row">
-                                            <a href="{$URL}produtos/{$dados[i].urlAmigavel}" class="btn-default-padrao">Ver Mais</a>
+                                            <a href="{$URL}{if $dados[0].tituloCat}produto/{$dados[0].urlAmigaCat}{else}produtos{/if}/{$dados[i].urlAmigavel}" class="btn-default-padrao">Ver Mais</a>
                                         </div>
                                     </div>
                                 {/if}
@@ -66,7 +66,7 @@
                                             <img class="img-produtos-tipos" src="{$URL}{$dados[i].caminhoImagem}" alt="{$dados[i].texto}" title="{$dados[i].texto}">
                                             <h2><a href="{$URL}produto" class="txt-interna">{$dados[i].titulo}</a></h2>
                                             <div class="row">
-                                                <a href="{$URL}produtos/{$dados[i].urlAmigavel}" class="btn-default-padrao">Ver Mais</a>
+                                                <a href="{$URL}{if $dados[0].tituloCat}produto/{$dados[0].urlAmigaCat}{else}produtos{/if}/{$dados[i].urlAmigavel}" class="btn-default-padrao">Ver Mais</a>
                                             </div>
                                         </div>
                                     {/if}
