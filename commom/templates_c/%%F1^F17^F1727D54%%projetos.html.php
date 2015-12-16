@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-15 13:20:23
+<?php /* Smarty version 2.6.12, created on 2015-12-15 16:59:16
          compiled from projetos.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -98,17 +98,6 @@ projeto/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['ur
                                     </div>
                                 </div>
                             <?php endfor; endif; ?>
-                            <!-- 
-                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
-                                <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/produto1.jpg" alt="projeto" title="projeto">
-                                <h2><a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="txt-interna">Clínica bem viver</a></h2>
-                                <div class="row">
-                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="btn-default-padrao">Ver Mais</a>
-                                </div>
-                            </div> -->
                         </div>
                         <!-- Tipos 1 -->
 

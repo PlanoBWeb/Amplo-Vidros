@@ -46,11 +46,9 @@
 {else}
     <div class="col-xs-12 col-sm-3 col-md-3 mg-bt-20 pd-lf-none hidden-xs">
         <ul class="menu-lateral">
-            <li class="txt-interna abre-sub-lateral"><a href="{$URL}projeto">Hotel Enseada</a></li>
-            <li class="txt-interna abre-sub-lateral"><a href="{$URL}projeto">Residencial Arujá</a></li>
-            <li class="txt-interna abre-sub-lateral"><a href="{$URL}projeto">Academia Nível A</a></li>
-            <li class="txt-interna abre-sub-lateral"><a href="{$URL}projeto">Academia Cia Água</a></li>
-            <li class="txt-interna abre-sub-lateral"><a href="{$URL}projeto">Clínica bem viver</a></li>
+            {section name=i loop=$dadosMenu}  
+                <li class="txt-interna abre-sub-lateral"><a href="{$URL}projeto/{$dadosMenu[i].urlAmigavel}">{$dadosMenu[i].titulo}</a></li>
+            {/section}
         </ul>
     </div>
     <!-- Mobile -->
@@ -59,7 +57,9 @@
             <div class="col-sm-9 mg-lf-5-">
                 <select class="form-control" id="inputOnde" name="onde">
                     <option>Escolha um projeto</option>
-                    <option>projeto</option>
+                    {section name=i loop=$dadosMenu} 
+                        <option value="{$URL}projeto/{$dadosMenu[i].urlAmigavel}">{$dadosMenu[i].titulo}</option>
+                    {/section}
                 </select>
             </div>
         </div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-15 13:33:46
+<?php /* Smarty version 2.6.12, created on 2015-12-15 16:53:01
          compiled from projeto.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -109,228 +109,277 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                         </div>
                         <!-- Projeto -->
                         
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 pd-none pd-bt-mob">
-                                <h2 class="titulo-interna ps-absolut">Produtos relacionados</h2>
-                                <img class="linha-img" src="<?php echo $this->_tpl_vars['URL']; ?>
+                        <?php if ($this->_tpl_vars['dadosRelacionados']): ?>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 pd-none pd-bt-mob">
+                                    <h2 class="titulo-interna ps-absolut">Produtos relacionados</h2>
+                                    <img class="linha-img" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/linha.jpg" alt="linha" title="linha">
-                            </div>
-                            <!-- 1 produto -->
-                            <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile pd-bt-60">
-                                <div class="mtlsr-images-for-lightbox">
-                                    <div class="row pd-lt-10">
-                                        <h3 class="txt-interna">Espelhos • Venezianos</h3>
-                                    </div>
-                                    <ul class="projetos-lightbox">
-                                        <li>
-                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g.jpg" data-item-id="projeto-com-1">
-                                                <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="produto" title="produto">
-                                                    <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g.jpg" data-item-id="projeto-com-1">
-                                                <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="produto" title="produto">
-                                                    <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g.jpg" data-item-id="projeto-com-1">
-                                                <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="produto" title="produto">
-                                                    <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="row">
-                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="btn-default-padrao pull-right align-btn-projeto">Ver Projeto</a>
-                                    </div>
-                                </div> 
-                                <div class="mtlsr-lightbox mtlsr-lightbox-1">
-                                    <a href="#" class="close">&#9421;</a>
-                                    <a href="#" class="prev">&lsaquo;</a>
-                                    <a href="#" class="next">&rsaquo;</a>
                                 </div>
-                            </div>
-                            <!-- 1 produto -->
-                            
-                            <!-- 2 produto -->
-                            <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile pd-bt-60">
-                                <div class="mtlsr-images-for-lightbox">
-                                    <div class="row pd-lt-10">
-                                        <h3 class="txt-interna">Portas • Automáticas</h3>
-                                    </div>
-                                    <ul class="projetos-lightbox">
-                                        <li>
-                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g.jpg" data-item-id="projeto-com-2">
-                                                <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="produto" title="produto">
-                                                    <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g.jpg" data-item-id="projeto-com-2">
-                                                <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="produto" title="produto">
-                                                    <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g.jpg" data-item-id="projeto-com-2">
-                                                <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="produto" title="produto">
-                                                    <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="row">
-                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="btn-default-padrao pull-right align-btn-projeto">Ver Projeto</a>
-                                    </div>
-                                </div> 
-                                <div class="mtlsr-lightbox mtlsr-lightbox-2">
-                                    <a href="#" class="close">&#9421;</a>
-                                    <a href="#" class="prev">&lsaquo;</a>
-                                    <a href="#" class="next">&rsaquo;</a>
-                                </div>
-                            </div>
-                            <!-- 2 produto -->
+                                <!-- 1 produto -->
+                                <?php if ($this->_tpl_vars['dadosRelacionadosUm']): ?>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile pd-bt-60">
+                                        <div class="mtlsr-images-for-lightbox">
+                                            <div class="row pd-lt-10">
+                                                <h3 class="txt-interna"><?php echo $this->_tpl_vars['dadosRelacionadosUm'][0]['titulo']; ?>
+</h3>
+                                            </div>
+                                            <ul class="projetos-lightbox">
+                                                <?php unset($this->_sections['i']);
+$this->_sections['i']['name'] = 'i';
+$this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['dadosRelacionadosUm']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['i']['show'] = true;
+$this->_sections['i']['max'] = $this->_sections['i']['loop'];
+$this->_sections['i']['step'] = 1;
+$this->_sections['i']['start'] = $this->_sections['i']['step'] > 0 ? 0 : $this->_sections['i']['loop']-1;
+if ($this->_sections['i']['show']) {
+    $this->_sections['i']['total'] = $this->_sections['i']['loop'];
+    if ($this->_sections['i']['total'] == 0)
+        $this->_sections['i']['show'] = false;
+} else
+    $this->_sections['i']['total'] = 0;
+if ($this->_sections['i']['show']):
 
-                            <!-- 3 produto -->
-                            <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile pd-bt-60">
-                                <div class="mtlsr-images-for-lightbox">
-                                    <div class="row pd-lt-10">
-                                        <h3 class="txt-interna">Divisórias • Vidro Jateado</h3>
+            for ($this->_sections['i']['index'] = $this->_sections['i']['start'], $this->_sections['i']['iteration'] = 1;
+                 $this->_sections['i']['iteration'] <= $this->_sections['i']['total'];
+                 $this->_sections['i']['index'] += $this->_sections['i']['step'], $this->_sections['i']['iteration']++):
+$this->_sections['i']['rownum'] = $this->_sections['i']['iteration'];
+$this->_sections['i']['index_prev'] = $this->_sections['i']['index'] - $this->_sections['i']['step'];
+$this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_sections['i']['step'];
+$this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
+$this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
+?> 
+                                                    <li>
+                                                        <a href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dadosRelacionadosUm'][$this->_sections['i']['index']]['caminhoImagem']; ?>
+" data-item-id="projeto-com-1">
+                                                            <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
+                                                                <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dadosRelacionadosUm'][$this->_sections['i']['index']]['caminhoThumbnail']; ?>
+" alt="<?php echo $this->_tpl_vars['dadosRelacionadosUm'][0]['titulo']; ?>
+" title="<?php echo $this->_tpl_vars['dadosRelacionadosUm'][0]['titulo']; ?>
+">
+                                                                <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
+                                                            </div>
+                                                        </a>
+                                                    </li>                                                
+                                                <?php endfor; endif; ?>
+                                            </ul>
+                                            <div class="row">
+                                                <a href="<?php echo $this->_tpl_vars['URL']; ?>
+produto/<?php echo $this->_tpl_vars['dadosRelacionadosUm'][0]['nomeCat'][1]; ?>
+/<?php echo $this->_tpl_vars['dadosRelacionadosUm'][0]['urlAmigavel']; ?>
+" class="btn-default-padrao pull-right align-btn-projeto">Ver Projeto</a>
+                                            </div>
+                                        </div> 
+                                        <div class="mtlsr-lightbox mtlsr-lightbox-1">
+                                            <a href="#" class="close">&#9421;</a>
+                                            <?php if (count ( $this->_tpl_vars['dadosRelacionadosUm'] ) >= 2): ?>
+                                                <a href="#" class="prev">&lsaquo;</a>
+                                                <a href="#" class="next">&rsaquo;</a>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
-                                    <ul class="projetos-lightbox">
-                                        <li>
-                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g.jpg" data-item-id="projeto-com-3">
-                                                <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="produto" title="produto">
-                                                    <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g.jpg" data-item-id="projeto-com-3">
-                                                <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="produto" title="produto">
-                                                    <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g.jpg" data-item-id="projeto-com-3">
-                                                <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="produto" title="produto">
-                                                    <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="row">
-                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="btn-default-padrao pull-right align-btn-projeto">Ver Projeto</a>
-                                    </div>
-                                </div> 
-                                <div class="mtlsr-lightbox mtlsr-lightbox-3">
-                                    <a href="#" class="close">&#9421;</a>
-                                    <a href="#" class="prev">&lsaquo;</a>
-                                    <a href="#" class="next">&rsaquo;</a>
-                                </div>
-                            </div>
-                            <!-- 3 produto -->
+                                <?php endif; ?>
+                                <!-- 1 produto -->
+                                
+                                <!-- 2 produto -->
+                                <?php if ($this->_tpl_vars['dadosRelacionadosDois']): ?>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile pd-bt-60">
+                                        <div class="mtlsr-images-for-lightbox">
+                                            <div class="row pd-lt-10">
+                                                <h3 class="txt-interna"><?php echo $this->_tpl_vars['dadosRelacionadosDois'][0]['titulo']; ?>
+</h3>
+                                            </div>
+                                            <ul class="projetos-lightbox">
+                                                <?php unset($this->_sections['i']);
+$this->_sections['i']['name'] = 'i';
+$this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['dadosRelacionadosDois']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['i']['show'] = true;
+$this->_sections['i']['max'] = $this->_sections['i']['loop'];
+$this->_sections['i']['step'] = 1;
+$this->_sections['i']['start'] = $this->_sections['i']['step'] > 0 ? 0 : $this->_sections['i']['loop']-1;
+if ($this->_sections['i']['show']) {
+    $this->_sections['i']['total'] = $this->_sections['i']['loop'];
+    if ($this->_sections['i']['total'] == 0)
+        $this->_sections['i']['show'] = false;
+} else
+    $this->_sections['i']['total'] = 0;
+if ($this->_sections['i']['show']):
 
-                            <!-- 4 produto -->
-                            <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile pd-bt-60">
-                                <div class="mtlsr-images-for-lightbox">
-                                    <div class="row pd-lt-10">
-                                        <h3 class="txt-interna">Guarda Corpo • Rubi</h3>
+            for ($this->_sections['i']['index'] = $this->_sections['i']['start'], $this->_sections['i']['iteration'] = 1;
+                 $this->_sections['i']['iteration'] <= $this->_sections['i']['total'];
+                 $this->_sections['i']['index'] += $this->_sections['i']['step'], $this->_sections['i']['iteration']++):
+$this->_sections['i']['rownum'] = $this->_sections['i']['iteration'];
+$this->_sections['i']['index_prev'] = $this->_sections['i']['index'] - $this->_sections['i']['step'];
+$this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_sections['i']['step'];
+$this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
+$this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
+?> 
+                                                    <li>
+                                                        <a href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dadosRelacionadosDois'][$this->_sections['i']['index']]['caminhoImagem']; ?>
+" data-item-id="projeto-com-2">
+                                                            <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
+                                                                <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dadosRelacionadosDois'][$this->_sections['i']['index']]['caminhoThumbnail']; ?>
+" alt="<?php echo $this->_tpl_vars['dadosRelacionadosDois'][0]['titulo']; ?>
+" title="<?php echo $this->_tpl_vars['dadosRelacionadosDois'][0]['titulo']; ?>
+">
+                                                                <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
+                                                            </div>
+                                                        </a>
+                                                    </li>                                                
+                                                <?php endfor; endif; ?>
+                                            </ul>
+                                            <div class="row">
+                                                <a href="<?php echo $this->_tpl_vars['URL']; ?>
+produto/<?php echo $this->_tpl_vars['dadosRelacionadosDois'][0]['nomeCat'][1]; ?>
+/<?php echo $this->_tpl_vars['dadosRelacionadosDois'][0]['urlAmigavel']; ?>
+" class="btn-default-padrao pull-right align-btn-projeto">Ver Projeto</a>
+                                            </div>
+                                        </div> 
+                                        <div class="mtlsr-lightbox mtlsr-lightbox-2">
+                                            <a href="#" class="close">&#9421;</a>
+                                            <?php if (count ( $this->_tpl_vars['dadosRelacionadosDois'] ) >= 2): ?>
+                                                <a href="#" class="prev">&lsaquo;</a>
+                                                <a href="#" class="next">&rsaquo;</a>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
-                                    <ul class="projetos-lightbox">
-                                        <li>
-                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g.jpg" data-item-id="projeto-com-4">
-                                                <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="produto" title="produto">
-                                                    <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
+                                <?php endif; ?>
+                                <!-- 2 produto -->
+
+                                <!-- 3 produto -->
+                                <?php if ($this->_tpl_vars['dadosRelacionadosTres']): ?>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile pd-bt-60">
+                                        <div class="mtlsr-images-for-lightbox">
+                                            <div class="row pd-lt-10">
+                                                <h3 class="txt-interna"><?php echo $this->_tpl_vars['dadosRelacionadosTres'][0]['titulo']; ?>
+</h3>
+                                            </div>
+                                            <ul class="projetos-lightbox">
+                                                <?php unset($this->_sections['i']);
+$this->_sections['i']['name'] = 'i';
+$this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['dadosRelacionadosTres']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['i']['show'] = true;
+$this->_sections['i']['max'] = $this->_sections['i']['loop'];
+$this->_sections['i']['step'] = 1;
+$this->_sections['i']['start'] = $this->_sections['i']['step'] > 0 ? 0 : $this->_sections['i']['loop']-1;
+if ($this->_sections['i']['show']) {
+    $this->_sections['i']['total'] = $this->_sections['i']['loop'];
+    if ($this->_sections['i']['total'] == 0)
+        $this->_sections['i']['show'] = false;
+} else
+    $this->_sections['i']['total'] = 0;
+if ($this->_sections['i']['show']):
+
+            for ($this->_sections['i']['index'] = $this->_sections['i']['start'], $this->_sections['i']['iteration'] = 1;
+                 $this->_sections['i']['iteration'] <= $this->_sections['i']['total'];
+                 $this->_sections['i']['index'] += $this->_sections['i']['step'], $this->_sections['i']['iteration']++):
+$this->_sections['i']['rownum'] = $this->_sections['i']['iteration'];
+$this->_sections['i']['index_prev'] = $this->_sections['i']['index'] - $this->_sections['i']['step'];
+$this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_sections['i']['step'];
+$this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
+$this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
+?> 
+                                                    <li>
+                                                        <a href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dadosRelacionadosTres'][$this->_sections['i']['index']]['caminhoImagem']; ?>
+" data-item-id="projeto-com-3">
+                                                            <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
+                                                                <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dadosRelacionadosTres'][$this->_sections['i']['index']]['caminhoThumbnail']; ?>
+" alt="<?php echo $this->_tpl_vars['dadosRelacionadosTres'][0]['titulo']; ?>
+" title="<?php echo $this->_tpl_vars['dadosRelacionadosTres'][0]['titulo']; ?>
+">
+                                                                <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g.jpg" data-item-id="projeto-com-4">
-                                                <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="produto" title="produto">
-                                                    <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto_g.jpg" data-item-id="projeto-com-4">
-                                                <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/projetos/projeto.jpg" alt="produto" title="produto">
-                                                    <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="row">
-                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
-projeto" class="btn-default-padrao pull-right align-btn-projeto">Ver Projeto</a>
+                                                            </div>
+                                                        </a>
+                                                    </li>                                                
+                                                <?php endfor; endif; ?>
+                                            </ul>
+                                            <div class="row">
+                                                <a href="<?php echo $this->_tpl_vars['URL']; ?>
+produto/<?php echo $this->_tpl_vars['dadosRelacionadosTres'][0]['nomeCat'][1]; ?>
+/<?php echo $this->_tpl_vars['dadosRelacionadosTres'][0]['urlAmigavel']; ?>
+" class="btn-default-padrao pull-right align-btn-projeto">Ver Projeto</a>
+                                            </div>
+                                        </div> 
+                                        <div class="mtlsr-lightbox mtlsr-lightbox-3">
+                                            <a href="#" class="close">&#9421;</a>
+                                            <?php if (count ( $this->_tpl_vars['dadosRelacionadosTres'] ) >= 2): ?>
+                                                <a href="#" class="prev">&lsaquo;</a>
+                                                <a href="#" class="next">&rsaquo;</a>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
-                                </div> 
-                                <div class="mtlsr-lightbox mtlsr-lightbox-4">
-                                    <a href="#" class="close">&#9421;</a>
-                                    <a href="#" class="prev">&lsaquo;</a>
-                                    <a href="#" class="next">&rsaquo;</a>
-                                </div>
-                            </div>
-                            <!-- 4 produto -->
-                        </div> 
+                                <?php endif; ?>
+                                <!-- 3 produto -->
+
+                                <!-- 4 produto -->
+                                <?php if ($this->_tpl_vars['dadosRelacionadosQuatro']): ?>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile pd-bt-60">
+                                        <div class="mtlsr-images-for-lightbox">
+                                            <div class="row pd-lt-10">
+                                                <h3 class="txt-interna"><?php echo $this->_tpl_vars['dadosRelacionadosQuatro'][0]['titulo']; ?>
+</h3>
+                                            </div>
+                                            <ul class="projetos-lightbox">
+                                                <?php unset($this->_sections['i']);
+$this->_sections['i']['name'] = 'i';
+$this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['dadosRelacionadosQuatro']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['i']['show'] = true;
+$this->_sections['i']['max'] = $this->_sections['i']['loop'];
+$this->_sections['i']['step'] = 1;
+$this->_sections['i']['start'] = $this->_sections['i']['step'] > 0 ? 0 : $this->_sections['i']['loop']-1;
+if ($this->_sections['i']['show']) {
+    $this->_sections['i']['total'] = $this->_sections['i']['loop'];
+    if ($this->_sections['i']['total'] == 0)
+        $this->_sections['i']['show'] = false;
+} else
+    $this->_sections['i']['total'] = 0;
+if ($this->_sections['i']['show']):
+
+            for ($this->_sections['i']['index'] = $this->_sections['i']['start'], $this->_sections['i']['iteration'] = 1;
+                 $this->_sections['i']['iteration'] <= $this->_sections['i']['total'];
+                 $this->_sections['i']['index'] += $this->_sections['i']['step'], $this->_sections['i']['iteration']++):
+$this->_sections['i']['rownum'] = $this->_sections['i']['iteration'];
+$this->_sections['i']['index_prev'] = $this->_sections['i']['index'] - $this->_sections['i']['step'];
+$this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_sections['i']['step'];
+$this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
+$this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
+?> 
+                                                    <li>
+                                                        <a href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dadosRelacionadosQuatro'][$this->_sections['i']['index']]['caminhoImagem']; ?>
+" data-item-id="projeto-com-4">
+                                                            <div class="col-xs-4 col-sm-4 col-md-4 bloco-img-projetos">
+                                                                <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dadosRelacionadosQuatro'][$this->_sections['i']['index']]['caminhoThumbnail']; ?>
+" alt="<?php echo $this->_tpl_vars['dadosRelacionadosQuatro'][0]['titulo']; ?>
+" title="<?php echo $this->_tpl_vars['dadosRelacionadosQuatro'][0]['titulo']; ?>
+">
+                                                                <img class="lupa-produto-projetos" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
+                                                            </div>
+                                                        </a>
+                                                    </li>                                                
+                                                <?php endfor; endif; ?>
+                                            </ul>
+                                            <div class="row">
+                                                <a href="<?php echo $this->_tpl_vars['URL']; ?>
+produto/<?php echo $this->_tpl_vars['dadosRelacionadosQuatro'][0]['nomeCat'][1];  echo $this->_tpl_vars['dadosRelacionadosQuatro'][0]['urlAmigavel']; ?>
+" class="btn-default-padrao pull-right align-btn-projeto">Ver Projeto</a>
+                                            </div>
+                                        </div> 
+                                        <div class="mtlsr-lightbox mtlsr-lightbox-4">
+                                            <a href="#" class="close">&#9421;</a>
+                                            <?php if (count ( $this->_tpl_vars['dadosRelacionadosQuatro'] ) >= 2): ?>
+                                                <a href="#" class="prev">&lsaquo;</a>
+                                                <a href="#" class="next">&rsaquo;</a>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+                                <!-- 4 produto -->
+                            </div> 
+                        <?php endif; ?>
 
                         <div class="row">
                             <br><br>

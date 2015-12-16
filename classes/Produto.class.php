@@ -36,7 +36,7 @@ class Produto
 				INNER JOIN 
 					produto_categoria PC
 				ON
-					PC.idCategoria = C.idPai
+					PC.idCategoria = C.id
 				INNER JOIN
 					produto P
 				ON
@@ -46,6 +46,10 @@ class Produto
 				ORDER BY
 					P.titulo ASC
 		";
+
+		// echo "<pre>";
+		// print_r($sql);
+		// die();
 
 		$result = mysql_query($sql);
 		if (!($result))
@@ -127,8 +131,7 @@ class Produto
 			LIMIT
 				2
 		";
-// GROUP BY
-// CP.idProjeto
+
 		$result = mysql_query($sql);
 		if (!($result))
 		{
@@ -202,7 +205,8 @@ class Produto
 		$idCategoria = $post;
 		$sql = "SELECT
 					C.id,
-					C.titulo
+					C.titulo,
+					C.urlAmigavel AS urlCat
 				FROM  
 					categoria C
 				WHERE
@@ -221,6 +225,55 @@ class Produto
 		while( $rows = mysql_fetch_array($result) )
 		{
 			$dados[$i] 					= $rows;
+			$dados[$i]['urlCat'] 		= $rows['urlCat'];
+			$i++;
+		}
+
+		$retorno[0] = 0;
+		$retorno[1] = $dados;
+		return $retorno;
+	}
+
+	function destaquesHome($post){
+
+		$retorno = array();
+		$sql = "SELECT
+					PC.idProduto,
+					PC.idCategoria,
+					C.idPai,
+					C.urlAmigavel,
+					P.*
+				FROM  
+					produto_categoria PC
+				INNER JOIN
+					categoria C
+				ON 
+					C.idPai = PC.idCategoria
+				INNER JOIN
+					produto P
+				ON
+					PC.idProduto = P.id
+				WHERE
+					1 = 1 
+				ORDER BY
+					rand()
+				LIMIT
+					6
+		";
+		
+		$result = mysql_query($sql);
+		if (!($result))
+		{
+			$retorno[0] = "1";
+			$retorno[1] = "Erro ao executar a query. Classe = " . $this->entidade . " - Metodo = Pesquisar";
+			return $retorno;
+		}
+		
+		$i = 0;
+		while( $rows = mysql_fetch_array($result) )
+		{
+			$dados[$i] 					= $rows;
+			$dados[$i]['nomeCat']				= $this->nomeCategoria($rows['idPai']);
 			$i++;
 		}
 

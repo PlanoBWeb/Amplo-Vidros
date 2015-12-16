@@ -95,20 +95,12 @@
                         <div class="vitrine-slides">
                             <div class="bloco-roda-vitrine">
                                 <div class="encapsula-produto-vitrine-geral encapsula-produto-vitrine">
-                                    <div class="produto-vitrine-geral produto-vitrine">
-                                            <img class="img-produto-destaque" src="{$URL}upload/produto/produto_1.jpg" alt="Produto 1" title="Produto 1">
-                                            <a href="{$URL}produtos/" class="titulo-produto-destaque">Espelhos</a>
-                                    </div>
-
-                                    <div class="produto-vitrine-geral produto-vitrine">
-                                            <img class="img-produto-destaque" src="{$URL}upload/produto/produto_2.jpg" alt="Produto 1" title="Produto 1">
-                                            <a href="{$URL}produtos/" class="titulo-produto-destaque">titulo 1</a>
-                                    </div>
-
-                                    <div class="produto-vitrine-geral produto-vitrine">
-                                            <img class="img-produto-destaque" src="{$URL}upload/produto/produto_3.jpg" alt="Produto 1" title="Produto 1">
-                                            <a href="{$URL}produtos/" class="titulo-produto-destaque">titulo 2</a>
-                                    </div>
+                                    {section name=i loop=$dados} 
+                                        <div class="produto-vitrine-geral produto-vitrine">
+                                            <img class="img-produto-destaque" src="{$URL}{$dados[i].caminhoThumbnail}" alt="{$dados[i].titulo}" title="{$dados[i].titulo}">
+                                            <a href="{$URL}produto/{$dados[i].nomeCat[1][0].urlCat}/{$dados[i].urlAmigavel}" class="titulo-produto-destaque">{$dados[i].titulo} </a>
+                                        </div>                                    
+                                    {/section}
                                 </div>
                             </div>
                             <div class="row">
@@ -132,20 +124,12 @@
                         <div class="vitrine-slides">
                             <div class="bloco-roda-vitrine">
                                 <div class="encapsula-produto-vitrine-geral encapsula-produto-vitrine-projetos">
-                                    <div class="produto-vitrine-geral produto-vitrine-projetos">
-                                        <img class="img-produto-destaque" src="{$URL}upload/produto/produto_1.jpg" alt="Produto 1" title="Produto 1">
-                                        <a href="{$URL}produtos/" class="titulo-produto-destaque">Espelhos</a>
-                                    </div>
-
-                                    <div class="produto-vitrine-geral produto-vitrine-projetos">
-                                        <img class="img-produto-destaque" src="{$URL}upload/produto/produto_2.jpg" alt="Produto 1" title="Produto 1">
-                                        <a href="{$URL}produtos/" class="titulo-produto-destaque">titulo 1</a>
-                                    </div>
-
-                                    <div class="produto-vitrine-geral produto-vitrine-projetos">
-                                        <img class="img-produto-destaque" src="{$URL}upload/produto/produto_3.jpg" alt="Produto 1" title="Produto 1">
-                                        <a href="{$URL}produtos/" class="titulo-produto-destaque">titulo 2</a>
-                                    </div>
+                                    {section name=i loop=$dadosProjeto} 
+                                        <div class="produto-vitrine-geral produto-vitrine-projetos">
+                                            <img class="img-produto-destaque" src="{$URL}{$dadosProjeto[i].caminhoThumbnail}" alt="{$dadosProjeto[i].titulo}" title="{$dadosProjeto[i].titulo}">
+                                            <a href="{$URL}projeto/{$dadosProjeto[i].urlAmigavel}" class="titulo-produto-destaque">{$dadosProjeto[i].titulo}</a>
+                                        </div>
+                                    {/section}
                                 </div>
                             </div>
                             <div class="row">

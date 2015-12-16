@@ -12,7 +12,7 @@
 	if( $retornoMenuLat[0] )
 	{
 		$smarty->assign("mensagem", $retornoMenuLat[1]);
-		$smarty->assign("redir", "home");
+		$smarty->assign("redir", URL."home");
 		$smarty->display("mensagem.html");
 		exit();
 	}
@@ -23,7 +23,7 @@
 	if( $retorno[0] )
 	{
 		$smarty->assign("mensagem", $retorno[1]);
-		$smarty->assign("redir", "home");
+		$smarty->assign("redir", URL."home");
 		$smarty->display("mensagem.html");
 		exit();
 	}
@@ -38,7 +38,7 @@
 		if( $retornoVejaTambem[0] )
 		{
 			$smarty->assign("mensagem", $retornoVejaTambem[1]);
-			$smarty->assign("redir", "home");
+			$smarty->assign("redir", URL."home");
 			$smarty->display("mensagem.html");
 			exit();
 		}
@@ -50,7 +50,7 @@
 		if( $retornoRelacionados[0] )
 		{
 			$smarty->assign("mensagem", $retornoRelacionados[1]);
-			$smarty->assign("redir", "home");
+			$smarty->assign("redir", URL."home");
 			$smarty->display("mensagem.html");
 			exit();
 		}else{
@@ -59,14 +59,14 @@
 			if( $dadosRelacionadosUm[0] || $dadosRelacionadosDois[0] )
 			{
 				$smarty->assign("mensagem", $dadosRelacionadosUm[1]);
-				$smarty->assign("redir", "home");
+				$smarty->assign("redir", URL."home");
 				$smarty->display("mensagem.html");
 				exit();
 			}
 		}
 	}else{
 		$smarty->assign("mensagem", $retorno[1]);
-		$smarty->assign("redir", "home");
+		$smarty->assign("redir", URL."home");
 		$smarty->display("mensagem.html");
 		exit();
 	}

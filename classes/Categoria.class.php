@@ -157,18 +157,26 @@ class Categoria
 	{
 		$query = "";
 		
-		// $query .= " AND categoria.idPai = categoria.id";	
-		//$query .= " AND categoria.id = '1' AND categoria.idPai = '1' ";	
-		
 		$retorno = array();
 	
 		$sql = "SELECT
-					*
+					C.idPai,
+					C.titulo,
+					C.ambiente,
+					CPai.titulo AS tituloPai
 				FROM  
-					" . $this->entidade . "
+					categoria C
+				INNER JOIN
+					categoria CPai
+				ON
+					CPai.id = C.idPai
 				WHERE
-					1 = 1 ".$query."
+					1 = 1 AND C.idPai <> 0
+				ORDER BY
+					C.idPai, C.titulo, C.ambiente
 		";
+
+
 		/*ORDER BY
 					idPai, titulo ASC*/
 		// echo "<pre>";

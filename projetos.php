@@ -5,7 +5,15 @@
     include_once "classes/Projeto.class.php";
 	$class 		= new Projeto();
 
-	// Menu lateral
+	$retornoMenu	= $class->PesquisarMenu(null);
+	if( $retornoMenu[0] )
+	{
+		$smarty->assign("mensagem", $retornoMenu[1]);
+		$smarty->assign("redir", "home");
+		$smarty->display("mensagem.html");
+		exit();
+	}
+
 	$retorno	= $class->Pesquisar(null);
 	if( $retorno[0] )
 	{
@@ -15,6 +23,8 @@
 		exit();
 	}
 
+
+	$smarty->assign("dadosMenu", $retornoMenu[1]);  
     $smarty->assign("dados", $retorno[1]);
     $smarty->assign("URL", URL);
     $smarty->assign("breadcrumb", "Projetos");
