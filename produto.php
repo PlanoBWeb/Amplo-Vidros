@@ -74,6 +74,7 @@
 	$smarty->assign("dadosRelacionadosDois", $dadosRelacionadosDois[1]);
 	$smarty->assign("dadosRelacionadosUm", $dadosRelacionadosUm[1]);
 	$smarty->assign("categoriaAtual", $url[1]);
+	$smarty->assign("produtoAtual", $url[2]);
 	$smarty->assign("dadosVejaTambem", $retornoVejaTambem[1]);
 	$smarty->assign("tituloCatProduto", $tituloCatProduto);
 	$smarty->assign("dados", $retorno[1]);

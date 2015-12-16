@@ -1,42 +1,51 @@
 {if $pagina == produtos || $pagina == produto}
     <div class="col-xs-12 col-sm-3 col-md-3 mg-bt-20 pd-lf-none hidden-xs">
         <ul class="menu-lateral">
-            <ul>
-            {assign var="nmTipo" value=$nmTipo|default:""}
+            {assign var="idPai" value=$idPai|default:""}
+            {assign var="ambiente" value=$ambiente|default:""}
+            <li>
+                <ul>
             {section name=i loop=$dadosCatMenu}  
-                </li>
-                {if $nmTipo <> $dadosCatMenu[i].titulo[0] && $dadosCatMenu[i].idPai[0] == 0}
-                    </ul> 
-                    <li class="txt-interna abre-sub-lateral">
-                    {$dadosCatMenu[i].titulo}
+                {if $idPai <> $dadosCatMenu[i].tituloPai}
+                        </ul>
+                    </li>
+                    {assign var="ambiente" value=0}
+                    <li class="txt-interna abre-sub-lateral {if $categoriaAtual == $dadosCatMenu[i].urlCat}menu-lat-ativo{/if}">
+                    {$dadosCatMenu[i].tituloPai}
                     <img class="pull-right" src="{$URL}commom/img/seta.png" alt="Abrir menu" title="Abrir menu"> 
-                    <ul class="subMenu-lateral">
+                    {assign var="idPai" value=$dadosCatMenu[i].tituloPai}
+                        <ul class="subMenu-lateral" {if $categoriaAtual == $dadosCatMenu[i].urlCat}style="display: block"{/if}>
                 {/if}
-                {if $dadosCatMenu[i].idPai[0] <>  0}
-                    <li class="txt-interna"><a href="{$URL}produtos/{$dadosCatMenu[i].urlAmigavel}">{$dadosCatMenu[i].titulo}</a></li>
+                {if  $idPai == $dadosCatMenu[i].tituloPai}
+                    {if  $dadosCatMenu[i].ambiente <> 0 AND  $ambiente == 0}
+                        <li class="txt-interna txt-ambiente">AMBIENTE</li>
+                        {assign var="ambiente" value=1}
+                    {/if}
                 {/if}
-                {assign var="nmTipo" value=$dadosCatMenu[i].titulo}
+                <li class="txt-interna"><a class="{if $produtoAtual == $dadosCatMenu[i].urlAmigavel}menu-lat-ativo{/if}" href="{$URL}produto/{$dadosCatMenu[i].urlCat}/{$dadosCatMenu[i].urlAmigavel}">{$dadosCatMenu[i].titulo}</a></li>
             {/section}
-            <!--
-            <li class="txt-interna abre-sub-lateral">espelhos <img class="pull-right" src="{$URL}commom/img/seta.png" alt="Abrir menu" title="Abrir menu">
-                <ul class="subMenu-lateral">
-                    <li class="txt-interna"><a href="{$URL}produto">espelhos Interno</a></li>
-                    <li class="txt-interna"><a href="{$URL}produto">espelhos Interno</a></li>
-                    <li class="txt-interna"><a href="{$URL}produto">espelhos Interno</a></li>
-                    <li class="txt-interna txt-ambiente">AMBIENTE</li>
-                    <li class="txt-interna"><a href="{$URL}produto">espelhos Interno</a></li>
-                    <li class="txt-interna"><a href="{$URL}produto">espelhos Interno</a></li>
-                </ul>
-            </li> -->
         </ul>
     </div>
     <!-- Mobile -->
     <form action="{$URL}" class="menu-lateral-mob visible-xs-block">
         <div class="form-group">
             <div class="col-sm-9 mg-lf-5-">
-                <select class="form-control" id="inputOnde" name="onde">
+                <select class="form-control menuLatLink">
                     <option>Escolha um produto</option>
-                    <option>produto</option>
+                    {section name=i loop=$dadosCatMenu}  
+                        {if $idPai <> $dadosCatMenu[i].tituloPai}
+                            {assign var="ambiente" value=0}
+                            <option disabled>{$dadosCatMenu[i].tituloPai}</option>
+                            {assign var="idPai" value=$dadosCatMenu[i].tituloPai}
+                        {/if}
+                        {if  $idPai == $dadosCatMenu[i].tituloPai}
+                            {if  $dadosCatMenu[i].ambiente <> 0 AND  $ambiente == 0}
+                            <option disabled>AMBIENTE</option>
+                            {assign var="ambiente" value=1}
+                            {/if}
+                        {/if}
+                        <option class="select-mobile-sub" value="{$URL}produto/{$dadosCatMenu[i].urlCat}/{$dadosCatMenu[i].urlAmigavel}">{$dadosCatMenu[i].titulo}</option>
+                    {/section}
                 </select>
             </div>
         </div>
@@ -47,7 +56,7 @@
     <div class="col-xs-12 col-sm-3 col-md-3 mg-bt-20 pd-lf-none hidden-xs">
         <ul class="menu-lateral">
             {section name=i loop=$dadosMenu}  
-                <li class="txt-interna abre-sub-lateral"><a href="{$URL}projeto/{$dadosMenu[i].urlAmigavel}">{$dadosMenu[i].titulo}</a></li>
+                <li class="txt-interna abre-sub-lateral"><a {if $dadosMenu[i].urlAmigavel == $projetoAtual}class="menu-lat-ativo"{/if} href="{$URL}projeto/{$dadosMenu[i].urlAmigavel}">{$dadosMenu[i].titulo}</a></li>
             {/section}
         </ul>
     </div>
@@ -55,7 +64,7 @@
     <form action="{$URL}" class="menu-lateral-mob visible-xs-block">
         <div class="form-group">
             <div class="col-sm-9 mg-lf-5-">
-                <select class="form-control" id="inputOnde" name="onde">
+                <select class="form-control menuLatLink">
                     <option>Escolha um projeto</option>
                     {section name=i loop=$dadosMenu} 
                         <option value="{$URL}projeto/{$dadosMenu[i].urlAmigavel}">{$dadosMenu[i].titulo}</option>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-09 13:18:56
+<?php /* Smarty version 2.6.12, created on 2015-12-16 13:04:48
          compiled from ../inc/header.html */ ?>
 <div id="fb-root"></div>
 <?php echo '
@@ -97,10 +97,10 @@ commom/img/icon_casa.jpg" alt="AmploVidros" title="AmploVidros">
                     <li><a class="link-menu-topo <?php if ($this->_tpl_vars['pagina'] == "quem-somos"): ?>link-topo-ativo<?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
 quem-somos">quem somos</a></li>
                     <li><span  class="barra-separa-menu hidden-xs">|</span></li>
-                    <li><a class="link-menu-topo <?php if ($this->_tpl_vars['pagina'] == 'produtos'): ?>link-topo-ativo<?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+                    <li><a class="link-menu-topo <?php if ($this->_tpl_vars['pagina'] == 'produtos' || $this->_tpl_vars['pagina'] == 'produto'): ?>link-topo-ativo<?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
 produtos">produtos</a></li>
                     <li><span  class="barra-separa-menu hidden-xs">|</span></li>
-                    <li><a class="link-menu-topo <?php if ($this->_tpl_vars['pagina'] == 'projetos'): ?>link-topo-ativo<?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+                    <li><a class="link-menu-topo <?php if ($this->_tpl_vars['pagina'] == 'projetos' || $this->_tpl_vars['pagina'] == 'projeto'): ?>link-topo-ativo<?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
 projetos">projetos</a></li>
                     <li><span  class="barra-separa-menu hidden-xs">|</span></li>
                     <li><a class="link-menu-topo <?php if ($this->_tpl_vars['pagina'] == 'promocao'): ?>link-topo-ativo<?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>

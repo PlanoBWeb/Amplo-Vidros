@@ -85,22 +85,6 @@
         
     });
 
-    // Menu lateral
-    $('.abre-sub-lateral').click(function(){
-        // event.preventDefault();
-        menu = $(this).children('.subMenu-lateral');
-        link = $(this).parent('.linha-menu-produto');
-
-        if($('.subMenu-lateral').is(':visible')){
-            $('.subMenu-lateral').hide();   
-            // $(link).addClass('menu-produto-icon'); 
-            // $(link).removeClass('menu-produto-icon-ativo'); 
-        }else{
-            $(menu).toggle();       
-
-        }
-    });
-
     // Valida Newslleter
     function validaNewsletter()
     {
@@ -299,4 +283,30 @@
          
         });
  
+    });
+
+    // Menu lateral
+    $('.abre-sub-lateral').click(function(){
+        // event.preventDefault();
+        menu = $(this).children('.subMenu-lateral');
+        link = $(this).parent('.linha-menu-produto');
+
+        if($('.subMenu-lateral').is(':visible')){
+            $('.subMenu-lateral').hide();   
+            // $(link).addClass('menu-produto-icon'); 
+            // $(link).removeClass('menu-produto-icon-ativo'); 
+        }else{
+            $(menu).toggle();       
+
+        }
+    });
+
+    // Redirect mobile menu lateral
+    $('.menuLatLink').change(function(){
+        var url = $(this).val();
+        if (url == "Escolha um produto" || url == "Escolha um projeto") {
+            alert("Valor inválido, selecione um valor válido");
+        }else{
+            window.location.href = url;        
+        }
     });

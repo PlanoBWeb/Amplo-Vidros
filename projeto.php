@@ -49,15 +49,12 @@
 		}
 	}
 
-	// echo "<pre>";
-	// print_r($dadosRelacionadosUm[1][0][nomeCat][1]);
-	// die();
-
 	$smarty->assign("dadosMenu", $retornoMenu[1]);  
 	$smarty->assign("dadosRelacionados", $retornoRelacionados[1]);
 	$smarty->assign("dadosRelacionadosDois", $dadosRelacionadosDois[1]);
 	$smarty->assign("dadosRelacionadosUm", $dadosRelacionadosUm[1]);
     $smarty->assign("dados", $retorno[1]);
+    $smarty->assign("projetoAtual", $url[1]);
     $smarty->assign("URL", URL);
     $smarty->assign("breadcrumb", "Projeto");
     $smarty->assign("pagina", $url['pagina']);

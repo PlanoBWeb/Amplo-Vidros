@@ -15,10 +15,6 @@
 		exit();
 	}
 
-	// echo "<pre>";
-	// print_r($retornoMenuLat[1]);
-	// die();
-
     // Passo parametro 1 para trazer somente as categorias pai
     if ($url[1] == "") {
     	$parametro['catPai'] = 1;	

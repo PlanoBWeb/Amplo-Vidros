@@ -759,7 +759,7 @@ footer{
 }
 
 .subMenu-lateral .txt-interna:last-child{
-    border-bottom:  1px solid #ebeaeb;
+    /*border-bottom:  1px solid #ebeaeb;*/
 }
 
 .abre-sub-lateral img{
@@ -774,6 +774,10 @@ footer{
     font-size:      0.9em;
     font-family:    'gotham-medium';
     color:          #d60308;
+}
+
+.menu-lat-ativo{
+    color:          #d60308  !important;
 }
 
 .txt-ambiente{

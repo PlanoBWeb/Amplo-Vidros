@@ -86,10 +86,6 @@ class Categoria
 					titulo ASC
 		";
 
-		// echo "<pre>";
-		// print_r($sql);
-		// die();
-
 		$result = mysql_query($sql);
 		if (!($result))
 		{
@@ -142,12 +138,6 @@ class Categoria
 			}
 		}
 		
-
-
-		// echo "<pre>";
-		// print_r($dados);
-		// die();
-		
 		$retorno[0] = 0;
 		$retorno[1] = $dados;
 		return $retorno;
@@ -163,7 +153,9 @@ class Categoria
 					C.idPai,
 					C.titulo,
 					C.ambiente,
-					CPai.titulo AS tituloPai
+					C.urlAmigavel,
+					CPai.titulo AS tituloPai,
+					CPai.urlAmigavel AS urlCat
 				FROM  
 					categoria C
 				INNER JOIN
@@ -175,14 +167,6 @@ class Categoria
 				ORDER BY
 					C.idPai, C.titulo, C.ambiente
 		";
-
-
-		/*ORDER BY
-					idPai, titulo ASC*/
-		// echo "<pre>";
-		// print_r($sql);
-		// die();
-
 		$result = mysql_query($sql);
 		if (!($result))
 		{
@@ -196,6 +180,7 @@ class Categoria
 		{
 			$dados[$i] 					= $rows;
 			$dados[$i]['titulo'] 		= utf8_encode($rows['titulo']);
+			$dados[$i]['tituloPai'] 	= utf8_encode($rows['tituloPai']);
 
 			$i++;
 		}
