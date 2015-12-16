@@ -867,7 +867,32 @@ footer{
     padding:    0px 8px 16px 8px;
 }
 
+.carrega-busca{
+    width:              280px;
+    max-height:         200px;
+    height:             auto;
+    overflow:           auto;
+    display:            block;
+    position:           absolute;
+    background-color:   #fff;
+    display:            none;
+    /*margin-top:         38px;*/
+    z-index:            999;
+    padding:            5px;
+}
 
+.carrega-busca .carrega-busca-ajax{
+    display: block;
+}
+
+.carrega-busca-ajax{
+    display: none;
+}
+
+.selectProduto:hover{
+    color:  #d60308;
+    cursor: pointer;
+}
 
 
 

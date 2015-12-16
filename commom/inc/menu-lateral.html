@@ -1,4 +1,4 @@
-{if $pagina == produtos || $pagina == produto}
+{if $pagina == produtos || $pagina == produto || $pagina == resultado-busca}
     <div class="col-xs-12 col-sm-3 col-md-3 mg-bt-20 pd-lf-none hidden-xs">
         <ul class="menu-lateral">
             {assign var="idPai" value=$idPai|default:""}
@@ -40,11 +40,11 @@
                         {/if}
                         {if  $idPai == $dadosCatMenu[i].tituloPai}
                             {if  $dadosCatMenu[i].ambiente <> 0 AND  $ambiente == 0}
-                            <option disabled>AMBIENTE</option>
+                            <option disabled>Ambiente</option>
                             {assign var="ambiente" value=1}
                             {/if}
                         {/if}
-                        <option class="select-mobile-sub" value="{$URL}produto/{$dadosCatMenu[i].urlCat}/{$dadosCatMenu[i].urlAmigavel}">{$dadosCatMenu[i].titulo}</option>
+                        <option class="select-mobile-sub" value="{$URL}produto/{$dadosCatMenu[i].urlCat}/{$dadosCatMenu[i].urlAmigavel}">&nbsp;&nbsp;&nbsp;{$dadosCatMenu[i].titulo}</option>
                     {/section}
                 </select>
             </div>

@@ -1,8 +1,8 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-16 13:09:24
+<?php /* Smarty version 2.6.12, created on 2015-12-16 16:12:10
          compiled from ../inc/menu-lateral.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '../inc/menu-lateral.html', 4, false),)), $this); ?>
-<?php if ($this->_tpl_vars['pagina'] == produtos || $this->_tpl_vars['pagina'] == produto): ?>
+<?php if ($this->_tpl_vars['pagina'] == produtos || $this->_tpl_vars['pagina'] == produto || $this->_tpl_vars['pagina'] == resultado - busca): ?>
     <div class="col-xs-12 col-sm-3 col-md-3 mg-bt-20 pd-lf-none hidden-xs">
         <ul class="menu-lateral">
             <?php $this->assign('idPai', ((is_array($_tmp=@$this->_tpl_vars['idPai'])) ? $this->_run_mod_handler('default', true, $_tmp, "") : smarty_modifier_default($_tmp, ""))); ?>
@@ -98,14 +98,14 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                         <?php endif; ?>
                         <?php if ($this->_tpl_vars['idPai'] == $this->_tpl_vars['dadosCatMenu'][$this->_sections['i']['index']]['tituloPai']): ?>
                             <?php if ($this->_tpl_vars['dadosCatMenu'][$this->_sections['i']['index']]['ambiente'] <> 0 && $this->_tpl_vars['ambiente'] == 0): ?>
-                            <option disabled>AMBIENTE</option>
+                            <option disabled>Ambiente</option>
                             <?php $this->assign('ambiente', 1); ?>
                             <?php endif; ?>
                         <?php endif; ?>
                         <option class="select-mobile-sub" value="<?php echo $this->_tpl_vars['URL']; ?>
 produto/<?php echo $this->_tpl_vars['dadosCatMenu'][$this->_sections['i']['index']]['urlCat']; ?>
 /<?php echo $this->_tpl_vars['dadosCatMenu'][$this->_sections['i']['index']]['urlAmigavel']; ?>
-"><?php echo $this->_tpl_vars['dadosCatMenu'][$this->_sections['i']['index']]['titulo']; ?>
+">&nbsp;&nbsp;&nbsp;<?php echo $this->_tpl_vars['dadosCatMenu'][$this->_sections['i']['index']]['titulo']; ?>
 </option>
                     <?php endfor; endif; ?>
                 </select>

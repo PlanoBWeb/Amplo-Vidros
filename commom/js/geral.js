@@ -310,3 +310,83 @@
             window.location.href = url;        
         }
     });
+
+    // Ajax Busca Desktop
+    $(document).ready(function(){
+        $("#buscaValor").keyup(function(){
+            var valorBusca = $('#buscaValor').val();
+            var min_length = 0;
+            var contaValor = $('#buscaValor').val().length;          
+            var urlAction = $('.urlAction').val();  
+
+            if (contaValor != min_length) {
+
+                $.ajax({
+                type: "POST",
+                url: urlAction,
+                // data:'busca='+$(this).val(),
+                data: {search: valorBusca, buscaAjax: "buscaAjax", acao: "busca"},
+          
+                    success: function(data){
+                        $("#carrega-busca").show();
+                        $("#carrega-busca").html(data);
+                        $("#buscaValor").css("background","#FFF");
+                    }
+                });
+            }else{
+                  $('#carrega-busca').hide();
+            }
+        });
+    });
+
+    $('#carrega-busca').on('click','.selectProduto', function(){
+        var valorTxtBusca = $(this).text();
+
+        $("#buscaValor").val(valorTxtBusca);
+        $('.form-busca-desk').submit();
+        $("#carrega-busca").hide();
+        
+    });
+
+    // Ajax Busca Mobile
+    $(document).ready(function(){
+        $("#buscaValorMobile").keyup(function(){
+            var valorBusca = $('#buscaValorMobile').val();
+            var min_length = 0;
+            var contaValor = $('#buscaValorMobile').val().length;
+            var urlAction = $('.urlAction').val();  
+
+            if (contaValor != min_length) {
+
+                $.ajax({
+                type: "POST",
+                url: urlAction,
+                // data:'busca='+$(this).val(),
+                data: {search: valorBusca, buscaAjax: "buscaAjax", acao: "busca"},
+          
+                    success: function(data){
+                        $("#carrega-busca-mobile").show();
+                        $("#carrega-busca-mobile").html(data);
+                        $("#buscaValorMobile").css("background","#FFF");
+                    }
+                });
+            }else{
+                  $('#carrega-busca-mobile').hide();
+            }
+        });
+    });
+
+    $('#carrega-busca-mobile').on('click','.selectProduto', function(){
+        var valorTxtBusca = $(this).text();
+
+        $("#buscaValorMobile").val(valorTxtBusca);
+        $('.form-busca-mob').submit();
+        $("#carrega-busca-mobile").hide();
+        
+    });
+    // Ajax Busca Mobile
+
+    $('html').on('click','body', function(){
+        $("#carrega-busca-mobile").hide();
+        $("#carrega-busca").hide();
+    });

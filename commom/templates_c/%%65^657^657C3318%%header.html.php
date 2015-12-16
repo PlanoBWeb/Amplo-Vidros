@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-16 13:04:48
+<?php /* Smarty version 2.6.12, created on 2015-12-16 16:06:51
          compiled from ../inc/header.html */ ?>
 <div id="fb-root"></div>
 <?php echo '
@@ -70,13 +70,18 @@ commom/img/icon_busca.jpg" alt="Buscar" title="Buscar">
 home"><img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/logo.png" alt="AmploVidros" title="AmploVidros"></a>
 
-                <form class="navbar-left bloco-busca-mobile" role="search">
+                <form class="navbar-left bloco-busca-mobile form-busca-mob" action="<?php echo $this->_tpl_vars['URL']; ?>
+resultado-busca" method="post" role="search">
                     <div class="form-group form-group-mob">
-                        <input type="text" class="form-control busca-mob pull-left" placeholder="BUSCA">
+                        <input type="hidden" name="acao" value="busca">
+                        <input type="hidden" class="urlAction" name="urlAction" value="<?php echo $this->_tpl_vars['URL']; ?>
+resultado-busca">
+                        <input type="text" id="buscaValorMobile" name="search" autocomplete="off" class="form-control busca-mob pull-left" placeholder="BUSCA">
                         <button type="submit" class="btn btn-buscar-desk pull-left">
                             <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon_busca.jpg" alt="Buscar" title="Buscar">
                         </button>
+                        <div id="carrega-busca-mobile" class="carrega-busca"></div>
                     </div>
                 </form>
             </div>
@@ -112,14 +117,19 @@ orcamentos">orçamentos</a></li>
 fale-conosco">fale conosco</a></li>
                 </ul>
                 <div class="pull-right hidden-xs">
-                    <form class="navbar-form navbar-left" role="search">
+                    <form class="navbar-form navbar-left form-busca-desk" action="<?php echo $this->_tpl_vars['URL']; ?>
+resultado-busca" method="post" role="search">
                         <div class="form-group">
-                            <input type="text" class="form-control busca-desk" placeholder="BUSCA">
+                            <input type="hidden" name="acao" value="busca">
+                            <input type="hidden" class="urlAction" name="urlAction" value="<?php echo $this->_tpl_vars['URL']; ?>
+resultado-busca">
+                            <input type="text" id="buscaValor" name="search" autocomplete="off" class="form-control busca-desk" placeholder="BUSCA">
                         </div>
                         <button type="submit" class="btn btn-buscar-desk">
                             <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon_busca.jpg" alt="Buscar" title="Buscar">
                         </button>
+                        <div  id="carrega-busca" class="carrega-busca"></div>
                     </form>
                     <div class="redes-sociais">
                         <a href="" target="_blank">

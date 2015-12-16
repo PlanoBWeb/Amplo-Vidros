@@ -18,6 +18,11 @@ class Produto
 			$query .= " AND C.urlAmigavel = '".$post['id']."'";
 		}
 
+		if($post['busca'])
+		{
+			$query .= " AND P.titulo LIKE '%".utf8_decode($post['busca'])."%' ";
+		}
+
 		$retorno = array();
 
 		$sql = "SELECT
@@ -46,10 +51,6 @@ class Produto
 				ORDER BY
 					P.titulo ASC
 		";
-
-		// echo "<pre>";
-		// print_r($sql);
-		// die();
 
 		$result = mysql_query($sql);
 		if (!($result))

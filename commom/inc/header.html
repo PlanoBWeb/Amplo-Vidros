@@ -58,12 +58,15 @@
                 <img class="lupa-mobile visible-xs-block mg-menu-busca" src="{$URL}commom/img/icon_busca.jpg" alt="Buscar" title="Buscar">
                 <a class="navbar-brand visible-xs-block" href="{$URL}home"><img src="{$URL}commom/img/logo.png" alt="AmploVidros" title="AmploVidros"></a>
 
-                <form class="navbar-left bloco-busca-mobile" role="search">
+                <form class="navbar-left bloco-busca-mobile form-busca-mob" action="{$URL}resultado-busca" method="post" role="search">
                     <div class="form-group form-group-mob">
-                        <input type="text" class="form-control busca-mob pull-left" placeholder="BUSCA">
+                        <input type="hidden" name="acao" value="busca">
+                        <input type="hidden" class="urlAction" name="urlAction" value="{$URL}resultado-busca">
+                        <input type="text" id="buscaValorMobile" name="search" autocomplete="off" class="form-control busca-mob pull-left" placeholder="BUSCA">
                         <button type="submit" class="btn btn-buscar-desk pull-left">
                             <img src="{$URL}commom/img/icon_busca.jpg" alt="Buscar" title="Buscar">
                         </button>
+                        <div id="carrega-busca-mobile" class="carrega-busca"></div>
                     </div>
                 </form>
             </div>
@@ -90,13 +93,16 @@
                     <li><a class="link-menu-topo visible-xs-block {if $pagina == "fale-conosco"}link-topo-ativo{/if}" href="{$URL}fale-conosco">fale conosco</a></li>
                 </ul>
                 <div class="pull-right hidden-xs">
-                    <form class="navbar-form navbar-left" role="search">
+                    <form class="navbar-form navbar-left form-busca-desk" action="{$URL}resultado-busca" method="post" role="search">
                         <div class="form-group">
-                            <input type="text" class="form-control busca-desk" placeholder="BUSCA">
+                            <input type="hidden" name="acao" value="busca">
+                            <input type="hidden" class="urlAction" name="urlAction" value="{$URL}resultado-busca">
+                            <input type="text" id="buscaValor" name="search" autocomplete="off" class="form-control busca-desk" placeholder="BUSCA">
                         </div>
                         <button type="submit" class="btn btn-buscar-desk">
                             <img src="{$URL}commom/img/icon_busca.jpg" alt="Buscar" title="Buscar">
                         </button>
+                        <div  id="carrega-busca" class="carrega-busca"></div>
                     </form>
                     <div class="redes-sociais">
                         <a href="" target="_blank">
