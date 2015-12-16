@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-16 15:53:41
+<?php /* Smarty version 2.6.12, created on 2015-12-16 16:55:19
          compiled from resultado-busca.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -51,16 +51,16 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
                     <div class="col-xs-12 col-sm-9 col-md-9">
-
-                        <h1 class="titulo-interna">produtos encontrados:</h1><br>
-                        <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
-                        
-                        <!-- Produto -->
-                        <div class="row">
-                            <br>
-                            <div class="mtlsr-images-for-lightbox">
-                                <ul class="projetos-lightbox">
-                                    <?php unset($this->_sections['i']);
+                        <?php if ($this->_tpl_vars['dados']): ?>
+                            <h1 class="titulo-interna">produtos encontrados:</h1><br>
+                            <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+                            
+                            <!-- Produto -->
+                            <div class="row">
+                                <br>
+                                <div class="mtlsr-images-for-lightbox">
+                                    <ul class="projetos-lightbox">
+                                        <?php unset($this->_sections['i']);
 $this->_sections['i']['name'] = 'i';
 $this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['dados']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
 $this->_sections['i']['show'] = true;
@@ -84,32 +84,35 @@ $this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_s
 $this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
 $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
 ?> 
-                                        <li>
-                                            <a class="img" href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']; ?>
+                                            <li>
+                                                <a class="img" href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']; ?>
 "  data-item-id="projeto-com-0">
-                                                <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoThumbnail']; ?>
+                                                    <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                                        <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoThumbnail']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 ">
-                                                    <img class="lupa-produto" src="<?php echo $this->_tpl_vars['URL']; ?>
+                                                        <img class="lupa-produto" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                    <h2><p class="txt-interna"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
+                                                        <h2><p class="txt-interna"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 </p></h2>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    <?php endfor; endif; ?>
-                                </ul>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        <?php endfor; endif; ?>
+                                    </ul>
+                                </div>
+                                <div class="mtlsr-lightbox mtlsr-lightbox-0">
+                                    <a href="#" class="close">&#9421;</a>
+                                    <?php if (count ( $this->_tpl_vars['dados'] ) >= 2): ?>
+                                        <a href="#" class="prev">&lsaquo;</a>
+                                        <a href="#" class="next">&rsaquo;</a>
+                                    <?php endif; ?>
+                                </div>
                             </div>
-                            <div class="mtlsr-lightbox mtlsr-lightbox-0">
-                                <a href="#" class="close">&#9421;</a>
-                                <?php if (count ( $this->_tpl_vars['dados'] ) >= 2): ?>
-                                    <a href="#" class="prev">&lsaquo;</a>
-                                    <a href="#" class="next">&rsaquo;</a>
-                                <?php endif; ?>
-                            </div>
-                        </div>
+                        <?php else: ?>
+                            <center><h1 class="titulo-interna">Nenhum produto encontrado</h1><br></center>
+                        <?php endif; ?>
                         <!-- Produto -->
                         <div class="row">
                             <br><br>

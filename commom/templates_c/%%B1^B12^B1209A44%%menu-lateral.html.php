@@ -1,8 +1,8 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-16 16:12:10
+<?php /* Smarty version 2.6.12, created on 2015-12-16 16:39:20
          compiled from ../inc/menu-lateral.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '../inc/menu-lateral.html', 4, false),)), $this); ?>
-<?php if ($this->_tpl_vars['pagina'] == produtos || $this->_tpl_vars['pagina'] == produto || $this->_tpl_vars['pagina'] == resultado - busca): ?>
+<?php if ($this->_tpl_vars['pagina'] == 'produtos' || $this->_tpl_vars['pagina'] == 'produto' || $this->_tpl_vars['pagina'] == "resultado-busca"): ?>
     <div class="col-xs-12 col-sm-3 col-md-3 mg-bt-20 pd-lf-none hidden-xs">
         <ul class="menu-lateral">
             <?php $this->assign('idPai', ((is_array($_tmp=@$this->_tpl_vars['idPai'])) ? $this->_run_mod_handler('default', true, $_tmp, "") : smarty_modifier_default($_tmp, ""))); ?>

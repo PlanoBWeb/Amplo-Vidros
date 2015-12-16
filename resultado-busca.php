@@ -18,30 +18,31 @@
 	}
 
 	// Resultado Busca
-	$parametro['busca'] = $_POST['search'];
-	
-	// echo "<pre>";
-	// print_r($parametro);
-	// die();
-
-	$retorno	= $class->Pesquisar($parametro);
-	if( $retorno[0] )
-	{
-		$smarty->assign("mensagem", $retorno[1]);
+	if ($_POST['search']) {
+		$parametro['busca'] = $_POST['search'];
+		$retorno	= $class->Pesquisar($parametro);
+		if( $retorno[0] )
+		{
+			$smarty->assign("mensagem", $retorno[1]);
+			$smarty->assign("redir", "home");
+			$smarty->display("mensagem.html");
+			exit();
+		}
+		if ($retorno[1]) {
+			echo '<ul class="carrega-busca-ajax">';
+			foreach ($retorno[1] as $key) {
+				echo '	    		
+					<li class="selectProduto">'.$key["titulo"].'</li>
+				';
+			}	
+			echo "</ul>";
+		}
+	}else{
+		$smarty->assign("mensagem", "Nenhum produto encontrado!");
 		$smarty->assign("redir", "home");
 		$smarty->display("mensagem.html");
 		exit();
 	}
-	if ($retorno[1]) {
-		echo '<ul class="carrega-busca-ajax">';
-		foreach ($retorno[1] as $key) {
-			echo '	    		
-				<li class="selectProduto">'.$key["titulo"].'</li>
-			';
-		}	
-		echo "</ul>";
-	}
-
 
 	$smarty->assign("dados", $retorno[1]);
 	$smarty->assign("dadosCatMenu", $retornoMenuLat[1]);

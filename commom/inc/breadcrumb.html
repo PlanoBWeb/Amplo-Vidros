@@ -4,16 +4,60 @@
     		<img src="{$URL}commom/img/icon_breadcrumb.png" alt="Você está na {$breadcrumb}" title="Você está na {$breadcrumb}">
     	</li>
         <li class="linha-breadcrumb">        	
-            <a href="{$URL}home">Home</a>
+            <a href="{$URL}home/">Home</a>
         </li>
-        <li class="linha-breadcrumb">
-        	/
-		</li>
-		<li class="linha-breadcrumb">        	
-            {$breadcrumb}
-        </li>
-		<!-- <li class="linha-breadcrumb">        	
-            <a href="{$URL}{$pagina}">{$breadcrumb}</a>
-        </li> -->
+        {if $projetoAtual}
+            <li class="linha-breadcrumb">
+                /
+            </li>
+    		<li class="linha-breadcrumb">    
+                <a href="{$URL}projetos/">Projetos</a>    	
+            </li>
+            <li class="linha-breadcrumb">
+                /
+            </li>
+            <li class="linha-breadcrumb">          
+                {$dados[0].titulo}
+            </li>
+        {elseif $dados[0].tituloCat}
+            <li class="linha-breadcrumb">
+                /
+            </li>
+            <li class="linha-breadcrumb">    
+                <a href="{$URL}produtos/">Produtos</a>      
+            </li>
+            <li class="linha-breadcrumb">
+                /
+            </li>
+            <li class="linha-breadcrumb">          
+                {$dados[0].tituloCat}
+            </li>
+        {elseif $tituloCatProduto}
+            <li class="linha-breadcrumb">
+                /
+            </li>
+            <li class="linha-breadcrumb">    
+                <a href="{$URL}produtos/">Produtos</a>      
+            </li>
+            <li class="linha-breadcrumb">
+                /
+            </li>
+            <li class="linha-breadcrumb">
+                <a href="{$URL}produtos/{$categoriaAtual}/">{$tituloCatProduto} </a>      
+            </li>
+            <li class="linha-breadcrumb">
+                /
+            </li>
+            <li class="linha-breadcrumb">          
+                {$dados[0].tituloCatFilho}
+            </li>
+        {else}
+            <li class="linha-breadcrumb">
+                /
+            </li>
+            <li class="linha-breadcrumb">           
+                {$breadcrumb}
+            </li>
+        {/if}
     </ul>
 </article>

@@ -31,36 +31,39 @@
                 <article class="bloco-conteudo-interna">
                     {include file="../inc/menu-lateral.html"}
                     <div class="col-xs-12 col-sm-9 col-md-9">
-
-                        <h1 class="titulo-interna">produtos encontrados:</h1><br>
-                        <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
-                        
-                        <!-- Produto -->
-                        <div class="row">
-                            <br>
-                            <div class="mtlsr-images-for-lightbox">
-                                <ul class="projetos-lightbox">
-                                    {section name=i loop=$dados} 
-                                        <li>
-                                            <a class="img" href="{$URL}{$dados[i].caminhoImagem}"  data-item-id="projeto-com-0">
-                                                <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
-                                                    <img class="img-produtos-tipos" src="{$URL}{$dados[i].caminhoThumbnail}" alt="{$dados[i].titulo}" title="{$dados[i].titulo}">
-                                                    <img class="lupa-produto" src="{$URL}commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                    <h2><p class="txt-interna">{$dados[i].titulo}</p></h2>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    {/section}
-                                </ul>
+                        {if $dados}
+                            <h1 class="titulo-interna">produtos encontrados:</h1><br>
+                            <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+                            
+                            <!-- Produto -->
+                            <div class="row">
+                                <br>
+                                <div class="mtlsr-images-for-lightbox">
+                                    <ul class="projetos-lightbox">
+                                        {section name=i loop=$dados} 
+                                            <li>
+                                                <a class="img" href="{$URL}{$dados[i].caminhoImagem}"  data-item-id="projeto-com-0">
+                                                    <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                                        <img class="img-produtos-tipos" src="{$URL}{$dados[i].caminhoThumbnail}" alt="{$dados[i].titulo}" title="{$dados[i].titulo}">
+                                                        <img class="lupa-produto" src="{$URL}commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
+                                                        <h2><p class="txt-interna">{$dados[i].titulo}</p></h2>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        {/section}
+                                    </ul>
+                                </div>
+                                <div class="mtlsr-lightbox mtlsr-lightbox-0">
+                                    <a href="#" class="close">&#9421;</a>
+                                    {if count($dados) >= 2}
+                                        <a href="#" class="prev">&lsaquo;</a>
+                                        <a href="#" class="next">&rsaquo;</a>
+                                    {/if}
+                                </div>
                             </div>
-                            <div class="mtlsr-lightbox mtlsr-lightbox-0">
-                                <a href="#" class="close">&#9421;</a>
-                                {if count($dados) >= 2}
-                                    <a href="#" class="prev">&lsaquo;</a>
-                                    <a href="#" class="next">&rsaquo;</a>
-                                {/if}
-                            </div>
-                        </div>
+                        {else}
+                            <center><h1 class="titulo-interna">Nenhum produto encontrado</h1><br></center>
+                        {/if}
                         <!-- Produto -->
                         <div class="row">
                             <br><br>

@@ -39,6 +39,7 @@
 
 	$smarty->assign("existeAmbiente", $existeAmbiente);
     $smarty->assign("dados", $retorno[1]);
+    $smarty->assign("categoriaAtual", $url[1]);
     $smarty->assign("dadosCatMenu", $retornoMenuLat[1]);
     $smarty->assign("URL", URL);
     $smarty->assign("breadcrumb", "Produtos");

@@ -23,7 +23,6 @@
 		exit();
 	}
 
-
 	$smarty->assign("dadosMenu", $retornoMenu[1]);  
     $smarty->assign("dados", $retorno[1]);
     $smarty->assign("URL", URL);
