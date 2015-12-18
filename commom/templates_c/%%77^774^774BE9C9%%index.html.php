@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-15 18:09:23
+<?php /* Smarty version 2.6.12, created on 2015-12-18 11:54:09
          compiled from index.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -153,8 +153,13 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                                             <a href="<?php echo $this->_tpl_vars['URL']; ?>
 produto/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['nomeCat'][1][0]['urlCat']; ?>
 /<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
-" class="titulo-produto-destaque"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
- </a>
+" class="titulo-produto-destaque titulo-abrev-tablet"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['tituloAbrev']; ?>
+</a>
+                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
+produto/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['nomeCat'][1][0]['urlCat']; ?>
+/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
+" class="titulo-produto-destaque titulo-abrev-resto"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
+</a>
                                         </div>                                    
                                     <?php endfor; endif; ?>
                                 </div>
@@ -215,7 +220,11 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 ">
                                             <a href="<?php echo $this->_tpl_vars['URL']; ?>
 projeto/<?php echo $this->_tpl_vars['dadosProjeto'][$this->_sections['i']['index']]['urlAmigavel']; ?>
-" class="titulo-produto-destaque"><?php echo $this->_tpl_vars['dadosProjeto'][$this->_sections['i']['index']]['titulo']; ?>
+" class="titulo-produto-destaque titulo-abrev-tablet"><?php echo $this->_tpl_vars['dadosProjeto'][$this->_sections['i']['index']]['tituloAbrev']; ?>
+</a>
+                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
+projeto/<?php echo $this->_tpl_vars['dadosProjeto'][$this->_sections['i']['index']]['urlAmigavel']; ?>
+" class="titulo-produto-destaque titulo-abrev-resto"><?php echo $this->_tpl_vars['dadosProjeto'][$this->_sections['i']['index']]['titulo']; ?>
 </a>
                                         </div>
                                     <?php endfor; endif; ?>
@@ -255,14 +264,14 @@ commom/img/empresa.jpg" alt="foto da loja" title="foto da loja">
                             </div>    
                         </div>
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">    
+                            <div class="col-xs-12 col-sm-12 col-md-12 pd-none">    
                                 <p class="txt-a-loja">
                                     <br>
                                     A Amplo Vidros e Espelhos é uma empresa baseada em princípios de responsabilidade e comprometimento, trabalhamos com o foco no atendimento extremamente personalizado, levando em consideração a necessidade real do nosso cliente nos mais variados projetos.<br><br>
 
                                     Nossos produtos são desenvolvidos em conjunto com nossos clientes, fornecedores e parceiros, criando algo único e de qualidade ampliada, surgimos como alternativa diferenciada para clientes que buscam o que há de melhor no mercado, com funcionalidade e segurança. <br><br>
                                 </p>
-                                <a class="btn-default-padrao pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
+                                <a class="btn-default-padrao left-desk-right-mob" href="<?php echo $this->_tpl_vars['URL']; ?>
 quem-somos">saiba mais</a>
                             </div>
                         </div>

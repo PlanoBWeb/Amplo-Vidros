@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
     include_once "configs/config.php";
     include_once "url.php";
@@ -19,7 +19,15 @@
 
 	// Resultado Busca
 	if ($_POST['search']) {
-		$parametro['busca'] = $_POST['search'];
+		//$parametro['busca'] = $_POST['search'];
+		$valorBusca = strstr($_POST['search'], "...");
+
+		if ($valorBusca) {
+			$parametro['busca'] = str_replace("...", "", $_POST['search']);
+		}else{
+			$parametro['busca'] = $_POST['search'];
+		}
+		
 		$retorno	= $class->Pesquisar($parametro);
 		if( $retorno[0] )
 		{
@@ -32,7 +40,7 @@
 			echo '<ul class="carrega-busca-ajax">';
 			foreach ($retorno[1] as $key) {
 				echo '	    		
-					<li class="selectProduto">'.$key["titulo"].'</li>
+					<li class="selectProduto">'.$key["tituloBusca"].'</li>
 				';
 			}	
 			echo "</ul>";

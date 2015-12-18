@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-15 12:49:06
+<?php /* Smarty version 2.6.12, created on 2015-12-18 10:23:54
          compiled from produto.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -51,7 +51,6 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
                     <div class="col-xs-12 col-sm-9 col-md-9">
-
                         <h1 class="titulo-interna"><?php echo $this->_tpl_vars['tituloCatProduto']; ?>
  • <?php echo $this->_tpl_vars['dados'][0]['tituloCatFilho']; ?>
 </h1><br>
@@ -89,12 +88,12 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                                         <li>
                                             <a class="img" href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']; ?>
 "  data-item-id="projeto-com-0">
-                                                <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
-                                                    <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoThumbnail']; ?>
+                                                <div class="col-xs-12 <?php if ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 3): ?>col-sm-4 col-md-4<?php elseif ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 4): ?>col-sm-3 col-md-3<?php else: ?>col-sm-4 col-md-4<?php endif; ?> bloco-img-tipos bloco-img-tipos-produtos">
+                                                    <img class="img-produtos-tipos <?php if ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 3): ?>img-produtos-tipos-4<?php elseif ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 4): ?>img-produtos-tipos-3<?php else: ?>img-produtos-tipos-4<?php endif; ?>" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoThumbnail']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 ">
-                                                    <img class="lupa-produto" src="<?php echo $this->_tpl_vars['URL']; ?>
+                                                    <img class="lupa-produto <?php if ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 3): ?>lupa-produto-3<?php endif; ?>" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
                                                     <h2><p class="txt-interna"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 </p></h2>
@@ -113,7 +112,6 @@ commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
                             </div>
                         </div>
                         <!-- Produto -->
-                        
                         <?php if ($this->_tpl_vars['dadosRelacionadosUm'][0] && $this->_tpl_vars['dadosRelacionadosDois'][0] != ""): ?>
                             <div class="row">
                                 <div class="row">
@@ -123,7 +121,6 @@ commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
 commom/img/linha.jpg" alt="linha" title="linha">
                                     </div>
                                 </div>
-                                
                                 <?php if ($this->_tpl_vars['dadosRelacionadosUm'][0] != ""): ?>
                                     <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile">
                                         <div class="mtlsr-images-for-lightbox">
@@ -184,7 +181,6 @@ projeto/<?php echo $this->_tpl_vars['dadosRelacionadosUm'][0]['urlAmigavel']; ?>
                                         </div>
                                     </div>
                                 <?php endif; ?>
-
                                 <?php if ($this->_tpl_vars['dadosRelacionadosDois'][0] != ""): ?>
                                     <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile">
                                         <div class="mtlsr-images-for-lightbox">
@@ -248,7 +244,7 @@ produto/<?php echo $this->_tpl_vars['dadosRelacionadosDois'][0]['urlAmigavel']; 
                             </div>   
                         <?php endif; ?>                                         
                         <!-- Veja também -->
-                        <?php if ($this->_tpl_vars['dados'][0]['ambiente'] == '0'): ?>
+                        <?php if ($this->_tpl_vars['dados'][0]['ambiente'] == '0' && $this->_tpl_vars['dadosVejaTambem']): ?>
                             <div class="row">
                                 <br>
                                 <br>
@@ -283,13 +279,14 @@ $this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_s
 $this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
 $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
 ?> 
-                                    <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                    <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos bloco-tipos-veja-mobile">
                                         <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dadosVejaTambem'][$this->_sections['i']['index']]['caminhoImagem']; ?>
 " alt="<?php echo $this->_tpl_vars['dadosVejaTambem'][$this->_sections['i']['index']]['titulo']; ?>
 " title="<?php echo $this->_tpl_vars['dadosVejaTambem'][$this->_sections['i']['index']]['titulo']; ?>
 ">
                                         <h2><a href="<?php echo $this->_tpl_vars['URL']; ?>
-produto/<?php echo $this->_tpl_vars['dadosVejaTambem'][$this->_sections['i']['index']]['urlAmigavel']; ?>
+produto/<?php echo $this->_tpl_vars['categoriaAtual']; ?>
+/<?php echo $this->_tpl_vars['dadosVejaTambem'][$this->_sections['i']['index']]['urlAmigavel']; ?>
 " class="txt-interna"><?php echo $this->_tpl_vars['dadosVejaTambem'][$this->_sections['i']['index']]['titulo']; ?>
 </a></h2>
                                         <div class="row">

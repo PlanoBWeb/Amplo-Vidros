@@ -110,6 +110,7 @@ class Categoria
 
 			$tituloCat 		= $dados[0]['titulo'];
 			$urlAmigaCat 	= $dados[0]['urlAmigavel'];
+			$tamanhoProduto = $dados[0]['tamanhoProduto'];	
 			// Com o id da urlAmigavel faço select trazendo os resultados
 			$sql = "SELECT
 						*
@@ -130,10 +131,11 @@ class Categoria
 			$i = 0;
 			while( $rows = mysql_fetch_array($result) )
 			{
-				$dados[$i] 					= $rows;
-				$dados[$i]['titulo'] 		= utf8_encode($rows['titulo']);
-				$dados[$i]['tituloCat']		= utf8_encode($tituloCat);
-				$dados[$i]['urlAmigaCat']	= $urlAmigaCat;
+				$dados[$i] 						= $rows;
+				$dados[$i]['titulo'] 			= utf8_encode($rows['titulo']);
+				$dados[$i]['tituloCat']			= utf8_encode($tituloCat);
+				$dados[$i]['urlAmigaCat']		= $urlAmigaCat;
+				$dados[$i]['tamanhoProduto']	= $tamanhoProduto;
 				$i++;
 			}
 		}

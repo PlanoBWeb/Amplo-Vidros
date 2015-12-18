@@ -29,6 +29,16 @@
 	}
 
 	$tituloCatProduto 	= $retorno[1][0]['idPai'][1][0]['titulo'];
+	$idPaiTamanhoProduto= $retorno[1][0]['idPai'][1][0]['id'];
+	$retornoTamanhoProd	= $class->PesquisarTamanhoProduto($idPaiTamanhoProduto);
+	if( $retornoTamanhoProd[0] )
+	{
+		$smarty->assign("mensagem", $retornoTamanhoProd[1]);
+		$smarty->assign("redir", URL."home");
+		$smarty->display("mensagem.html");
+		exit();
+	}
+
 	$parametro['id']	= $retorno[1][0]['idPai'][1][0]['id'];
 	$parametro['url']	= $url[2];
 	if (is_numeric($parametro['id']) && $parametro['url'] != "") {
@@ -71,6 +81,8 @@
 		exit();
 	}
 
+
+	$smarty->assign("dadosTamanhoProd", $retornoTamanhoProd[1]);
 	$smarty->assign("dadosRelacionadosDois", $dadosRelacionadosDois[1]);
 	$smarty->assign("dadosRelacionadosUm", $dadosRelacionadosUm[1]);
 	$smarty->assign("categoriaAtual", $url[1]);

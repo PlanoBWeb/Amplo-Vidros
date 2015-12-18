@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-09 15:19:18
+<?php /* Smarty version 2.6.12, created on 2015-12-18 10:16:42
          compiled from produtos.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -57,6 +57,34 @@ unset($_smarty_tpl_vars);
                         <!-- Tipos 1 -->
                         <div class="row">
                             <br>
+                            <!-- <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                <img class="img-produtos-tipos" src="http://planobweb/clientes/AmploVidros/Web/upload/produto/box.jpg" alt="Box para banheiros" title="Box para banheiros">
+                                <h2><a href="http://planobweb/clientes/AmploVidros/Web/produto" class="txt-interna">Box para banheiros</a></h2>
+                                <div class="row">
+                                    <a href="http://planobweb/clientes/AmploVidros/Web/produtos/box_para_banheiros" class="btn-default-padrao">Ver Mais</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                <img class="img-produtos-tipos" src="http://planobweb/clientes/AmploVidros/Web/upload/produto/box.jpg" alt="Box para banheiros" title="Box para banheiros">
+                                <h2><a href="http://planobweb/clientes/AmploVidros/Web/produto" class="txt-interna">Box para banheiros</a></h2>
+                                <div class="row">
+                                    <a href="http://planobweb/clientes/AmploVidros/Web/produtos/box_para_banheiros" class="btn-default-padrao">Ver Mais</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                <img class="img-produtos-tipos" src="http://planobweb/clientes/AmploVidros/Web/upload/produto/box.jpg" alt="Box para banheiros" title="Box para banheiros">
+                                <h2><a href="http://planobweb/clientes/AmploVidros/Web/produto" class="txt-interna">Box para banheiros</a></h2>
+                                <div class="row">
+                                    <a href="http://planobweb/clientes/AmploVidros/Web/produtos/box_para_banheiros" class="btn-default-padrao">Ver Mais</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                <img class="img-produtos-tipos" src="http://planobweb/clientes/AmploVidros/Web/upload/produto/box.jpg" alt="Box para banheiros" title="Box para banheiros">
+                                <h2><a href="http://planobweb/clientes/AmploVidros/Web/produto" class="txt-interna">Box para banheiros</a></h2>
+                                <div class="row">
+                                    <a href="http://planobweb/clientes/AmploVidros/Web/produtos/box_para_banheiros" class="btn-default-padrao">Ver Mais</a>
+                                </div>
+                            </div> -->
                             <?php unset($this->_sections['i']);
 $this->_sections['i']['name'] = 'i';
 $this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['dados']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
@@ -82,13 +110,13 @@ $this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
 $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
 ?> 
                                 <?php if ($this->_tpl_vars['dados'][$this->_sections['i']['index']]['ambiente'] == 0): ?>
-                                    <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                    <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos bloco-img-tipos-produtos">
                                         <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['texto']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['texto']; ?>
 ">
-                                        <h2><a href="<?php echo $this->_tpl_vars['URL']; ?>
-produto" class="txt-interna"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
+                                        <h2><a href="<?php echo $this->_tpl_vars['URL'];  if ($this->_tpl_vars['dados'][0]['tituloCat']): ?>produto/<?php echo $this->_tpl_vars['dados'][0]['urlAmigaCat'];  else: ?>produtos<?php endif; ?>/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
+" class="txt-interna"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 </a></h2>
                                         <div class="row">
                                             <a href="<?php echo $this->_tpl_vars['URL'];  if ($this->_tpl_vars['dados'][0]['tituloCat']): ?>produto/<?php echo $this->_tpl_vars['dados'][0]['urlAmigaCat'];  else: ?>produtos<?php endif; ?>/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>

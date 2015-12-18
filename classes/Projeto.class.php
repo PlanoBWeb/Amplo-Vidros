@@ -289,6 +289,8 @@ class Projeto
 		while( $rows = mysql_fetch_array($result) )
 		{
 			$dados[$i] 					= $rows;
+			$dados[$i]['tituloAbrev']	= utf8_encode(limita_caracteres($rows['titulo'], 55, false));	
+			$dados[$i]['titulo']		= utf8_encode($rows['titulo']);	
 			$i++;
 		}
 

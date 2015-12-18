@@ -8,6 +8,19 @@
 	include_once "classes/Projeto.class.php";
 	$classProjeto 		= new Projeto();
 
+	include_once "classes/Categoria.class.php";
+    $class 		= new Categoria();
+
+    // Menu lateral
+	$retornoMenuLat	= $class->PesquisarCategoria(null);
+	if( $retornoMenuLat[0] )
+	{
+		$smarty->assign("mensagem", $retornoMenuLat[1]);
+		$smarty->assign("redir", "home");
+		$smarty->display("mensagem.html");
+		exit();
+	}
+
 	$retornoProduto	= $classProduto->destaquesHome($parametro);
 	if( $retornoProduto[0] )
 	{
@@ -26,7 +39,7 @@
 		exit();
 	}
 
-	
+	$smarty->assign("dadosCatMenu", $retornoMenuLat[1]);
 	$smarty->assign("dadosProjeto", $retornoProjeto[1]);
 	$smarty->assign("dados", $retornoProduto[1]);
     $smarty->assign("pagina", $pagina);

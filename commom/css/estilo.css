@@ -47,20 +47,43 @@ a {
     background:transparent;
 }
 
-@font-face{
+/*@font-face{
     font-family: 'gotham-book';
-    src: url('../fonts/gotham-rounded-book.otf');
+    src: url('http://amplovidros.com.br/homologacao/commom/fonts/gotham-book-webfont.eot') format('embedded-opentype'),
+    url('http://amplovidros.com.br/homologacao/commom/fonts/GothamRounded-Book.ttf');
 }
 
 @font-face{
     font-family: 'gotham-medium';
-    src: url('../fonts/gotham-rounded-medium.otf');
+    src: url('http://amplovidros.com.br/homologacao/commom/fonts/gotham-medium-webfont.eot') format('embedded-opentype'),
+    url('http://amplovidros.com.br/homologacao/commom/fonts/GothamRounded-Medium.ttf');
 }
 
 @font-face{
     font-family: 'gotham-italic';
-    src: url('../fonts/gotham-rounded-medium-italic.otf');
+    src: url('http://amplovidros.com.br/homologacao/commom/fonts/gotham-light-webfont.eot') format('embedded-opentype'),
+    url('http://amplovidros.com.br/homologacao/commom/fonts/GothamRounded-MediumItalic.ttf');
+}*/
+
+
+@font-face{
+    font-family: 'gotham-book';
+    src: url('../fonts/gotham-book-webfont.eot') format('embedded-opentype'),
+    url('../fonts/GothamRounded-Book.ttf');
 }
+
+@font-face{
+    font-family: 'gotham-medium';
+    src: url('../fonts/gotham-medium-webfont.eot') format('embedded-opentype'),
+    url('../fonts/GothamRounded-Medium.ttf');
+}
+
+@font-face{
+    font-family: 'gotham-italic';
+    src: url('../fonts/gotham-light-webfont.eot') format('embedded-opentype'),
+    url('../fonts/GothamRounded-MediumItalic.ttf');
+}
+
 
 a:hover{
     text-decoration: none !important;
@@ -261,7 +284,7 @@ li{
 /*Vitrine*/
 .bloco-desc-banner
 {
-    padding:    5px 70px;
+    /*padding:    5px 70px;*/
     /*background: #000;
     opacity:    0.8;*/
     position:   absolute;
@@ -284,6 +307,7 @@ li{
     color:          #464646;
     font-family:    'gotham-medium';
     text-transform: uppercase;
+    margin-top:     0px;
 }
 
 .bloco-desc-banner p
@@ -386,7 +410,8 @@ li{
 
 .bloco-roda-vitrine{
     width:      3000px;
-    height:     190px;
+    /* height:     190px; */
+    height:     260px;
     overflow:   hidden;
 }
 
@@ -403,7 +428,7 @@ li{
 .produto-vitrine-projetos{
     width:      173px;
     /*height:     170px;*/
-    height:     190px;
+    height:     260px;
     position:   relative;
     padding:    5px;
     float:      left;
@@ -412,7 +437,8 @@ li{
 .produto-vitrine{
     width:      173px;
     /*height:     170px;*/
-    height:     190px;
+    /*height:     190px;*/
+    height:     260px;
     position:   relative;
     padding:    5px;
     float:      left;
@@ -420,12 +446,15 @@ li{
 
 .produto-vitrine img{
     max-width:  100%;
-    max-height: 160px;
+    /*max-height: 160px;*/
+    max-height: 96px;
+    /*width:      100%;*/
 }
 
 .produto-vitrine-projetos img{
     max-width:  100%;
-    max-height: 160px;
+    max-height: 96px;
+    /*width:      100%;*/
 }
 
 .setas-produto-destaque{
@@ -439,9 +468,10 @@ li{
 
 .titulo-produto-destaque{
     color:              #707979;
-    font-size:          0.9em;    
+    font-size:          0.85em;    
     text-decoration:    none;
     font-family:        'gotham-medium';
+    display:            block;
 }
 /* Vitrine roda destaques */
 
@@ -538,6 +568,10 @@ footer{
     list-style: none;
     float:      left;
     padding:    1px 5px;
+}
+
+.bloco-rodape-ind .linha-rodape:last-child{
+    display: none;
 }
 
 .titulo-verme{
@@ -797,9 +831,15 @@ footer{
 }
 
 .bloco-img-tipos{
-    max-width:      192px;
-    padding:        10px !important;
+    /*max-width:      192px;*/
+    max-width:      100%;
+    /*padding:        10px !important;*/
+    padding:        10px 15px 10px 0px !important;
     margin-bottom:  20px; 
+}
+
+.bloco-img-tipos-produtos{
+    height: 270px;
 }
 
 .bloco-img-tipos h2{
@@ -810,6 +850,15 @@ footer{
 .img-produtos-tipos{
     max-width:      100%;
     padding-bottom: 5px;
+    max-height:     120px;
+}
+
+.img-produtos-tipos-4{
+    max-height: 160px;
+}
+
+.img-produtos-tipos-3{
+    max-height: 120px;
 }
 
 .bloco-img-tipos .txt-interna{
@@ -820,8 +869,13 @@ footer{
 
 .lupa-produto{
     position:   absolute;
-    bottom:     67px;
+    bottom:     110px;
     right:      20px;
+}
+
+.lupa-produto-3{
+    bottom: 110px;
+    right:  20px;
 }
 
 .lupa-produto-projetos{
@@ -859,12 +913,14 @@ footer{
 }
 
 .carrega-lightBox-menor img{
-    max-width: 100%;
+    max-width:  100%;
+    max-height: 100%;
 }
 
 .lightBox-menor{
     float:      left;
     padding:    0px 8px 16px 8px;
+    max-width:  120px;
 }
 
 .carrega-busca{
@@ -872,7 +928,7 @@ footer{
     max-height:         200px;
     height:             auto;
     overflow:           auto;
-    display:            block;
+    /*display:            block;*/
     position:           absolute;
     background-color:   #fff;
     display:            none;
@@ -883,10 +939,12 @@ footer{
 
 .carrega-busca .carrega-busca-ajax{
     display: block;
+    padding: 0px 6px;
 }
 
 .carrega-busca-ajax{
-    display: none;
+    display:        none;
+    margin-bottom:  0;
 }
 
 .selectProduto:hover{
@@ -894,7 +952,22 @@ footer{
     cursor: pointer;
 }
 
+.titulo-abrev-tablet{
+    display: none;
+}
 
+.titulo-abrev-resto{
+    display: block;
+}
+
+.selectProduto{
+    padding: 3px 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+.selectProduto:last-child{
+    border-bottom: transparent;
+}
 
 
 
@@ -994,8 +1067,10 @@ footer{
         -moz-box-shadow:    -2px -3px 5px -1px #cbcbcb;
         box-shadow:         -2px -3px 5px -1px #cbcbcb;
         margin-top:         20px;
-        padding-top:        10px;
-        padding-bottom:     5px;
+        /*padding-top:        10px;
+        padding-bottom:     5px;*/
+        padding-top: 15px;
+        padding-bottom: 10px;
     }
 
     .link-home{
@@ -1032,6 +1107,18 @@ footer{
 
     .pd-lt-5{
         padding-left: 5px !important;
+    }
+
+    .navbar-collapse{
+        padding-left: 5px !important; 
+    }
+
+    .bloco-contato-mobile{
+        display: none;
+    }
+
+    .left-desk-right-mob{
+        float: left;
     }
 }
 
@@ -1090,8 +1177,12 @@ footer{
     }
     /* Vitrine roda destaques */
 
-    .mg-top-mobile{
+    /*.mg-top-mobile{
         margin-top: 108px;
+    }*/
+
+    .baixo-banner{
+        border-top: transparent;
     }
 
     .bloco-vitrine-destaques{
@@ -1131,7 +1222,9 @@ footer{
     }
 
     .breadcrumb{
-        margin-top: 110px;
+        /*margin-top: 110px;*/
+        margin-top:     10px;
+        margin-bottom:  0px !important; 
     }
 
     .bloco-conteudo-interna{
@@ -1139,9 +1232,20 @@ footer{
     }
 
     .bloco-img-tipos {
+        max-width: 260px;
         display:    table;
         margin:     auto;
         float:      none !important;
+    }
+
+    .lupa-produto{
+        /*bottom: 135px;*/
+        bottom: 155px;
+        right: 25px;
+    }
+
+    .lupa-produto-projetos{
+        right: 15px;
     }
 
     .linha-img{
@@ -1182,6 +1286,66 @@ footer{
         margin:     auto;
     }
 
+    .titulo-interna{
+        position: relative !important;
+    }
+
+    .bloco-tipos-veja-mobile{
+        width: 200px !important;
+    }
+
+    .bloco-img-tipos{
+        width: 200px !important;
+    }
+
+    .carrega-lightBox-menor{
+        /*height: 217px;*/
+        height: 225px;
+    }
+
+    .img-inicial{
+        height: 225px;
+    }
+    
+    .bloco-projetos-mobile .txt-interna{
+        margin-top: 0;
+    }
+
+    .carrega-busca{
+        margin-top: 28px;
+    }
+
+    .bloco-contato-mobile{
+        display:        table;
+        margin-top:     110px;
+        padding:        10px 15px;
+        border-bottom:  1px solid #ddd;
+        position:       relative;
+        width:          100%;
+        height:         auto;
+    }
+
+    .tel-topo {
+        font-size:  1.2em !important; 
+        margin-top: -5px;
+    }
+
+    .atende-topo{
+        font-size:      1.2em !important;
+        margin-bottom:  2px !important;
+    }
+
+    .email-topo {
+        font-size: 1.2em !important;
+    }
+
+    .bloco-contato-mobile img{
+        margin-top: 5px;
+    }
+
+    .left-desk-right-mob{
+        float: right;
+    }
 }
 
 @media all and (max-width: 976px) {
@@ -1214,7 +1378,8 @@ footer{
     }
 
     .bloco-roda-vitrine{
-        height: 120px;
+        /*height: 120px;*/
+        height: 220px;
     }
 
     .txt-prod-destaque{
@@ -1223,5 +1388,13 @@ footer{
     
     .img-conectado{
         width: 30px;
+    }
+
+    .titulo-abrev-tablet{
+        display: block;
+    }
+
+    .titulo-abrev-resto{
+        display: none;
     }
 }

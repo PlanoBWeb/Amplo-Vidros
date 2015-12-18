@@ -5,6 +5,19 @@
     include_once "classes/Projeto.class.php";
 	$class 		= new Projeto();
 
+	include_once "classes/Categoria.class.php";
+    $classCat 		= new Categoria();
+
+    // Menu lateral
+	$retornoMenuLat	= $classCat->PesquisarCategoria(null);
+	if( $retornoMenuLat[0] )
+	{
+		$smarty->assign("mensagem", $retornoMenuLat[1]);
+		$smarty->assign("redir", "home");
+		$smarty->display("mensagem.html");
+		exit();
+	}
+
 	// Menu lateral
 	$retornoMenu	= $class->PesquisarMenu(null);
 	if( $retornoMenu[0] )
@@ -31,6 +44,8 @@
 	$retornoRelacionados		= $class->PesquisarIdRelacionados($idProjeto);
 	$retornoRelacionadosUm 		= $retornoRelacionados[1][0]['idCategoria'];
 	$retornoRelacionadosDois 	= $retornoRelacionados[1][1]['idCategoria'];
+	$retornoRelacionadosTres 	= $retornoRelacionados[1][2]['idCategoria'];
+	$retornoRelacionadosQuatro 	= $retornoRelacionados[1][3]['idCategoria'];
 	if( $retornoRelacionados[0] )
 	{
 		$smarty->assign("mensagem", $retornoRelacionados[1]);
@@ -38,9 +53,11 @@
 		$smarty->display("mensagem.html");
 		exit();
 	}else{
-		$dadosRelacionadosUm 	= $class->PesquisarRelacionados($retornoRelacionadosUm);
-		$dadosRelacionadosDois 	= $class->PesquisarRelacionados($retornoRelacionadosDois);
-		if( $dadosRelacionadosUm[0] || $dadosRelacionadosDois[0] )
+		$dadosRelacionadosUm 		= $class->PesquisarRelacionados($retornoRelacionadosUm);
+		$dadosRelacionadosDois 		= $class->PesquisarRelacionados($retornoRelacionadosDois);
+		$dadosRelacionadosTres 		= $class->PesquisarRelacionados($retornoRelacionadosTres);
+		$dadosRelacionadosQuatro 	= $class->PesquisarRelacionados($retornoRelacionadosQuatro);
+		if( $dadosRelacionadosUm[0] || $dadosRelacionadosDois[0] || $dadosRelacionadosTres[0] ||  $dadosRelacionadosQuatro[0])
 		{
 			$smarty->assign("mensagem", $dadosRelacionadosUm[1]);
 			$smarty->assign("redir", "home");
@@ -49,8 +66,11 @@
 		}
 	}
 
+	$smarty->assign("dadosCatMenu", $retornoMenuLat[1]);
 	$smarty->assign("dadosMenu", $retornoMenu[1]);  
 	$smarty->assign("dadosRelacionados", $retornoRelacionados[1]);
+	$smarty->assign("dadosRelacionadosQuatro", $dadosRelacionadosQuatro[1]);
+	$smarty->assign("dadosRelacionadosTres", $dadosRelacionadosTres[1]);
 	$smarty->assign("dadosRelacionadosDois", $dadosRelacionadosDois[1]);
 	$smarty->assign("dadosRelacionadosUm", $dadosRelacionadosUm[1]);
     $smarty->assign("dados", $retorno[1]);

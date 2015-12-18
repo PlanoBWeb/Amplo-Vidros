@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-15 16:53:01
+<?php /* Smarty version 2.6.12, created on 2015-12-17 13:01:04
          compiled from projeto.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -121,7 +121,8 @@ commom/img/linha.jpg" alt="linha" title="linha">
                                     <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile pd-bt-60">
                                         <div class="mtlsr-images-for-lightbox">
                                             <div class="row pd-lt-10">
-                                                <h3 class="txt-interna"><?php echo $this->_tpl_vars['dadosRelacionadosUm'][0]['titulo']; ?>
+                                                <h3 class="txt-interna"><?php echo $this->_tpl_vars['dadosRelacionadosUm'][0]['tituloCat']; ?>
+ • <?php echo $this->_tpl_vars['dadosRelacionadosUm'][0]['titulo']; ?>
 </h3>
                                             </div>
                                             <ul class="projetos-lightbox">
@@ -168,7 +169,7 @@ commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
                                                 <a href="<?php echo $this->_tpl_vars['URL']; ?>
 produto/<?php echo $this->_tpl_vars['dadosRelacionadosUm'][0]['nomeCat'][1]; ?>
 /<?php echo $this->_tpl_vars['dadosRelacionadosUm'][0]['urlAmigavel']; ?>
-" class="btn-default-padrao pull-right align-btn-projeto">Ver Projeto</a>
+" class="btn-default-padrao pull-right align-btn-projeto">Ver Mais</a>
                                             </div>
                                         </div> 
                                         <div class="mtlsr-lightbox mtlsr-lightbox-1">
@@ -187,7 +188,8 @@ produto/<?php echo $this->_tpl_vars['dadosRelacionadosUm'][0]['nomeCat'][1]; ?>
                                     <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile pd-bt-60">
                                         <div class="mtlsr-images-for-lightbox">
                                             <div class="row pd-lt-10">
-                                                <h3 class="txt-interna"><?php echo $this->_tpl_vars['dadosRelacionadosDois'][0]['titulo']; ?>
+                                                <h3 class="txt-interna"><?php echo $this->_tpl_vars['dadosRelacionadosDois'][0]['tituloCat']; ?>
+ • <?php echo $this->_tpl_vars['dadosRelacionadosDois'][0]['titulo']; ?>
 </h3>
                                             </div>
                                             <ul class="projetos-lightbox">
@@ -234,7 +236,7 @@ commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
                                                 <a href="<?php echo $this->_tpl_vars['URL']; ?>
 produto/<?php echo $this->_tpl_vars['dadosRelacionadosDois'][0]['nomeCat'][1]; ?>
 /<?php echo $this->_tpl_vars['dadosRelacionadosDois'][0]['urlAmigavel']; ?>
-" class="btn-default-padrao pull-right align-btn-projeto">Ver Projeto</a>
+" class="btn-default-padrao pull-right align-btn-projeto">Ver Mais</a>
                                             </div>
                                         </div> 
                                         <div class="mtlsr-lightbox mtlsr-lightbox-2">
@@ -253,7 +255,8 @@ produto/<?php echo $this->_tpl_vars['dadosRelacionadosDois'][0]['nomeCat'][1]; ?
                                     <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile pd-bt-60">
                                         <div class="mtlsr-images-for-lightbox">
                                             <div class="row pd-lt-10">
-                                                <h3 class="txt-interna"><?php echo $this->_tpl_vars['dadosRelacionadosTres'][0]['titulo']; ?>
+                                                <h3 class="txt-interna"><?php echo $this->_tpl_vars['dadosRelacionadosTres'][0]['tituloCat']; ?>
+ • <?php echo $this->_tpl_vars['dadosRelacionadosTres'][0]['titulo']; ?>
 </h3>
                                             </div>
                                             <ul class="projetos-lightbox">
@@ -300,7 +303,7 @@ commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
                                                 <a href="<?php echo $this->_tpl_vars['URL']; ?>
 produto/<?php echo $this->_tpl_vars['dadosRelacionadosTres'][0]['nomeCat'][1]; ?>
 /<?php echo $this->_tpl_vars['dadosRelacionadosTres'][0]['urlAmigavel']; ?>
-" class="btn-default-padrao pull-right align-btn-projeto">Ver Projeto</a>
+" class="btn-default-padrao pull-right align-btn-projeto">Ver Mais</a>
                                             </div>
                                         </div> 
                                         <div class="mtlsr-lightbox mtlsr-lightbox-3">
@@ -319,7 +322,8 @@ produto/<?php echo $this->_tpl_vars['dadosRelacionadosTres'][0]['nomeCat'][1]; ?
                                     <div class="col-xs-12 col-sm-6 col-md-6 bloco-projetos-mobile pd-bt-60">
                                         <div class="mtlsr-images-for-lightbox">
                                             <div class="row pd-lt-10">
-                                                <h3 class="txt-interna"><?php echo $this->_tpl_vars['dadosRelacionadosQuatro'][0]['titulo']; ?>
+                                                <h3 class="txt-interna"><?php echo $this->_tpl_vars['dadosRelacionadosQuatro'][0]['tituloCat']; ?>
+ • <?php echo $this->_tpl_vars['dadosRelacionadosQuatro'][0]['titulo']; ?>
 </h3>
                                             </div>
                                             <ul class="projetos-lightbox">
@@ -365,7 +369,7 @@ commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
                                             <div class="row">
                                                 <a href="<?php echo $this->_tpl_vars['URL']; ?>
 produto/<?php echo $this->_tpl_vars['dadosRelacionadosQuatro'][0]['nomeCat'][1];  echo $this->_tpl_vars['dadosRelacionadosQuatro'][0]['urlAmigavel']; ?>
-" class="btn-default-padrao pull-right align-btn-projeto">Ver Projeto</a>
+" class="btn-default-padrao pull-right align-btn-projeto">Ver Mais</a>
                                             </div>
                                         </div> 
                                         <div class="mtlsr-lightbox mtlsr-lightbox-4">

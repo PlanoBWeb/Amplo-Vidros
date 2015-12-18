@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-16 16:55:19
+<?php /* Smarty version 2.6.12, created on 2015-12-18 13:34:03
          compiled from resultado-busca.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -87,12 +87,12 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                                             <li>
                                                 <a class="img" href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']; ?>
 "  data-item-id="projeto-com-0">
-                                                    <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
-                                                        <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoThumbnail']; ?>
+                                                    <div class="col-xs-12 <?php if ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 3): ?>col-sm-4 col-md-4<?php elseif ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 4): ?>col-sm-3 col-md-3<?php else: ?>col-sm-4 col-md-4<?php endif; ?> bloco-img-tipos bloco-img-tipos-produtos">
+                                                        <img class="img-produtos-tipos <?php if ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 3): ?>img-produtos-tipos-4<?php elseif ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 4): ?>img-produtos-tipos-3<?php else: ?>img-produtos-tipos-4<?php endif; ?>" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoThumbnail']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 ">
-                                                        <img class="lupa-produto" src="<?php echo $this->_tpl_vars['URL']; ?>
+                                                        <img class="lupa-produto" style="bottom: 107px;" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
                                                         <h2><p class="txt-interna"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 </p></h2>
@@ -116,7 +116,7 @@ commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
                         <!-- Produto -->
                         <div class="row">
                             <br><br>
-                            <h2 class="titulo-interna ps-absolut">solicite seu orçamento!</h2>
+                            <h2 class="titulo-interna ps-absolut" style="margin-top: -10px;">solicite seu orçamento!</h2>
                             <img class="linha-img" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/linha.jpg" alt="linha" title="linha">
                             <br><br>

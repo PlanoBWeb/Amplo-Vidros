@@ -20,7 +20,23 @@ class Produto
 
 		if($post['busca'])
 		{
-			$query .= " AND P.titulo LIKE '%".utf8_decode($post['busca'])."%' ";
+			$valoresLike = explode(" ", $post['busca']);
+			$totalValores = count($valoresLike);
+			$totalValoresMenosUm = $totalValores-1;
+
+			if ($totalValores == 1) {
+				$query .= " AND P.titulo LIKE '%".utf8_decode($post['busca'])."%' ";
+			}else{
+				$and = array();
+				if ($totalValores > 1) {
+					for ($i=0; $i < $totalValores; $i++) { 
+						$and[$i] = " LIKE '%".utf8_decode($valoresLike[$i])."%' ".($i <> $totalValoresMenosUm ? "AND P.titulo" : "");
+					}
+				}
+				$andLike = implode('', $and);
+
+				$query .= " AND P.titulo ".$andLike." ";	
+			}
 		}
 
 		$retorno = array();
@@ -67,9 +83,45 @@ class Produto
 			$dados[$i]['tituloCatFilho'] 	= utf8_encode($rows['tituloCatFilho']);
 			$dados[$i]['titulo'] 			= utf8_encode($rows['titulo']);
 			$dados[$i]['idPai']				= $this->nomeCategoria($rows['idPai']);
+			$dados[$i]['tituloBusca']		= utf8_encode(limita_caracteres($rows['titulo'], 70, false));	
 			$i++;
 		}
 
+		$retorno[0] = 0;
+		$retorno[1] = $dados;
+		return $retorno;
+	}
+
+	function PesquisarTamanhoProduto($post){
+		$query = "AND C.id = '".$post."'";
+
+		$retorno = array();
+
+		$sql = "
+			SELECT 
+				C.idPai,
+				C.tamanhoProduto
+			FROM
+				categoria C 
+			WHERE
+				1 = 1 ".$query."
+		";
+
+		$result = mysql_query($sql);
+		if (!($result))
+		{
+			$retorno[0] = "1";
+			$retorno[1] = "Erro ao executar a query. Classe = " . $this->entidade . " - Metodo = PesquisarVejaTambem";
+			return $retorno;
+		}
+		
+		$i = 0;
+		while( $rows = mysql_fetch_array($result) )
+		{
+			$dados[$i] 						= $rows;
+			$i++;
+		}
+		
 		$retorno[0] = 0;
 		$retorno[1] = $dados;
 		return $retorno;
@@ -249,7 +301,7 @@ class Produto
 				INNER JOIN
 					categoria C
 				ON 
-					C.idPai = PC.idCategoria
+					C.id = PC.idCategoria
 				INNER JOIN
 					produto P
 				ON
@@ -274,7 +326,9 @@ class Produto
 		while( $rows = mysql_fetch_array($result) )
 		{
 			$dados[$i] 					= $rows;
-			$dados[$i]['nomeCat']				= $this->nomeCategoria($rows['idPai']);
+			$dados[$i]['nomeCat']		= $this->nomeCategoria($rows['idPai']);
+			$dados[$i]['tituloAbrev']	= utf8_encode(limita_caracteres($rows['titulo'], 55, false));	
+			$dados[$i]['titulo']		= utf8_encode($rows['titulo']);	
 			$i++;
 		}
 

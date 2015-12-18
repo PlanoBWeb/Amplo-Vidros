@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-16 16:06:51
+<?php /* Smarty version 2.6.12, created on 2015-12-18 10:42:54
          compiled from ../inc/header.html */ ?>
 <div id="fb-root"></div>
 <?php echo '
@@ -145,4 +145,26 @@ commom/img/icon_twitter.png" alt="Twitter" title="Twitter">
             </div>
         </div>
     </nav>
+    <div class="bloco-contato-mobile">
+        <div class="col-xs-12">
+            <div class="row">
+                <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_tel.png" alt="Atendimento" title="Atendimento">
+                <p class="atende-topo">Atendimento</p>
+            </div>
+            <div class="row">
+                <a class="tel-topo" href="tel:01140554430">11 4055•4430</a><br>
+            </div>
+        </div>    
+        <div class="col-xs-12">
+            <div class="row">
+                <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_atende.png" alt="Contato" title="Contato">
+                <p class="atende-topo">Contato</p>
+            </div>
+            <div class="row">
+                <a class="email-topo" href="mailto:vendas@amplovidros.com.br">vendas@amplovidros.com.br</a>
+            </div>
+        </div>    
+    </div>
 </header>

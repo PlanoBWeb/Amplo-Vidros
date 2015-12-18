@@ -1,8 +1,8 @@
 <?php
 
     include_once "configs/config.php";
-    include_once "classes/Categoria.class.php";
     include_once "url.php";
+    include_once "classes/Categoria.class.php";
     $class 		= new Categoria();
 
     // Menu lateral

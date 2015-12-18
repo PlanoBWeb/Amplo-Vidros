@@ -42,13 +42,13 @@ if( $_SERVER['SERVER_NAME'] == 'planobweb' || $_SERVER['SERVER_NAME'] == '192.16
 else
 {
 	/* DADOS Online  */
-	define("db_host", '179.188.16.43');
-	define("db_user", 'planobweb212');
-	define("db_pass", 'teste123');
-	define("db_base", 'planobweb212');
-	define("PATH_SERVIDOR","E:/Home/planobweb2/Web/extranet/");
-	define("PASTAPROJETO", "/");
-	define("URL","http://amplovidros.com.br/Homologacao/");
+	define("db_host", '179.188.16.96');
+	define("db_user", 'amplovidros');
+	define("db_pass", 'am8076os');
+	define("db_base", 'amplovidros');
+	define("PATH_SERVIDOR","E:/Home/amplovidros/Web/homologacao/");
+	define("PASTAPROJETO", "homologacao/");
+	define("URL","http://amplovidros.com.br/homologacao/");
 }
 
 //Acesso ao MyAdmin

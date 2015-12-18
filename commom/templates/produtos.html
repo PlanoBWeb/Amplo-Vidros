@@ -37,11 +37,39 @@
                         <!-- Tipos 1 -->
                         <div class="row">
                             <br>
+                            <!-- <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                <img class="img-produtos-tipos" src="http://planobweb/clientes/AmploVidros/Web/upload/produto/box.jpg" alt="Box para banheiros" title="Box para banheiros">
+                                <h2><a href="http://planobweb/clientes/AmploVidros/Web/produto" class="txt-interna">Box para banheiros</a></h2>
+                                <div class="row">
+                                    <a href="http://planobweb/clientes/AmploVidros/Web/produtos/box_para_banheiros" class="btn-default-padrao">Ver Mais</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                <img class="img-produtos-tipos" src="http://planobweb/clientes/AmploVidros/Web/upload/produto/box.jpg" alt="Box para banheiros" title="Box para banheiros">
+                                <h2><a href="http://planobweb/clientes/AmploVidros/Web/produto" class="txt-interna">Box para banheiros</a></h2>
+                                <div class="row">
+                                    <a href="http://planobweb/clientes/AmploVidros/Web/produtos/box_para_banheiros" class="btn-default-padrao">Ver Mais</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                <img class="img-produtos-tipos" src="http://planobweb/clientes/AmploVidros/Web/upload/produto/box.jpg" alt="Box para banheiros" title="Box para banheiros">
+                                <h2><a href="http://planobweb/clientes/AmploVidros/Web/produto" class="txt-interna">Box para banheiros</a></h2>
+                                <div class="row">
+                                    <a href="http://planobweb/clientes/AmploVidros/Web/produtos/box_para_banheiros" class="btn-default-padrao">Ver Mais</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                <img class="img-produtos-tipos" src="http://planobweb/clientes/AmploVidros/Web/upload/produto/box.jpg" alt="Box para banheiros" title="Box para banheiros">
+                                <h2><a href="http://planobweb/clientes/AmploVidros/Web/produto" class="txt-interna">Box para banheiros</a></h2>
+                                <div class="row">
+                                    <a href="http://planobweb/clientes/AmploVidros/Web/produtos/box_para_banheiros" class="btn-default-padrao">Ver Mais</a>
+                                </div>
+                            </div> -->
                             {section name=i loop=$dados} 
                                 {if $dados[i].ambiente == 0}
-                                    <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                    <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos bloco-img-tipos-produtos">
                                         <img class="img-produtos-tipos" src="{$URL}{$dados[i].caminhoImagem}" alt="{$dados[i].texto}" title="{$dados[i].texto}">
-                                        <h2><a href="{$URL}produto" class="txt-interna">{$dados[i].titulo}</a></h2>
+                                        <h2><a href="{$URL}{if $dados[0].tituloCat}produto/{$dados[0].urlAmigaCat}{else}produtos{/if}/{$dados[i].urlAmigavel}" class="txt-interna">{$dados[i].titulo}</a></h2>
                                         <div class="row">
                                             <a href="{$URL}{if $dados[0].tituloCat}produto/{$dados[0].urlAmigaCat}{else}produtos{/if}/{$dados[i].urlAmigavel}" class="btn-default-padrao">Ver Mais</a>
                                         </div>

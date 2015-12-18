@@ -98,7 +98,8 @@
                                     {section name=i loop=$dados} 
                                         <div class="produto-vitrine-geral produto-vitrine">
                                             <img class="img-produto-destaque" src="{$URL}{$dados[i].caminhoThumbnail}" alt="{$dados[i].titulo}" title="{$dados[i].titulo}">
-                                            <a href="{$URL}produto/{$dados[i].nomeCat[1][0].urlCat}/{$dados[i].urlAmigavel}" class="titulo-produto-destaque">{$dados[i].titulo} </a>
+                                            <a href="{$URL}produto/{$dados[i].nomeCat[1][0].urlCat}/{$dados[i].urlAmigavel}" class="titulo-produto-destaque titulo-abrev-tablet">{$dados[i].tituloAbrev}</a>
+                                            <a href="{$URL}produto/{$dados[i].nomeCat[1][0].urlCat}/{$dados[i].urlAmigavel}" class="titulo-produto-destaque titulo-abrev-resto">{$dados[i].titulo}</a>
                                         </div>                                    
                                     {/section}
                                 </div>
@@ -127,7 +128,8 @@
                                     {section name=i loop=$dadosProjeto} 
                                         <div class="produto-vitrine-geral produto-vitrine-projetos">
                                             <img class="img-produto-destaque" src="{$URL}{$dadosProjeto[i].caminhoThumbnail}" alt="{$dadosProjeto[i].titulo}" title="{$dadosProjeto[i].titulo}">
-                                            <a href="{$URL}projeto/{$dadosProjeto[i].urlAmigavel}" class="titulo-produto-destaque">{$dadosProjeto[i].titulo}</a>
+                                            <a href="{$URL}projeto/{$dadosProjeto[i].urlAmigavel}" class="titulo-produto-destaque titulo-abrev-tablet">{$dadosProjeto[i].tituloAbrev}</a>
+                                            <a href="{$URL}projeto/{$dadosProjeto[i].urlAmigavel}" class="titulo-produto-destaque titulo-abrev-resto">{$dadosProjeto[i].titulo}</a>
                                         </div>
                                     {/section}
                                 </div>
@@ -160,14 +162,14 @@
                             </div>    
                         </div>
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">    
+                            <div class="col-xs-12 col-sm-12 col-md-12 pd-none">    
                                 <p class="txt-a-loja">
                                     <br>
                                     A Amplo Vidros e Espelhos é uma empresa baseada em princípios de responsabilidade e comprometimento, trabalhamos com o foco no atendimento extremamente personalizado, levando em consideração a necessidade real do nosso cliente nos mais variados projetos.<br><br>
 
                                     Nossos produtos são desenvolvidos em conjunto com nossos clientes, fornecedores e parceiros, criando algo único e de qualidade ampliada, surgimos como alternativa diferenciada para clientes que buscam o que há de melhor no mercado, com funcionalidade e segurança. <br><br>
                                 </p>
-                                <a class="btn-default-padrao pull-left" href="{$URL}quem-somos">saiba mais</a>
+                                <a class="btn-default-padrao left-desk-right-mob" href="{$URL}quem-somos">saiba mais</a>
                             </div>
                         </div>
                     </div>    
