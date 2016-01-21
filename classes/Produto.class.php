@@ -9,13 +9,22 @@ class Produto
 		$this->entidade = "produto";
     }
 	
-	function Pesquisar($post)
+	function Pesquisar($post, $totalPorPagina, $pagina)
 	{
 		$query = "";
 		
 		if($post['id'])
 		{
 			$query .= " AND C.urlAmigavel = '".$post['id']."'";
+		}
+
+		$sqlLimit = "";
+		if ($totalPorPagina) {
+
+			$numero = $pagina-1;
+			$_limit = $numero*$totalPorPagina;
+
+			$sqlLimit = "LIMIT ".$_limit.",".$totalPorPagina."";
 		}
 
 		if($post['busca'])
@@ -38,6 +47,7 @@ class Produto
 				$query .= " AND P.titulo ".$andLike." ";	
 			}
 		}
+
 
 		$retorno = array();
 
@@ -66,6 +76,7 @@ class Produto
 					1 = 1 ".$query."
 				ORDER BY
 					P.titulo ASC
+				".$sqlLimit." 
 		";
 
 		$result = mysql_query($sql);
@@ -279,6 +290,7 @@ class Produto
 		{
 			$dados[$i] 					= $rows;
 			$dados[$i]['urlCat'] 		= $rows['urlCat'];
+			$dados[$i]['titulo'] 		= utf8_encode($rows['titulo']);
 			$i++;
 		}
 

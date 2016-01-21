@@ -7,6 +7,7 @@
 	<meta name="robots" content="index, follow">
 	<meta name="description" content="" />
 	<link href="{$URL}commom/img/icon-tab.png" rel="icon">
+    {include file="../inc/cssUrlAmigavel.html"}
 	<link rel="stylesheet" type="text/css" href="{$URL}commom/css/estilo.css">
 	<title>Amplo Vidros</title>
  	<!-- Bootstrap -->
@@ -32,14 +33,17 @@
                 <div class="span12">
                     <div id="owl-demo" class="owl-carousel">
                         <div class="item">
-                            <div class="bloco-desc-banner">
+                            <!-- <div class="bloco-desc-banner">
                                 <h2>GUARDA CORPO <br>DE VIDRO</h2>
                                 <p>Somos especialistas: Consulte os modelos de fixação, todos em aço inox</p>
-                                <a class="saiba-mais-vitrine" href="">saiba mais</a>
-                            </div>
+                                <a class="saiba-mais-vitrine" href="{$URL}produtos/guarda-corpo-de-vidro">saiba mais</a>
+                            </div> -->
                             <img src="{$URL}commom/img/banner.jpg" alt="banner" title="banner">
                         </div>
-                        <!-- <div class="item"><img src="{$URL}commom/img/banner.jpg" alt="banner" title="banner"></div> -->
+                        <div class="item"><img src="{$URL}commom/img/banner2.jpg" alt="banner" title="banner"></div>
+                        <div class="item"><img src="{$URL}commom/img/banner3.jpg" alt="banner" title="banner"></div>
+                        <div class="item"><img src="{$URL}commom/img/banner4.jpg" alt="banner" title="banner"></div>
+                        <div class="item"><img src="{$URL}commom/img/banner5.jpg" alt="banner" title="banner"></div>
                     </div>
                 </div>
             </div>
@@ -50,30 +54,38 @@
         <article class="baixo-banner mg-top-mobile">
             <div class="encapsula-baixo-banner">
                 <div class="col-xs-12 col-sm-3 col-md-3">
-                    <a class="link-baixo-banner pull-left" href="{$URL}home"><h2>BOX<br> para banheiros</h2></a>
-                    <a class="pull-left" href="{$URL}home">
+                    <a class="link-baixo-banner pull-left" href="{$URL}produtos/box-para-banheiro"><h2>BOX<br> para banheiros</h2></a>
+                    <a class="pull-left" href="{$URL}produtos/box-para-banheiro">
                         <img src="{$URL}commom/img/icon_1.png" alt="BOX para banheiros" title="BOX para banheiros">
                     </a>
                 </div>
 
                 <div class="col-xs-12 col-sm-3 col-md-3">
-                    <a class="link-baixo-banner pull-left" href="{$URL}home"><h2>DECORAÇÃO<br> de ambientes</h2></a>
-                    <a class="pull-left" href="{$URL}home">
-                        <img src="{$URL}commom/img/icon_2.png" alt="BOX para banheiros" title="BOX para banheiros">
+                    <a class="link-baixo-banner pull-left" href="{$URL}produtos/espelhos"><h2>DECORAÇÃO<br> de ambientes</h2></a>
+                    <!-- <h2 class="link-baixo-banner-2 pull-left">DECORAÇÃO<br> de ambientes</h2> -->
+                    <a class="pull-left" href="{$URL}produtos/espelhos">
+                        <img src="{$URL}commom/img/icon_2.png" alt="DECORAÇÃO de ambientes" title="DECORAÇÃO de ambientes">
                     </a>
+                    <!-- <p class="pull-left">
+                        <img src="{$URL}commom/img/icon_2.png" alt="DECORAÇÃO de ambientes" title="DECORAÇÃO de ambientes">
+                    </p> -->
                 </div>
 
                 <div class="col-xs-12 col-sm-3 col-md-3">
-                    <a class="link-baixo-banner pull-left" href="{$URL}home"><h2>ENGENHARIA<br> soluções</h2></a>
-                    <a class="pull-left" href="{$URL}home">
-                        <img src="{$URL}commom/img/icon_3.png" alt="BOX para banheiros" title="BOX para banheiros">
+                    <a class="link-baixo-banner pull-left" href="{$URL}produtos/divisoria-de-vidro"><h2>ENGENHARIA<br> soluções</h2></a>
+                    <!-- <h2 class="link-baixo-banner-2 pull-left">ENGENHARIA<br> soluções</h2> -->
+                    <a class="pull-left" href="{$URL}produtos/divisoria-de-vidro">
+                        <img src="{$URL}commom/img/icon_3.png" alt="ENGENHARIA soluções" title="ENGENHARIA soluções">
                     </a>
+                    <!-- <p class="pull-left">
+                        <img src="{$URL}commom/img/icon_3.png" alt="ENGENHARIA soluções" title="ENGENHARIA soluções">
+                    </p> -->
                 </div>
 
                 <div class="col-xs-12 col-sm-3 col-md-3">
-                    <a class="link-baixo-banner pull-left" href="{$URL}home"><h2>PROJETOS <br> especiais</h2></a>
-                    <a class="pull-left" href="{$URL}home">
-                        <img src="{$URL}commom/img/icon_4.png" alt="BOX para banheiros" title="BOX para banheiros">
+                    <a class="link-baixo-banner pull-left" href="{$URL}produtos/porta-de-vidro"><h2>PORTAS <br> de vidro</h2></a>
+                    <a class="pull-left" href="{$URL}produtos/porta-de-vidro">
+                        <img src="{$URL}commom/img/icon_4.png" alt="PORTAS de vidro" title="PORTAS de vidro">
                     </a>
                 </div>
             </div>
@@ -115,6 +127,7 @@
                     <!-- Destaque 1 -->
 
                     <!-- Destaque 2 -->
+                    {if $dadosProjeto}
                     <div class="col-xs-12 col-sm-6 col-md-6 bloco-vitrine-destaques">
                         <div class="row">
                             <div class="col-xs-12 col-sm-7 col-md-7 pd-none">
@@ -142,6 +155,7 @@
                             </div>
                         </div>
                     </div>
+                    {/if}
                     <!-- Destaque 2 -->  
                 </div>               
 
@@ -229,7 +243,7 @@
                                 <a href="https://twitter.com/#!/amplovidros" target="_blank">
                                     <img class="img-conectado" src="{$URL}commom/img/icone_twitter.png" alt="fique conectado pelo Twitter" title="fique conectado pelo Twitter">
                                 </a>
-                                <a href="" target="_blank">
+                                <a href="https://www.instagram.com/amplovidros/" target="_blank">
                                     <img class="img-conectado" src="{$URL}commom/img/icon_instagram.png" alt="fique conectado pelo Instagram" title="fique conectado pelo Instagram">
                                 </a>
                             </div>    

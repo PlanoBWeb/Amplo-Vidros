@@ -10,10 +10,95 @@
         });
     });
 
-    $(document).ready(function() {
+    // Função lightbox
+    // $(document).ready(function() {
+    //     var current = '.mtlsr-images-for-lightbox ul li.current';
+    //     //Função para verificar a posição atual da imagem e remover as setas(prev e next) conforme necessário
+    //     function check_image_position(){                
+    //         if ($(current).is(':last-child')) {
+    //             $('.next').hide();
+    //             $('.prev').show();
+    //         }else if ($(current).is(':first-child')) {
+    //             $('.next').show();
+    //             $('.prev').hide();
+    //         }else{
+    //             $('.next, .prev').show();
+    //         }
+    //     }           
+        
+    //     $('.mtlsr-images-for-lightbox ul li').on('click', 'a', function(event) {
+    //         event.preventDefault();
+            
+    //         var qualLightBox = $(this).data("item-id");
+    //         // projeto-com-1
 
+    //         var big_image_href = $(this).attr('href');
+            
+    //         // $(this).parent().addClass('current');
+    //         if (qualLightBox == "projeto-com-1") {
+    //             $('.mtlsr-lightbox-1').fadeIn();  
+    //         }else if(qualLightBox == "projeto-com-2"){
+    //             $('.mtlsr-lightbox-2').fadeIn(); 
+    //         }else if(qualLightBox == "projeto-com-3"){
+    //             $('.mtlsr-lightbox-3').fadeIn(); 
+    //         }else if(qualLightBox == "projeto-com-4"){
+    //             $('.mtlsr-lightbox-4').fadeIn(); 
+    //         }else if(qualLightBox == "projeto-com-5"){
+    //             $('.mtlsr-lightbox-5').fadeIn(); 
+    //         }else if(qualLightBox == "projeto-com-6"){
+    //             $('.mtlsr-lightbox-6').fadeIn(); 
+    //         }else if(qualLightBox == "projeto-com-0"){
+    //             $('.mtlsr-lightbox-0').fadeIn(); 
+    //         }
+
+    //         $(this).parents('li').addClass('current');
+    //         //$('.mtlsr-lightbox').fadeIn();
+    //         $('.mtlsr-lightbox').append('<img class="image-in-lightbox" src="'+big_image_href+'" alt=""></div>');
+            
+    //         check_image_position();
+    //     });
+    //     //Fechar
+    //     $('.mtlsr-lightbox').on('click', '.close', function(event) {
+    //         $('.mtlsr-lightbox').fadeOut();
+    //         $('.mtlsr-lightbox .image-in-lightbox').remove();
+    //         $(current).removeClass('current');
+    //     });
+
+    //     $(document).keydown(function (e) {
+    //         if(e.which == 27)
+    //         {
+    //             $('.mtlsr-lightbox').fadeOut();
+    //             $('.mtlsr-lightbox .image-in-lightbox').remove();
+    //             $(current).removeClass('current');
+    //         }
+    //     });
+
+    //     //Função Next e Prev
+    //     $('.mtlsr-lightbox a').on('click', function(e){             
+    //         if($(this).attr('class')=='next'){
+    //             var big_image_href = $(current).next().find('a').attr('href');                
+            
+    //             $(current).next().addClass('current');
+    //             $(current).prev().removeClass('current');
+                
+    //         }else if($(this).attr('class')=='prev'){
+    //             var big_image_href = $(current).prev().find('a').attr('href');
+            
+    //             $(current).prev().addClass('current');
+    //             $(current).next().removeClass('current');
+    //         }
+    //         check_image_position();
+                
+    //         $('.mtlsr-lightbox .image-in-lightbox').remove();
+    //         $('.mtlsr-lightbox').append('<img class="image-in-lightbox" src="'+big_image_href+'" alt=""></div>');
+    //     });
+        
+    // });
+
+
+    $(document).ready(function() {
         var current = '.mtlsr-images-for-lightbox ul li.current';
-        //Função para verificar a posição atual da imagem e remover as setas(prev e next) conforme necessário
+
         function check_image_position(){                
             if ($(current).is(':last-child')) {
                 $('.next').hide();
@@ -25,74 +110,73 @@
                 $('.next, .prev').show();
             }
         }           
-        
+
         $('.mtlsr-images-for-lightbox ul li').on('click', 'a', function(event) {
             event.preventDefault();
-            
-            var qualLightBox = $(this).data("item-id");
-            // projeto-com-1
-
             var big_image_href = $(this).attr('href');
             
-            // $(this).parent().addClass('current');
-            if (qualLightBox == "projeto-com-1") {
-                $('.mtlsr-lightbox-1').fadeIn();  
-            }else if(qualLightBox == "projeto-com-2"){
-                $('.mtlsr-lightbox-2').fadeIn(); 
-            }else if(qualLightBox == "projeto-com-3"){
-                $('.mtlsr-lightbox-3').fadeIn(); 
-            }else if(qualLightBox == "projeto-com-4"){
-                $('.mtlsr-lightbox-4').fadeIn(); 
-            }else if(qualLightBox == "projeto-com-5"){
-                $('.mtlsr-lightbox-5').fadeIn(); 
-            }else if(qualLightBox == "projeto-com-6"){
-                $('.mtlsr-lightbox-6').fadeIn(); 
-            }else if(qualLightBox == "projeto-com-0"){
-                $('.mtlsr-lightbox-0').fadeIn(); 
-            }
+            $(this).parents('li').addClass('current');
+            $('.bg-fundo-lightbox').fadeIn();
+            $('.mtlsr-lightbox').fadeIn();
+            $('.txt-lightbox').append('<img class="image-in-lightbox" src="'+big_image_href+'" alt="">');
 
-            $(this).parent('li').addClass('current');
-            //$('.mtlsr-lightbox').fadeIn();
-            $('.mtlsr-lightbox').append('<img class="image-in-lightbox" src="'+big_image_href+'" alt=""></div>');
-            
             check_image_position();
         });
-        //Fechar
-        $('.mtlsr-lightbox').on('click', '.close', function(event) {
-            $('.mtlsr-lightbox').fadeOut();
-            $('.mtlsr-lightbox .image-in-lightbox').remove();
-            $(current).removeClass('current');
+        
+        // //Fechar Clique
+        $(document).ready(function() {
+            $('.mtlsr-lightbox').on('click', '.close', function(event) {
+                $('.mtlsr-lightbox').fadeOut();
+                $('.bg-fundo-lightbox').fadeOut();
+                $('.image-in-lightbox, .descricao-produ1').remove();
+                $(current).removeClass('current');
+                return false;
+            });
         });
 
+        // //Fechar Clique
+        $(document).ready(function() {
+            $('body').on('click', '.bg-fundo-lightbox', function(event) {
+                $('.mtlsr-lightbox').fadeOut();
+                $('.bg-fundo-lightbox').fadeOut();
+                $('.image-in-lightbox, .descricao-produ1').remove();
+                $(current).removeClass('current');
+                return false;
+            });
+        });
+
+        // //Fechar ESC
         $(document).keydown(function (e) {
             if(e.which == 27)
             {
                 $('.mtlsr-lightbox').fadeOut();
-                $('.mtlsr-lightbox .image-in-lightbox').remove();
+                $('.bg-fundo-lightbox').fadeOut();
+                $('.image-in-lightbox, .descricao-produ1').remove();
                 $(current).removeClass('current');
+                return false;
             }
         });
 
-        //Função Next e Prev
-        $('.mtlsr-lightbox a').on('click', function(e){             
+        $('.mtlsr-lightbox a').on('click', function(e){                
             if($(this).attr('class')=='next'){
-                var big_image_href = $(current).next().find('a').attr('href');                
+                var big_image_href = $(current).next().find('a').attr('href');  
+                var texto          = $(current).next().find('a').text();
             
                 $(current).next().addClass('current');
                 $(current).prev().removeClass('current');
                 
             }else if($(this).attr('class')=='prev'){
                 var big_image_href = $(current).prev().find('a').attr('href');
-            
+                var texto = $(current).prev().find('a').text();
+
                 $(current).prev().addClass('current');
                 $(current).next().removeClass('current');
             }
             check_image_position();
                 
-            $('.mtlsr-lightbox .image-in-lightbox').remove();
-            $('.mtlsr-lightbox').append('<img class="image-in-lightbox" src="'+big_image_href+'" alt=""></div>');
+            $('.image-in-lightbox, .descricao-produ1').remove();
+            $('.txt-lightbox').append('<img class="image-in-lightbox" src="'+big_image_href+'" alt=""> <div class="descricao-produ1"> '+texto+' </div> ');
         });
-        
     });
 
     // Valida Newslleter
@@ -297,21 +381,43 @@
  
     });
 
-    // Menu lateral
-    $('.abre-sub-lateral').click(function(){
-        // event.preventDefault();
-        menu = $(this).children('.subMenu-lateral');
-        link = $(this).parent('.linha-menu-produto');
+    // // Menu lateral
+    // $('.abre-sub-lateral').click(function(){
+    //     // event.preventDefault();
+    //     menu = $(this).children('.subMenu-lateral');
+    //     link = $(this).parent('.linha-menu-produto');
 
-        if($('.subMenu-lateral').is(':visible')){
-            $('.subMenu-lateral').hide();   
-            // $(link).addClass('menu-produto-icon'); 
-            // $(link).removeClass('menu-produto-icon-ativo'); 
-        }else{
-            $(menu).toggle();       
+    //     if($('.subMenu-lateral').is(':visible')){
+    //         $('.subMenu-lateral').hide();   
+    //         // $(link).addClass('menu-produto-icon'); 
+    //         // $(link).removeClass('menu-produto-icon-ativo'); 
+    //     }else{
+    //         $(menu).toggle();       
 
-        }
+    //     }
+    // });
+
+    $(document).ready(function () {
+        $('.menu-lateral li').click(function(){
+            if ($(this).attr('class') != 'active'){
+                $('.subMenu-lateral').slideUp();
+                $(this).find('.subMenu-lateral').slideToggle();
+                $('.menu-lateral li').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
     });
+
+    // $(document).ready(function () {
+    //   $('#nav > li > a').click(function(){
+    //     if ($(this).attr('class') != 'active'){
+    //       $('#nav li ul').slideUp();
+    //       $(this).next().slideToggle();
+    //       $('#nav li a').removeClass('active');
+    //       $(this).addClass('active');
+    //     }
+    //   });
+    // });
 
     // Redirect mobile menu lateral
     $('.menuLatLink').change(function(){

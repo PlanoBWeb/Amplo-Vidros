@@ -21,11 +21,11 @@
             $headers  .= "Content-type: text/plain; charset=UTF-8\n";
             $assunto  .= "Amplo Vidros - Site";
             $conteudo     .= "$cont\r\n";
-            $headers  .= "From: joseygor@planobweb.com.br\n"; 
-            $headers  .= "Return-Path: joseygor@planobweb.com.br\r\n"; 
+            $headers  .= "From: vendas@amplovidros.com.br\n"; 
+            $headers  .= "Return-Path: vendas@amplovidros.com.br\r\n"; 
             //$headers    .= "Bcc: contato@planobweb.com.br\r\n"; // cópia
             $headers  .= "Reply-To: $email\n";
-            $envio        = mail("joseygor@planobweb.com.br", $assunto,$conteudo,$headers);
+            $envio        = mail("vendas@amplovidros.com.br", $assunto,$conteudo,$headers);
 
             if ($envio) {
                 echo "<script>location.href ='obrigado-newsletter'</script>";     
@@ -60,11 +60,11 @@
             $headers  .= "Content-type: text/plain; charset=UTF-8\n";
             $assunto  .= "Amplo Vidros - Site";
             $conteudo     .= "$cont\r\n";
-            $headers  .= "From: joseygor@planobweb.com.br\n"; 
-            $headers  .= "Return-Path: joseygor@planobweb.com.br\r\n"; 
+            $headers  .= "From: vendas@amplovidros.com.br\n"; 
+            $headers  .= "Return-Path: vendas@amplovidros.com.br\r\n"; 
             //$headers    .= "Bcc: contato@planobweb.com.br\r\n"; // cópia
             $headers  .= "Reply-To: $email\n";
-            $envio        = mail("joseygor@planobweb.com.br", $assunto,$conteudo,$headers);
+            $envio        = mail("vendas@amplovidros.com.br", $assunto,$conteudo,$headers);
 
             if ($_POST['pagina'] == "fale-conosco") {
                 echo "<script>location.href ='obrigado-contato'</script>";  

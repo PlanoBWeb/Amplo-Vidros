@@ -133,7 +133,7 @@ class Categoria
 			{
 				$dados[$i] 						= $rows;
 				$dados[$i]['titulo'] 			= utf8_encode($rows['titulo']);
-				$dados[$i]['tituloCat']			= utf8_encode($tituloCat);
+				$dados[$i]['tituloCat']			= $tituloCat;
 				$dados[$i]['urlAmigaCat']		= $urlAmigaCat;
 				$dados[$i]['tamanhoProduto']	= $tamanhoProduto;
 				$i++;
@@ -167,8 +167,13 @@ class Categoria
 				WHERE
 					1 = 1 AND C.idPai <> 0
 				ORDER BY
-					C.idPai, C.titulo, C.ambiente
+					CPai.titulo, C.idPai, C.ambiente, C.titulo
 		";
+
+		
+
+
+		// C.idPai, C.titulo, C.ambiente
 		$result = mysql_query($sql);
 		if (!($result))
 		{

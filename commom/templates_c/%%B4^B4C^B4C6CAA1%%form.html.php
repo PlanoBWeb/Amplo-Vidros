@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-08 17:16:43
+<?php /* Smarty version 2.6.12, created on 2016-01-18 15:16:56
          compiled from ../inc/form.html */ ?>
 <form class="form-horizontal" name="contato" method="post" action="envia.php">
     <input type="hidden" name="pagina" value="<?php echo $this->_tpl_vars['pagina']; ?>
@@ -11,16 +11,20 @@
     </div>
     <div class="form-group">
         <label for="inputEmail3" class="col-sm-2 control-label">e-mail*</label>
-        <div class="col-sm-10">
+        <div class="col-sm-5">
             <input type="email" name="email" class="form-control" id="inputEmail3">
         </div>
+        <label for="inputEmail3" class="col-sm-1 control-label">Telefone*</label>
+        <div class="col-sm-4">
+            <input type="tel" name="telefone" class="form-control" id="inputTel">
+        </div>
     </div>
-    <div class="form-group">
+ <!--    <div class="form-group">
         <label for="inputTel" class="col-sm-2 control-label">Telefone</label>
         <div class="col-sm-10">
             <input type="tel" name="telefone" class="form-control" id="inputTel">
         </div>
-    </div>                            
+    </div> -->                            
     <div class="form-group">
         <label for="inputMsg" class="col-sm-2 control-label">Mensagem*</label>
         <div class="col-sm-10">

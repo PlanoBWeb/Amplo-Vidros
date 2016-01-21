@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-18 10:25:23
+<?php /* Smarty version 2.6.12, created on 2016-01-20 12:52:29
          compiled from ../inc/footer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '../inc/footer.html', 23, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '../inc/footer.html', 25, false),)), $this); ?>
     <footer>
         <article class="rodape">
             <div class="col-xs-12 col-sm-4 col-md-4 pd-none hidden-xs">
@@ -13,7 +13,7 @@ commom/img/logo.png" alt="AmploVidros" title="AmploVidros"></a>
 home" class="link-rodape">Home</a></li>
                     <li class="linha-rodape"> | </li>
                     <li class="linha-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
-quem-somos" class="link-rodape">Sobre nós</a></li>
+quem-somos" class="link-rodape">Quem somos</a></li>
                     <li><div class="row"></div></li>
                     <li class="linha-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
 produtos" class="link-rodape">Produtos</a></li>
@@ -26,10 +26,13 @@ promocao" class="link-rodape">Promoção</a></li>
                     <li class="linha-rodape"> | </li>
                     <li class="linha-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
 fale-conosco" class="link-rodape">Fale conosco</a></li>
+                    <li class="linha-rodape"> | </li>
+                    <li class="linha-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
+orcamentos" class="link-rodape">Orçamentos</a></li>
                 </ul>
             </div>  
 
-            <div class="col-xs-12 col-sm-4 col-md-4 pd-none bloco-rodape-ind">
+            <div class="col-xs-12 col-sm-4 col-md-4 pd-none bloco-rodape-ind" style="padding-right: 30px!important;">
                 <span class="titulo-verme">Produtos</span>
                 <ul>
                     <?php $this->assign('idPai', ((is_array($_tmp=@$this->_tpl_vars['idPai'])) ? $this->_run_mod_handler('default', true, $_tmp, "") : smarty_modifier_default($_tmp, ""))); ?>
@@ -58,7 +61,7 @@ $this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
 $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
 ?> 
                         <?php if ($this->_tpl_vars['idPai'] <> $this->_tpl_vars['dadosCatMenu'][$this->_sections['i']['index']]['tituloPai']): ?> 
-                            <li><div class="row"></div></li>
+                            <!-- <li><div class="row"></div></li> -->
                             <li class="linha-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
 produtos/<?php echo $this->_tpl_vars['dadosCatMenu'][$this->_sections['i']['index']]['urlCat']; ?>
 " class="link-rodape"><?php echo $this->_tpl_vars['dadosCatMenu'][$this->_sections['i']['index']]['tituloPai']; ?>
@@ -108,7 +111,7 @@ commom/img/icon_face_f.png" alt="Facebook" title="Facebook">
                                 <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon_twitter.png" alt="Twitter" title="Twitter">
                             </a>
-                            <a class="link-redes-f" href="" target="_blank">
+                            <a class="link-redes-f" href="https://www.instagram.com/amplovidros/" target="_blank">
                                 <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon_insta.png" alt="Instagram" title="Instagram">
                             </a>

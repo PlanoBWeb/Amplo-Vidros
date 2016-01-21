@@ -21,7 +21,7 @@
     }else{
     	$parametro['catNormal'] = $url[1];
     }    
-    $retorno	= $class->Pesquisar($parametro);
+    $retorno	= $class->Pesquisar($parametro, null, null);
 	if( $retorno[0] )
 	{
 		$smarty->assign("mensagem", $retorno[1]);

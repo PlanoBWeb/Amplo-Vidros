@@ -7,6 +7,7 @@
     <meta name="robots" content="index, follow">
     <meta name="description" content="" />
     <link href="{$URL}commom/img/icon-tab.png" rel="icon">
+    {include file="../inc/cssUrlAmigavel.html"}
     <link rel="stylesheet" type="text/css" href="{$URL}commom/css/estilo.css">
     <title>Amplo Vidros</title>
     <!-- Bootstrap -->
@@ -32,7 +33,7 @@
                     {include file="../inc/menu-lateral.html"}
                     <div class="col-xs-12 col-sm-9 col-md-9">
                         <h1 class="titulo-interna">{$tituloCatProduto} • {$dados[0].tituloCatFilho}</h1><br>
-                        <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+                        <!-- <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p> -->
                         
                         <!-- Produto -->
                         <div class="row">
@@ -41,23 +42,35 @@
                                 <ul class="projetos-lightbox">
                                     {section name=i loop=$dados} 
                                         <li>
-                                            <a class="img" href="{$URL}{$dados[i].caminhoImagem}"  data-item-id="projeto-com-0">
-                                                <div class="col-xs-12 {if  $dadosTamanhoProd[0].tamanhoProduto == 3}col-sm-4 col-md-4{elseif  $dadosTamanhoProd[0].tamanhoProduto == 4}col-sm-3 col-md-3{else}col-sm-4 col-md-4{/if} bloco-img-tipos bloco-img-tipos-produtos">
+                                            <div class="col-xs-12 {if  $dadosTamanhoProd[0].tamanhoProduto == 3}col-sm-4 col-md-4{elseif  $dadosTamanhoProd[0].tamanhoProduto == 4}col-sm-3 col-md-3{else}col-sm-4 col-md-4{/if} bloco-img-tipos bloco-img-tipos-produtos">
+                                                <a class="img" href="{$URL}{$dados[i].caminhoImagem}"  data-item-id="projeto-com-0">
                                                     <img class="img-produtos-tipos {if  $dadosTamanhoProd[0].tamanhoProduto == 3}img-produtos-tipos-4{elseif  $dadosTamanhoProd[0].tamanhoProduto == 4}img-produtos-tipos-3{else}img-produtos-tipos-4{/if}" src="{$URL}{$dados[i].caminhoThumbnail}" alt="{$dados[i].titulo}" title="{$dados[i].titulo}">
                                                     <img class="lupa-produto {if  $dadosTamanhoProd[0].tamanhoProduto == 3}lupa-produto-3{/if}" src="{$URL}commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                    <h2><p class="txt-interna">{$dados[i].titulo}</p></h2>
-                                                </div>
-                                            </a>
+                                                </a>
+                                                <h2><a class="img txt-interna" href="{$URL}{$dados[i].caminhoImagem}"  data-item-id="projeto-com-0">{$dados[i].titulo}</a></h2>
+                                            </div>
                                         </li>
                                     {/section}
                                 </ul>
                             </div>
-                            <div class="mtlsr-lightbox mtlsr-lightbox-0">
+                            <!-- <div class="mtlsr-lightbox mtlsr-lightbox-0">
                                 <a href="#" class="close">&#9421;</a>
                                 {if count($dados) >= 2}
                                     <a href="#" class="prev">&lsaquo;</a>
                                     <a href="#" class="next">&rsaquo;</a>
                                 {/if}
+                            </div> -->
+                            <div id="fecha" class="mtlsr-lightbox">
+                                <div class="bg-fundo-lightbox"></div>
+                                <div class="encapsula-img-lightbox">
+                                    <div class="txt-lightbox">
+                                        <a href="#" class="close">&#9421;</a>
+                                        {if count($dados) >= 2}
+                                            <a href="#" class="prev">&lsaquo;</a>    
+                                            <a href="#" class="next">&rsaquo;</a>  
+                                        {/if}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- Produto -->

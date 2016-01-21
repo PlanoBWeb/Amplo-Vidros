@@ -10,7 +10,8 @@
                         </ul>
                     </li>
                     {assign var="ambiente" value=0}
-                    <li class="txt-interna abre-sub-lateral {if $categoriaAtual == $dadosCatMenu[i].urlCat}menu-lat-ativo{/if}">
+                    <!-- <li class="txt-interna abre-sub-lateral {if $categoriaAtual == $dadosCatMenu[i].urlCat}menu-lat-ativo{/if} "> -->
+                    <li class="{if $categoriaAtual == $dadosCatMenu[i].urlCat}menu-lat-ativo{/if} ">
                     {$dadosCatMenu[i].tituloPai}
                     <img class="pull-right" src="{$URL}commom/img/seta.png" alt="Abrir menu" title="Abrir menu"> 
                     {assign var="idPai" value=$dadosCatMenu[i].tituloPai}

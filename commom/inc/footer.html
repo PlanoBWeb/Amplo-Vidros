@@ -5,7 +5,7 @@
                 <ul>
                     <li class="linha-rodape"><a href="{$URL}home" class="link-rodape">Home</a></li>
                     <li class="linha-rodape"> | </li>
-                    <li class="linha-rodape"><a href="{$URL}quem-somos" class="link-rodape">Sobre nós</a></li>
+                    <li class="linha-rodape"><a href="{$URL}quem-somos" class="link-rodape">Quem somos</a></li>
                     <li><div class="row"></div></li>
                     <li class="linha-rodape"><a href="{$URL}produtos" class="link-rodape">Produtos</a></li>
                     <li class="linha-rodape"> | </li>
@@ -14,16 +14,18 @@
                     <li class="linha-rodape"><a href="{$URL}promocao" class="link-rodape">Promoção</a></li>
                     <li class="linha-rodape"> | </li>
                     <li class="linha-rodape"><a href="{$URL}fale-conosco" class="link-rodape">Fale conosco</a></li>
+                    <li class="linha-rodape"> | </li>
+                    <li class="linha-rodape"><a href="{$URL}orcamentos" class="link-rodape">Orçamentos</a></li>
                 </ul>
             </div>  
 
-            <div class="col-xs-12 col-sm-4 col-md-4 pd-none bloco-rodape-ind">
+            <div class="col-xs-12 col-sm-4 col-md-4 pd-none bloco-rodape-ind" style="padding-right: 30px!important;">
                 <span class="titulo-verme">Produtos</span>
                 <ul>
                     {assign var="idPai" value=$idPai|default:""}
                     {section name=i loop=$dadosCatMenu} 
                         {if $idPai <> $dadosCatMenu[i].tituloPai} 
-                            <li><div class="row"></div></li>
+                            <!-- <li><div class="row"></div></li> -->
                             <li class="linha-rodape"><a href="{$URL}produtos/{$dadosCatMenu[i].urlCat}" class="link-rodape">{$dadosCatMenu[i].tituloPai}</a></li>
                             {assign var="idPai" value=$dadosCatMenu[i].tituloPai}
                             <li class="linha-rodape"> | </li>                            
@@ -63,7 +65,7 @@
                             <a class="link-redes-f" href="https://twitter.com/amplovidros" target="_blank">
                                 <img src="{$URL}commom/img/icon_twitter.png" alt="Twitter" title="Twitter">
                             </a>
-                            <a class="link-redes-f" href="" target="_blank">
+                            <a class="link-redes-f" href="https://www.instagram.com/amplovidros/" target="_blank">
                                 <img src="{$URL}commom/img/icon_insta.png" alt="Instagram" title="Instagram">
                             </a>
                         </div>

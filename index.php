@@ -1,7 +1,7 @@
 <?php
 	include_once "configs/config.php";
 
-	$url = $_SERVER['REQUEST_URI'];
+	$url = strtolower($_SERVER['REQUEST_URI']);
 	$url = substr($url, 1);
 	$url = str_replace(PASTAPROJETO, "", $url);
 	$url = explode('/', $url);

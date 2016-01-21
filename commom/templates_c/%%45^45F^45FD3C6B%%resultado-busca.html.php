@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-18 13:34:03
+<?php /* Smarty version 2.6.12, created on 2016-01-20 12:59:35
          compiled from resultado-busca.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -10,6 +10,11 @@
     <meta name="description" content="" />
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
+    <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../inc/cssUrlAmigavel.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
     <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
     <title>Amplo Vidros</title>
@@ -53,7 +58,7 @@ unset($_smarty_tpl_vars);
                     <div class="col-xs-12 col-sm-9 col-md-9">
                         <?php if ($this->_tpl_vars['dados']): ?>
                             <h1 class="titulo-interna">produtos encontrados:</h1><br>
-                            <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+                            <!-- <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p> -->
                             
                             <!-- Produto -->
                             <div class="row">
@@ -85,31 +90,110 @@ $this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
 $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
 ?> 
                                             <li>
-                                                <a class="img" href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']; ?>
+                                                <div class="col-xs-12 <?php if ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 3): ?>col-sm-4 col-md-4<?php elseif ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 4): ?>col-sm-3 col-md-3<?php else: ?>col-sm-4 col-md-4<?php endif; ?> bloco-img-tipos bloco-img-tipos-produtos">
+                                                    <a class="img" href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']; ?>
 "  data-item-id="projeto-com-0">
-                                                    <div class="col-xs-12 <?php if ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 3): ?>col-sm-4 col-md-4<?php elseif ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 4): ?>col-sm-3 col-md-3<?php else: ?>col-sm-4 col-md-4<?php endif; ?> bloco-img-tipos bloco-img-tipos-produtos">
                                                         <img class="img-produtos-tipos <?php if ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 3): ?>img-produtos-tipos-4<?php elseif ($this->_tpl_vars['dadosTamanhoProd'][0]['tamanhoProduto'] == 4): ?>img-produtos-tipos-3<?php else: ?>img-produtos-tipos-4<?php endif; ?>" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoThumbnail']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 ">
                                                         <img class="lupa-produto" style="bottom: 107px;" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/lupa-produto.png" alt="Abrir" title="Abrir">
-                                                        <h2><p class="txt-interna"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
-</p></h2>
-                                                    </div>
-                                                </a>
+                                                    </a>
+                                                    <h2><a class="img txt-interna" href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']; ?>
+"  data-item-id="projeto-com-0"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
+</a></h2>
+                                                </div>
+                                                
                                             </li>
                                         <?php endfor; endif; ?>
                                     </ul>
                                 </div>
-                                <div class="mtlsr-lightbox mtlsr-lightbox-0">
+                                <div id="fecha" class="mtlsr-lightbox">
+                                    <div class="bg-fundo-lightbox"></div>
+                                    <div class="encapsula-img-lightbox">
+                                        <div class="txt-lightbox">
+                                            <a href="#" class="close">&#9421;</a>
+                                            <?php if (count ( $this->_tpl_vars['dados'] ) >= 2): ?>
+                                                <a href="#" class="prev">&lsaquo;</a>    
+                                                <a href="#" class="next">&rsaquo;</a>  
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="mtlsr-lightbox mtlsr-lightbox-0">
                                     <a href="#" class="close">&#9421;</a>
                                     <?php if (count ( $this->_tpl_vars['dados'] ) >= 2): ?>
                                         <a href="#" class="prev">&lsaquo;</a>
                                         <a href="#" class="next">&rsaquo;</a>
                                     <?php endif; ?>
-                                </div>
+                                </div> -->
                             </div>
+
+                            <?php if ($this->_tpl_vars['totalPaginas'] > 1): ?>
+                                <div class="bloco-paginacao">
+                                    <form class="pull-left" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+resultado-busca">
+                                        <input type="hidden" class="urlAction" name="urlAction" value="<?php echo $this->_tpl_vars['URL']; ?>
+resultado-busca">
+                                        <input type="hidden" name="search" value="<?php echo $this->_tpl_vars['postBusca']; ?>
+">   
+                                        <input type="hidden" name="p" value="<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
+">
+                                        <input class="seta-pagin-laterais pull-left" type="submit" value=" << ">
+                                    </form>
+                                    <?php unset($this->_sections['j']);
+$this->_sections['j']['start'] = (int)1;
+$this->_sections['j']['name'] = 'j';
+$this->_sections['j']['loop'] = is_array($_loop=$this->_tpl_vars['Numpaginas']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['j']['show'] = true;
+$this->_sections['j']['max'] = $this->_sections['j']['loop'];
+$this->_sections['j']['step'] = 1;
+if ($this->_sections['j']['start'] < 0)
+    $this->_sections['j']['start'] = max($this->_sections['j']['step'] > 0 ? 0 : -1, $this->_sections['j']['loop'] + $this->_sections['j']['start']);
+else
+    $this->_sections['j']['start'] = min($this->_sections['j']['start'], $this->_sections['j']['step'] > 0 ? $this->_sections['j']['loop'] : $this->_sections['j']['loop']-1);
+if ($this->_sections['j']['show']) {
+    $this->_sections['j']['total'] = min(ceil(($this->_sections['j']['step'] > 0 ? $this->_sections['j']['loop'] - $this->_sections['j']['start'] : $this->_sections['j']['start']+1)/abs($this->_sections['j']['step'])), $this->_sections['j']['max']);
+    if ($this->_sections['j']['total'] == 0)
+        $this->_sections['j']['show'] = false;
+} else
+    $this->_sections['j']['total'] = 0;
+if ($this->_sections['j']['show']):
+
+            for ($this->_sections['j']['index'] = $this->_sections['j']['start'], $this->_sections['j']['iteration'] = 1;
+                 $this->_sections['j']['iteration'] <= $this->_sections['j']['total'];
+                 $this->_sections['j']['index'] += $this->_sections['j']['step'], $this->_sections['j']['iteration']++):
+$this->_sections['j']['rownum'] = $this->_sections['j']['iteration'];
+$this->_sections['j']['index_prev'] = $this->_sections['j']['index'] - $this->_sections['j']['step'];
+$this->_sections['j']['index_next'] = $this->_sections['j']['index'] + $this->_sections['j']['step'];
+$this->_sections['j']['first']      = ($this->_sections['j']['iteration'] == 1);
+$this->_sections['j']['last']       = ($this->_sections['j']['iteration'] == $this->_sections['j']['total']);
+?>                                    
+                                        <form class="pull-left" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+resultado-busca">
+                                            <input type="hidden" class="urlAction" name="urlAction" value="<?php echo $this->_tpl_vars['URL']; ?>
+resultado-busca">
+                                            <input type="hidden" name="search" value="<?php echo $this->_tpl_vars['postBusca']; ?>
+">   
+                                            <input type="hidden" name="p" value="<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+">
+                                            <input class="seta-pagin pull-left <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $this->_tpl_vars['pagPost']): ?>link-paginacao-ativo<?php endif; ?>" type="submit" value="<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+">
+                                        </form>
+                                    <?php endfor; endif; ?>
+                                    <form class="pull-left" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+resultado-busca">
+                                        <input type="hidden" class="urlAction" name="urlAction" value="<?php echo $this->_tpl_vars['URL']; ?>
+resultado-busca">
+                                        <input type="hidden" name="search" value="<?php echo $this->_tpl_vars['postBusca']; ?>
+">   
+                                        <input type="hidden" name="p" value="<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
+">
+                                        <input class="seta-pagin-laterais pull-left" type="submit" value=" >> ">
+                                    </form>
+                                </div>
+                            <?php endif; ?>
                         <?php else: ?>
                             <center><h1 class="titulo-interna">Nenhum produto encontrado</h1><br></center>
                         <?php endif; ?>

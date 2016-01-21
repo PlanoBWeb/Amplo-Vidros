@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-18 10:16:42
+<?php /* Smarty version 2.6.12, created on 2016-01-15 18:16:21
          compiled from produtos.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -10,6 +10,11 @@
     <meta name="description" content="" />
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
+    <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../inc/cssUrlAmigavel.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
     <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
     <title>Amplo Vidros</title>
@@ -53,7 +58,7 @@ unset($_smarty_tpl_vars);
                     <div class="col-xs-12 col-sm-9 col-md-9">
 
                         <h1 class="titulo-interna"><?php if ($this->_tpl_vars['dados'][0]['tituloCat']):  echo $this->_tpl_vars['dados'][0]['tituloCat'];  else: ?>Produtos<?php endif; ?></h1><br>
-                        <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+                       <!--  <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p> -->
                         <!-- Tipos 1 -->
                         <div class="row">
                             <br>
@@ -163,7 +168,7 @@ $this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
 $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
 ?> 
                                     <?php if ($this->_tpl_vars['dados'][$this->_sections['i']['index']]['ambiente'] == 1): ?>
-                                        <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos">
+                                        <div class="col-xs-12 col-sm-3 col-md-3 bloco-img-tipos mg-bt-30">
                                             <img class="img-produtos-tipos" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['texto']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['texto']; ?>

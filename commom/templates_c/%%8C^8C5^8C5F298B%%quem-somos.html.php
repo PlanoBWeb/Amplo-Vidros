@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-03 17:41:15
+<?php /* Smarty version 2.6.12, created on 2016-01-15 17:41:15
          compiled from quem-somos.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -10,6 +10,11 @@
 	<meta name="description" content="" />
 	<link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
+    <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../inc/cssUrlAmigavel.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
 	<link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
 	<title>Amplo Vidros</title>

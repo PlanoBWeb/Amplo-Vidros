@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-18 10:42:54
+<?php /* Smarty version 2.6.12, created on 2016-01-18 14:21:44
          compiled from ../inc/header.html */ ?>
 <div id="fb-root"></div>
 <?php echo '
@@ -14,8 +14,10 @@
 
 <header>
     <div class="bg-topo hidden-xs">
+        <div class="bg-top-left"></div>
         <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/bg_topo.jpg" alt="">
+        <div class="bg-top-right"></div>
     </div>
     <article class="topo-contato">
         <div class="col-xs-9 col-sm-3 col-md-3 hidden-xs">
@@ -132,7 +134,7 @@ commom/img/icon_busca.jpg" alt="Buscar" title="Buscar">
                         <div  id="carrega-busca" class="carrega-busca"></div>
                     </form>
                     <div class="redes-sociais">
-                        <a href="" target="_blank">
+                        <a href="https://www.instagram.com/amplovidros/" target="_blank">
                             <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon_insta.png" alt="Instagram" title="Instagram">
                         </a>
@@ -148,9 +150,9 @@ commom/img/icon_twitter.png" alt="Twitter" title="Twitter">
     <div class="bloco-contato-mobile">
         <div class="col-xs-12">
             <div class="row">
-                <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/icon_tel.png" alt="Atendimento" title="Atendimento">
-                <p class="atende-topo">Atendimento</p>
+                <!-- <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_tel.png" alt="Atendimento" title="Atendimento"> -->
+                <!-- <p class="atende-topo">Atendimento</p> -->
             </div>
             <div class="row">
                 <a class="tel-topo" href="tel:01140554430">11 4055•4430</a><br>
@@ -158,9 +160,9 @@ commom/img/icon_tel.png" alt="Atendimento" title="Atendimento">
         </div>    
         <div class="col-xs-12">
             <div class="row">
-                <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/icon_atende.png" alt="Contato" title="Contato">
-                <p class="atende-topo">Contato</p>
+                <!-- <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_atende.png" alt="Contato" title="Contato"> -->
+                <!-- <p class="atende-topo">Contato</p> -->
             </div>
             <div class="row">
                 <a class="email-topo" href="mailto:vendas@amplovidros.com.br">vendas@amplovidros.com.br</a>

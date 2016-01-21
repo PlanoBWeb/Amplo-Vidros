@@ -32,7 +32,7 @@ if( $_SERVER['SERVER_NAME'] == 'planobweb' || $_SERVER['SERVER_NAME'] == '192.16
 	define("db_pass", '');
 	define("db_base", 'amplovidros');
 	define("PATH_SERVIDOR","C:/wamp/www/clientes/AmploVidros/Web/");
-	define("PASTAPROJETO", "clientes/AmploVidros/Web/");
+	define("PASTAPROJETO", strtolower("clientes/AmploVidros/Web/"));
 	if ($_SERVER['SERVER_NAME'] == '192.168.0.105') {
 		define("URL","http://192.168.0.105/clientes/AmploVidros/Web/");
 	}else{
@@ -47,8 +47,20 @@ else
 	define("db_pass", 'am8076os');
 	define("db_base", 'amplovidros');
 	define("PATH_SERVIDOR","E:/Home/amplovidros/Web/homologacao/");
-	define("PASTAPROJETO", "homologacao/");
-	define("URL","http://amplovidros.com.br/homologacao/");
+	define("PASTAPROJETO", strtolower("homologacao/"));
+
+	$urlWWW = $_SERVER['SERVER_NAME'];
+	$urlWWWFinal = explode('.', $urlWWW);
+	if ($urlWWWFinal[0] == "www") {
+		define("URL","http://www.amplovidros.com.br/homologacao/");	
+	}elseif ($urlWWWFinal[0] == "WWW") {
+		define("URL","http://WWW.amplovidros.com.br/homologacao/");	
+	}
+	else{
+		define("URL","http://amplovidros.com.br/homologacao/");
+	}
+	
+	// define("URL","http://amplovidros.com.br/homologacao/");
 }
 
 //Acesso ao MyAdmin

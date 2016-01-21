@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-16 16:39:20
+<?php /* Smarty version 2.6.12, created on 2016-01-18 14:41:51
          compiled from ../inc/menu-lateral.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '../inc/menu-lateral.html', 4, false),)), $this); ?>
@@ -37,7 +37,8 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                         </ul>
                     </li>
                     <?php $this->assign('ambiente', 0); ?>
-                    <li class="txt-interna abre-sub-lateral <?php if ($this->_tpl_vars['categoriaAtual'] == $this->_tpl_vars['dadosCatMenu'][$this->_sections['i']['index']]['urlCat']): ?>menu-lat-ativo<?php endif; ?>">
+                    <!-- <li class="txt-interna abre-sub-lateral <?php if ($this->_tpl_vars['categoriaAtual'] == $this->_tpl_vars['dadosCatMenu'][$this->_sections['i']['index']]['urlCat']): ?>menu-lat-ativo<?php endif; ?> "> -->
+                    <li class="<?php if ($this->_tpl_vars['categoriaAtual'] == $this->_tpl_vars['dadosCatMenu'][$this->_sections['i']['index']]['urlCat']): ?>menu-lat-ativo<?php endif; ?> ">
                     <?php echo $this->_tpl_vars['dadosCatMenu'][$this->_sections['i']['index']]['tituloPai']; ?>
 
                     <img class="pull-right" src="<?php echo $this->_tpl_vars['URL']; ?>

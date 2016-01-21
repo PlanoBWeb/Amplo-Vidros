@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-15 16:59:16
+<?php /* Smarty version 2.6.12, created on 2016-01-15 18:19:25
          compiled from projetos.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -10,6 +10,11 @@
 	<meta name="description" content="" />
 	<link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
+    <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../inc/cssUrlAmigavel.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
 	<link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
 	<title>Amplo Vidros</title>
@@ -53,7 +58,7 @@ unset($_smarty_tpl_vars);
                     <div class="col-xs-12 col-sm-9 col-md-9">
 
                         <h1 class="titulo-interna">Projetos</h1><br>
-                        <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+                        <p class="txt-interna">Em breve!</p>
                         
                         <!-- Tipos 1 -->
                         <div class="row">

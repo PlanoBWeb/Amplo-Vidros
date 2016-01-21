@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-12-18 11:54:09
+<?php /* Smarty version 2.6.12, created on 2016-01-20 10:43:54
          compiled from index.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -10,6 +10,11 @@
 	<meta name="description" content="" />
 	<link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
+    <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../inc/cssUrlAmigavel.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
 	<link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
 	<title>Amplo Vidros</title>
@@ -44,16 +49,23 @@ unset($_smarty_tpl_vars);
                 <div class="span12">
                     <div id="owl-demo" class="owl-carousel">
                         <div class="item">
-                            <div class="bloco-desc-banner">
+                            <!-- <div class="bloco-desc-banner">
                                 <h2>GUARDA CORPO <br>DE VIDRO</h2>
                                 <p>Somos especialistas: Consulte os modelos de fixação, todos em aço inox</p>
-                                <a class="saiba-mais-vitrine" href="">saiba mais</a>
-                            </div>
+                                <a class="saiba-mais-vitrine" href="<?php echo $this->_tpl_vars['URL']; ?>
+produtos/guarda-corpo-de-vidro">saiba mais</a>
+                            </div> -->
                             <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/banner.jpg" alt="banner" title="banner">
                         </div>
-                        <!-- <div class="item"><img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/banner.jpg" alt="banner" title="banner"></div> -->
+                        <div class="item"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/banner2.jpg" alt="banner" title="banner"></div>
+                        <div class="item"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/banner3.jpg" alt="banner" title="banner"></div>
+                        <div class="item"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/banner4.jpg" alt="banner" title="banner"></div>
+                        <div class="item"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/banner5.jpg" alt="banner" title="banner"></div>
                     </div>
                 </div>
             </div>
@@ -65,9 +77,9 @@ commom/img/banner.jpg" alt="banner" title="banner"></div> -->
             <div class="encapsula-baixo-banner">
                 <div class="col-xs-12 col-sm-3 col-md-3">
                     <a class="link-baixo-banner pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
-home"><h2>BOX<br> para banheiros</h2></a>
+produtos/box-para-banheiro"><h2>BOX<br> para banheiros</h2></a>
                     <a class="pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
-home">
+produtos/box-para-banheiro">
                         <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon_1.png" alt="BOX para banheiros" title="BOX para banheiros">
                     </a>
@@ -75,31 +87,41 @@ commom/img/icon_1.png" alt="BOX para banheiros" title="BOX para banheiros">
 
                 <div class="col-xs-12 col-sm-3 col-md-3">
                     <a class="link-baixo-banner pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
-home"><h2>DECORAÇÃO<br> de ambientes</h2></a>
+produtos/espelhos"><h2>DECORAÇÃO<br> de ambientes</h2></a>
+                    <!-- <h2 class="link-baixo-banner-2 pull-left">DECORAÇÃO<br> de ambientes</h2> -->
                     <a class="pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
-home">
+produtos/espelhos">
                         <img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/icon_2.png" alt="BOX para banheiros" title="BOX para banheiros">
+commom/img/icon_2.png" alt="DECORAÇÃO de ambientes" title="DECORAÇÃO de ambientes">
                     </a>
+                    <!-- <p class="pull-left">
+                        <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_2.png" alt="DECORAÇÃO de ambientes" title="DECORAÇÃO de ambientes">
+                    </p> -->
                 </div>
 
                 <div class="col-xs-12 col-sm-3 col-md-3">
                     <a class="link-baixo-banner pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
-home"><h2>ENGENHARIA<br> soluções</h2></a>
+produtos/divisoria-de-vidro"><h2>ENGENHARIA<br> soluções</h2></a>
+                    <!-- <h2 class="link-baixo-banner-2 pull-left">ENGENHARIA<br> soluções</h2> -->
                     <a class="pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
-home">
+produtos/divisoria-de-vidro">
                         <img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/icon_3.png" alt="BOX para banheiros" title="BOX para banheiros">
+commom/img/icon_3.png" alt="ENGENHARIA soluções" title="ENGENHARIA soluções">
                     </a>
+                    <!-- <p class="pull-left">
+                        <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon_3.png" alt="ENGENHARIA soluções" title="ENGENHARIA soluções">
+                    </p> -->
                 </div>
 
                 <div class="col-xs-12 col-sm-3 col-md-3">
                     <a class="link-baixo-banner pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
-home"><h2>PROJETOS <br> especiais</h2></a>
+produtos/porta-de-vidro"><h2>PORTAS <br> de vidro</h2></a>
                     <a class="pull-left" href="<?php echo $this->_tpl_vars['URL']; ?>
-home">
+produtos/porta-de-vidro">
                         <img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/icon_4.png" alt="BOX para banheiros" title="BOX para banheiros">
+commom/img/icon_4.png" alt="PORTAS de vidro" title="PORTAS de vidro">
                     </a>
                 </div>
             </div>
@@ -179,6 +201,7 @@ commom/img/btn_right.png" alt="Seta direita" title="Seta direita"></a>
                     <!-- Destaque 1 -->
 
                     <!-- Destaque 2 -->
+                    <?php if ($this->_tpl_vars['dadosProjeto']): ?>
                     <div class="col-xs-12 col-sm-6 col-md-6 bloco-vitrine-destaques">
                         <div class="row">
                             <div class="col-xs-12 col-sm-7 col-md-7 pd-none">
@@ -242,6 +265,7 @@ commom/img/btn_right.png" alt="Seta direita" title="Seta direita"></a>
                             </div>
                         </div>
                     </div>
+                    <?php endif; ?>
                     <!-- Destaque 2 -->  
                 </div>               
 
@@ -339,7 +363,7 @@ commom/img/icon_face.png" alt="fique conectado pelo Facebook" title="fique conec
                                     <img class="img-conectado" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icone_twitter.png" alt="fique conectado pelo Twitter" title="fique conectado pelo Twitter">
                                 </a>
-                                <a href="" target="_blank">
+                                <a href="https://www.instagram.com/amplovidros/" target="_blank">
                                     <img class="img-conectado" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon_instagram.png" alt="fique conectado pelo Instagram" title="fique conectado pelo Instagram">
                                 </a>
